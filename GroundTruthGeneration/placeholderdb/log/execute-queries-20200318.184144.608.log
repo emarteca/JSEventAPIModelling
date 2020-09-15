@@ -1,0 +1,64 @@
+[2020-03-18 18:41:44] This is codeql execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --warnings=show --output=/home/ellen/Documents/ASJProj/AsyncAnalysis/temp_allStmts.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/ASJProj/AsyncAnalysis/getAllStmts_codeql.ql
+[2020-03-18 18:41:44] Creating executor with 1 threads.
+[2020-03-18 18:41:44] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/ASJProj/AsyncAnalysis/getAllStmts_codeql.ql --format=json
+[2020-03-18 18:41:44] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/ASJProj/AsyncAnalysis/getAllStmts_codeql.ql.
+[2020-03-18 18:41:44] [DETAILS] resolve library-path> Found enclosing pack 'await-reordering-analysis' at /home/ellen/Documents/ASJProj/AsyncAnalysis.
+[2020-03-18 18:41:44] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/ASJProj/AsyncAnalysis/.cache.
+[2020-03-18 18:41:44] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/ASJProj/AsyncAnalysis/qlpack.yml.
+[2020-03-18 18:41:44] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-03-18 18:41:44] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-03-18 18:41:44] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-03-18 18:41:44] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/ASJProj/AsyncAnalysis resolved OK.
+[2020-03-18 18:41:44] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-03-18 18:41:44] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis/.cache"
+                        ],
+                        "relativeName" : "await-reordering-analysis/getAllStmts_codeql.ql"
+                      }
+[2020-03-18 18:41:44] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/ASJProj/AsyncAnalysis/getAllStmts_codeql.ql.
+[2020-03-18 18:41:44] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/ASJProj/AsyncAnalysis/getAllStmts_codeql.ql.
+[2020-03-18 18:41:45] Resolved file set for /home/ellen/Documents/ASJProj/AsyncAnalysis/getAllStmts_codeql.ql hashes to 00965188ad6e711bfa6a18bcfbf73d34ce60782e.
+[2020-03-18 18:41:45] [DETAILS] execute queries> Compilation cache hit for /home/ellen/Documents/ASJProj/AsyncAnalysis/getAllStmts_codeql.ql.
+[2020-03-18 18:41:45] [PROGRESS] execute queries> [1/1] Compiled /home/ellen/Documents/ASJProj/AsyncAnalysis/getAllStmts_codeql.ql (418ms).
+[2020-03-18 18:41:45] Of 44 predicates, 0 are used in more than one query.
+[2020-03-18 18:41:45] [PROGRESS] execute queries> Starting evaluation of await-reordering-analysis/getAllStmts_codeql.ql.
+[2020-03-18 18:41:45] Starting evaluation of /home/ellen/Documents/ASJProj/AsyncAnalysis/getAllStmts_codeql.ql
+[2020-03-18 18:41:45] (0s) Start query execution
+[2020-03-18 18:41:45] (0s) Prepared IMB program for execution: took 0ms
+[2020-03-18 18:41:45] (0s) Beginning execution of program...
+[2020-03-18 18:41:45] (0s)  >>> Wrote relation stmts with 24676 rows and 5 columns.
+[2020-03-18 18:41:45] (0s)  >>> Wrote relation hasLocation with 439344 rows and 2 columns.
+[2020-03-18 18:41:45] (0s)  >>> Wrote relation locations_default with 354422 rows and 6 columns.
+[2020-03-18 18:41:45] (0s)  >>> Wrote relation files with 404 rows and 5 columns.
+[2020-03-18 18:41:45] (0s) Starting to evaluate predicate #select#fffff/5@49b283
+[2020-03-18 18:41:45] (0s)  >>> Wrote relation #select#fffff with 352 rows and 5 columns.
+[2020-03-18 18:41:45] (0s) Starting to evaluate predicate Files::File::getURL_dispred#ff/2@b7aabf
+[2020-03-18 18:41:45] (0s)  >>> Wrote relation Files::File::getURL_dispred#ff with 404 rows and 2 columns.
+[2020-03-18 18:41:45] (0s) Starting to evaluate predicate Files::File::getURL_dispred#ff_0#antijoin_rhs/1@b5c439
+[2020-03-18 18:41:45] (0s)  >>> Wrote relation Files::File::getURL_dispred#ff_0#antijoin_rhs with 404 rows and 1 columns.
+[2020-03-18 18:41:45] (0s) Starting to evaluate predicate files_0#antijoin_rhs/1@40ff22
+[2020-03-18 18:41:45] (0s)  >>> Wrote relation files_0#antijoin_rhs with 404 rows and 1 columns.
+[2020-03-18 18:41:45] (0s) Starting to evaluate predicate #select#query#fffffff/7@b06d87
+[2020-03-18 18:41:45] (0s)  >>> Wrote relation #select#query#fffffff with 352 rows and 7 columns.
+[2020-03-18 18:41:45] (0s) Query done
+[2020-03-18 18:41:45] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2020-03-18 18:41:45] CSV_CACHE_DIFF: #select#query#fffffff (getAllStmts_codeql.ql),0.371,0.211,0.118,0.018,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:41:45] (0s) Sequence stamp origin is -6748204061852877775
+[2020-03-18 18:41:45] (0s) Stopped the world to sync to disk at sequence stamp o+0
+[2020-03-18 18:41:45] (0s) Starting the world again
+[2020-03-18 18:41:45] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2020-03-18 18:41:45] CSV_IMB_QUERIES: Query,#select#query#fffffff,getAllStmts_codeql.ql,1,Success,0.371,352,385
+[2020-03-18 18:41:45] Evaluation of /home/ellen/Documents/ASJProj/AsyncAnalysis/getAllStmts_codeql.ql produced BQRS results
+[2020-03-18 18:41:45] [PROGRESS] execute queries> [1/1] Evaluation done (463ms); writing results to /home/ellen/Documents/ASJProj/AsyncAnalysis/temp_allStmts.bqrs.
+[2020-03-18 18:41:45] [PROGRESS] execute queries> Shutting down query evaluator.
+[2020-03-18 18:41:45] Stopped the world to close the cache at sequence stamp o+1
+[2020-03-18 18:41:45] The disk cache is freshly trimmed; leave it be.
+[2020-03-18 18:41:45] Starting the world again
+[2020-03-18 18:41:45] Terminating normally.

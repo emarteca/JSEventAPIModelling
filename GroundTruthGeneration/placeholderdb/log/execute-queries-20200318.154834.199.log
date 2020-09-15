@@ -1,0 +1,50 @@
+[2020-03-18 15:48:34] This is codeql execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --warnings=show --output=/home/ellen/Documents/ASJProj/AsyncAnalysis/temp_swaps.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql
+[2020-03-18 15:48:34] Creating executor with 1 threads.
+[2020-03-18 15:48:34] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql --format=json
+[2020-03-18 15:48:34] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 15:48:34] [DETAILS] resolve library-path> Found enclosing pack 'await-reordering-analysis' at /home/ellen/Documents/ASJProj/AsyncAnalysis.
+[2020-03-18 15:48:34] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/ASJProj/AsyncAnalysis/.cache.
+[2020-03-18 15:48:34] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/ASJProj/AsyncAnalysis/qlpack.yml.
+[2020-03-18 15:48:34] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-03-18 15:48:34] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-03-18 15:48:34] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-03-18 15:48:34] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/ASJProj/AsyncAnalysis resolved OK.
+[2020-03-18 15:48:34] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-03-18 15:48:34] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis/.cache"
+                        ],
+                        "relativeName" : "await-reordering-analysis/console_getStmtAndSets.ql"
+                      }
+[2020-03-18 15:48:34] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 15:48:34] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 15:48:34] Resolved file set for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql hashes to a8363e98900c33cccd49a89ce746586a6fcbe8fb.
+[2020-03-18 15:48:34] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 15:48:35] ExternalModuleBindingPass ...
+[2020-03-18 15:48:35] ExternalModuleBindingPass time: 00:00.511
+[2020-03-18 15:48:35] QLPredicateSynthesiser ...
+[2020-03-18 15:48:35] QLPredicateSynthesiser time: 00:00.032
+[2020-03-18 15:48:35] DeclarationBindingPass ...
+[2020-03-18 15:48:35] DeclarationBindingPass time: 00:00.057
+[2020-03-18 15:48:37] ReferenceBindingCheck ...
+[2020-03-18 15:48:37] ReferenceBindingCheck time: 00:00.099
+[2020-03-18 15:48:37] PredicateBodyBindingPass ...
+[2020-03-18 15:48:37] PredicateBodyBindingPass time: 00:00.406
+[2020-03-18 15:48:37] LanguagePragmaPropagationPass ...
+[2020-03-18 15:48:37] LanguagePragmaPropagationPass time: 00:00.015
+[2020-03-18 15:48:37] Ambiguity checks ...
+[2020-03-18 15:48:37] Ambiguity checks time: 00:00.033
+[2020-03-18 15:48:37] Ql checks ...
+[2020-03-18 15:48:38] Ql checks time: 00:00.401
+[2020-03-18 15:48:38] [ERROR] execute queries> ERROR: extraneous input ')' expecting one of: '(', '*', '+' (/home/ellen/Documents/ASJProj/AsyncAnalysis/ReorderingUtils.qll:1012,70-71)
+[2020-03-18 15:48:38] Sequence stamp origin is -6748248688433369718
+[2020-03-18 15:48:38] Stopped the world to close the cache at sequence stamp o+0
+[2020-03-18 15:48:38] The disk cache is freshly trimmed; leave it be.
+[2020-03-18 15:48:38] Starting the world again
+[2020-03-18 15:48:38] Exiting with code 1

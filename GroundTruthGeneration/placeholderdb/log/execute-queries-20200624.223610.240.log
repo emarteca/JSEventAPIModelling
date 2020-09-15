@@ -1,0 +1,53 @@
+[2020-06-24 22:36:10] This is codeql execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --ml-model-path= --native-library-path= --warnings=show --output=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/temp.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql
+[2020-06-24 22:36:10] Creating executor with 1 threads.
+[2020-06-24 22:36:10] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql --format=json
+[2020-06-24 22:36:10] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 22:36:10] [DETAILS] resolve library-path> Found enclosing pack 'api-modelling-analysis' at /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data.
+[2020-06-24 22:36:10] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/.cache.
+[2020-06-24 22:36:10] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/qlpack.yml.
+[2020-06-24 22:36:10] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-06-24 22:36:10] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-06-24 22:36:10] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-06-24 22:36:10] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data resolved OK.
+[2020-06-24 22:36:10] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-06-24 22:36:10] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/.cache"
+                        ],
+                        "relativeName" : "api-modelling-analysis/analyse.ql"
+                      }
+[2020-06-24 22:36:10] [ERROR] Dbscheme mismatch!
+                              Query name: /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql
+                              Query dbscheme: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme
+                              Dataset dbscheme: /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript/semmlecode.javascript.dbscheme
+[2020-06-24 22:36:10] [ERROR] Exception collected asynchronously; saving it while cancelling everything
+                              com.semmle.util.exception.UserError: This CodeQL database is not compatible with the QL library /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql uses. You may need to run 'codeql database upgrade ../../../ASJProj/TESTING_reordering/QLDBs/fiddle'.
+                              	at com.semmle.cli2.ql.dataset.DatasetLayout.verifyQueryDbscheme(DatasetLayout.java:86)
+                              	at com.semmle.cli2.ql.CompilationCommon.compile(CompilationCommon.java:195)
+                              	at com.semmle.cli2.execute.ExecuteQueriesCommand.lambda$executeSubcommand$0(ExecuteQueriesCommand.java:157)
+                              	at com.semmle.cli2.ql.Paralleliser$1.lambda$next$0(Paralleliser.java:68)
+                              	at com.semmle.util.concurrent.FutureUtils.supplyCompose(FutureUtils.java:217)
+                              	at com.semmle.cli2.ql.Paralleliser.lambda$startMoreJobs$1(Paralleliser.java:98)
+                              	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+                              	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+                              	at java.base/java.lang.Thread.run(Unknown Source)
+[2020-06-24 22:36:10] Sequence stamp origin is -6711777303252612094
+[2020-06-24 22:36:10] Stopped the world to close the cache at sequence stamp o+0
+[2020-06-24 22:36:10] The disk cache is freshly trimmed; leave it be.
+[2020-06-24 22:36:10] Starting the world again
+[2020-06-24 22:36:10] Excption caught in async task: This CodeQL database is not compatible with the QL library /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql uses. You may need to run 'codeql database upgrade ../../../ASJProj/TESTING_reordering/QLDBs/fiddle'.
+                      com.semmle.cli2.ql.dataset.DatasetLayout.verifyQueryDbscheme(DatasetLayout.java:86)
+                      com.semmle.cli2.ql.CompilationCommon.compile(CompilationCommon.java:195)
+                      com.semmle.cli2.execute.ExecuteQueriesCommand.lambda$executeSubcommand$0(ExecuteQueriesCommand.java:157)
+                      com.semmle.cli2.ql.Paralleliser$1.lambda$next$0(Paralleliser.java:68)
+                      com.semmle.util.concurrent.FutureUtils.supplyCompose(FutureUtils.java:217)
+                      com.semmle.cli2.ql.Paralleliser.lambda$startMoreJobs$1(Paralleliser.java:98)
+                      java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+                      java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+                      java.base/java.lang.Thread.run(Unknown Source)

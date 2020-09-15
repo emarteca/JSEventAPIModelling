@@ -1,0 +1,36 @@
+[2020-03-18 10:58:30] This is codeql database upgrade ../TESTING_reordering/QLDBs/fiddle/
+[2020-03-18 10:58:30] Log file was started late.
+[2020-03-18 10:58:30] Running plumbing command: codeql dataset upgrade -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript
+[2020-03-18 10:58:30] Calling plumbing command: codeql resolve upgrades --dbscheme=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript/semmlecode.javascript.dbscheme --format=json
+[2020-03-18 10:58:30] [DETAILS] resolve upgrades> Searching for upgrades that apply to dad09eeeff5cf8c9c2b674d5053c63ab44e091df.
+[2020-03-18 10:58:30] [DETAILS] resolve upgrades> Scanning for qlpack.yml from /home/ellen/codeql_home/codeql/.codeqlmanifest.json
+[2020-03-18 10:58:30] [DETAILS] resolve upgrades> Scanning for qlpack.yml from /home/ellen/codeql_home/
+[2020-03-18 10:58:30] [SPAMMIER] resolve upgrades> Recursing into /home/ellen/codeql_home.
+[2020-03-18 10:58:30] [DETAILS] resolve upgrades> Not scanning from /home/ellen/codeql_home/codeql which is already done.
+[2020-03-18 10:58:30] [DETAILS] resolve upgrades> Scanning for qlpack.yml from /home/ellen/codeql_home/ql/.codeqlmanifest.json
+[2020-03-18 10:58:30] [SPAMMIER] resolve upgrades> Recursing into /home/ellen/codeql_home/ql.
+[2020-03-18 10:58:30] [SPAMMIER] resolve upgrades> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-03-18 10:58:30] [DETAILS] resolve upgrades> Will look for upgrades in /home/ellen/codeql_home/codeql/legacy-upgrades/upgrades
+[2020-03-18 10:58:30] [DETAILS] resolve upgrades> Will look for upgrades in /home/ellen/codeql_home/ql/csharp/upgrades
+[2020-03-18 10:58:30] [DETAILS] resolve upgrades> Will look for upgrades in /home/ellen/codeql_home/ql/python/upgrades
+[2020-03-18 10:58:30] [DETAILS] resolve upgrades> Will look for upgrades in /home/ellen/codeql_home/ql/javascript/upgrades
+[2020-03-18 10:58:30] [DETAILS] resolve upgrades> Will look for upgrades in /home/ellen/codeql_home/ql/cpp/upgrades
+[2020-03-18 10:58:30] [DETAILS] resolve upgrades> Will look for upgrades in /home/ellen/codeql_home/ql/java/upgrades
+[2020-03-18 10:58:30] [DETAILS] resolve upgrades> Found upgrade run ending at 03c078a7e6eec294f1457b3d20f9fec4427cb4af.
+[2020-03-18 10:58:30] Plumbing command codeql resolve upgrades completed:
+                      {
+                        "scripts" : [
+                          "/home/ellen/codeql_home/ql/javascript/upgrades/dad09eeeff5cf8c9c2b674d5053c63ab44e091df"
+                        ],
+                        "finalDbscheme" : "/home/ellen/codeql_home/ql/javascript/upgrades/dad09eeeff5cf8c9c2b674d5053c63ab44e091df/semmlecode.javascript.dbscheme"
+                      }
+[2020-03-18 10:58:30] Calling plumbing command: codeql resolve ram --format=json
+[2020-03-18 10:58:30] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx3968M",
+                        "--off-heap-ram=3968"
+                      ]
+[2020-03-18 10:58:30] Spawning plumbing command: execute upgrades -J-Xmx3968M --off-heap-ram=3968 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/codeql_home/ql/javascript/upgrades/dad09eeeff5cf8c9c2b674d5053c63ab44e091df
+[2020-03-18 10:58:31] Plumbing command codeql execute upgrades terminated with status 0.
+[2020-03-18 10:58:31] Plumbing command codeql dataset upgrade completed with status 0.
+[2020-03-18 10:58:31] Exiting with code 0

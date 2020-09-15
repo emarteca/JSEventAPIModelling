@@ -1,0 +1,73 @@
+[2020-06-24 22:36:38] This is codeql execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --ml-model-path= --native-library-path= --warnings=show --output=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/temp.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql
+[2020-06-24 22:36:38] Creating executor with 1 threads.
+[2020-06-24 22:36:38] Clearing disk cache since the version file /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript/default/cache/version does not exist
+[2020-06-24 22:36:38] Tuple pool not found. Clearing relations with cached strings
+[2020-06-24 22:36:38] Trimming disk cache at /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript/default/cache in mode brutal.
+[2020-06-24 22:36:38] Sequence stamp origin is -6711777183547990904
+[2020-06-24 22:36:38] Stopped the world to hard-clear memory at sequence stamp o+0
+[2020-06-24 22:36:38] Starting the world again
+[2020-06-24 22:36:38] Stopped the world to quickly trim disk at sequence stamp o+1
+[2020-06-24 22:36:38] Starting the world again
+[2020-06-24 22:36:38] Stopped the world to zealously trim disk at sequence stamp o+2
+[2020-06-24 22:36:38] Starting the world again
+[2020-06-24 22:36:38] Trimming completed (7ms): Purged everything.
+[2020-06-24 22:36:38] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql --format=json
+[2020-06-24 22:36:38] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 22:36:38] [DETAILS] resolve library-path> Found enclosing pack 'api-modelling-analysis' at /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data.
+[2020-06-24 22:36:38] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/.cache.
+[2020-06-24 22:36:38] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/qlpack.yml.
+[2020-06-24 22:36:38] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-06-24 22:36:38] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-06-24 22:36:38] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-06-24 22:36:38] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data resolved OK.
+[2020-06-24 22:36:38] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-06-24 22:36:38] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/.cache"
+                        ],
+                        "relativeName" : "api-modelling-analysis/analyse.ql"
+                      }
+[2020-06-24 22:36:38] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 22:36:38] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 22:36:39] Resolved file set for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql hashes to 63c3bd04436d39162efe7bcfa23c0925ffc82405.
+[2020-06-24 22:36:39] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 22:36:40] ExternalModuleBindingPass ...
+[2020-06-24 22:36:44] ExternalModuleBindingPass time: 00:04.007
+[2020-06-24 22:36:44] QLPredicateSynthesiser ...
+[2020-06-24 22:36:44] QLPredicateSynthesiser time: 00:00.037
+[2020-06-24 22:36:44] DeclarationBindingPass ...
+[2020-06-24 22:36:44] DeclarationBindingPass time: 00:00.149
+[2020-06-24 22:36:44] Fixed point time ...
+[2020-06-24 22:36:44] Fixed point time time: 00:00.302
+[2020-06-24 22:36:44] ReferenceBindingPass ...
+[2020-06-24 22:36:44] ReferenceBindingPass time: 00:00.082
+[2020-06-24 22:36:44] EntityTypeUpdateBindingPass ...
+[2020-06-24 22:36:44] EntityTypeUpdateBindingPass time: 00:00.074
+[2020-06-24 22:36:44] ReferenceBindingCheck ...
+[2020-06-24 22:36:44] ReferenceBindingCheck time: 00:00.064
+[2020-06-24 22:36:44] PredicateBodyBindingPass ...
+[2020-06-24 22:36:45] PredicateBodyBindingPass time: 00:00.613
+[2020-06-24 22:36:45] LanguagePragmaPropagationPass ...
+[2020-06-24 22:36:45] LanguagePragmaPropagationPass time: 00:00.035
+[2020-06-24 22:36:45] Ambiguity checks ...
+[2020-06-24 22:36:45] Ambiguity checks time: 00:00.057
+[2020-06-24 22:36:45] Ql checks ...
+[2020-06-24 22:36:46] Ql checks time: 00:00.717
+[2020-06-24 22:36:46] [ERROR] execute queries> ERROR: token recognition error at: ':h' (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/new_externalData.qll:69448,143-144)
+[2020-06-24 22:36:46] [ERROR] execute queries> ERROR: missing one of: '}' (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/new_externalData.qll:69448,139-143)
+[2020-06-24 22:36:46] [ERROR] execute queries> ERROR: token recognition error at: ':h' (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/new_externalData.qll:69454,141-142)
+[2020-06-24 22:36:46] [ERROR] execute queries> ERROR: no viable parse for input 'andleClick"]"', expecting one of : 'boolean', 'class', 'newtype', 'date', 'float', 'from', 'import', 'int', 'module', 'predicate', 'select', 'string', 'where', Lowerid, Upperid, Atlowerid (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/new_externalData.qll:69448,145-155)
+[2020-06-24 22:36:46] [ERROR] execute queries> ERROR: no viable parse for input 'andleClick"]"', expecting one of : 'boolean', 'class', 'newtype', 'date', 'float', 'from', 'import', 'int', 'module', 'predicate', 'select', 'string', 'where', Lowerid, Upperid, Atlowerid (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/new_externalData.qll:69454,143-153)
+[2020-06-24 22:36:46] [ERROR] execute queries> ERROR: token recognition error at: ':h' (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/new_externalData.qll:69448,143-144)
+[2020-06-24 22:36:46] [ERROR] execute queries> ERROR: token recognition error at: ':h' (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/new_externalData.qll:69454,141-142)
+[2020-06-24 22:36:46] [ERROR] execute queries> ERROR: Could not resolve predicate correct/0 (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:974,8-15)
+[2020-06-24 22:36:46] Stopped the world to close the cache at sequence stamp o+3
+[2020-06-24 22:36:46] The disk cache is freshly trimmed; leave it be.
+[2020-06-24 22:36:46] Starting the world again
+[2020-06-24 22:36:46] Exiting with code 1

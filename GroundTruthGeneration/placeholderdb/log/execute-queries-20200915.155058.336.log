@@ -1,0 +1,26 @@
+[2020-09-15 15:50:58] This is codeql execute queries -J-Xmx3968M --off-heap-ram=3968 --verbosity=progress --logdir=/home/ellen/Documents/APIModellingProj/Artifact/placeholderdb/log --ml-model-path= --native-library-path= --warnings=show --output=/home/ellen/Documents/APIModellingProj/Artifact/temp.bqrs -- /home/ellen/Documents/APIModellingProj/Artifact/placeholderdb/db-javascript /home/ellen/Documents/APIModellingProj/Artifact/broken_groundTruth.ql
+[2020-09-15 15:50:58] Creating executor with 1 threads.
+[2020-09-15 15:50:58] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/APIModellingProj/Artifact/broken_groundTruth.ql --format=json
+[2020-09-15 15:50:58] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/APIModellingProj/Artifact/broken_groundTruth.ql.
+[2020-09-15 15:50:58] [DETAILS] resolve library-path> Found no enclosing pack; trying after symlink resolution with /home/ellen/Documents/APIModellingProj/Artifact/broken_groundTruth.ql.
+[2020-09-15 15:50:58] [DETAILS] resolve library-path> Found enclosing pack 'Artifact' at /home/ellen/Documents/APIModellingProj/Artifact.
+[2020-09-15 15:50:58] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/APIModellingProj/Artifact/.cache.
+[2020-09-15 15:50:58] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/APIModellingProj/Artifact/broken_groundTruth.ql.
+[2020-09-15 15:50:58] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/APIModellingProj/Artifact resolved OK.
+[2020-09-15 15:50:58] [DETAILS] resolve library-path> Found no dbscheme through dependencies.
+[2020-09-15 15:50:58] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/APIModellingProj/Artifact"
+                        ],
+                        "compilationCache" : [
+                          "/home/ellen/Documents/APIModellingProj/Artifact/.cache"
+                        ],
+                        "relativeName" : "Artifact/broken_groundTruth.ql",
+                        "possibleAdvice" : "There should probably be a qlpack.yml file declaring dependencies in /home/ellen/Documents/APIModellingProj/Artifact or an enclosing directory."
+                      }
+[2020-09-15 15:50:58] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/APIModellingProj/Artifact/broken_groundTruth.ql.
+[2020-09-15 15:50:58] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/APIModellingProj/Artifact/broken_groundTruth.ql.
+[2020-09-15 15:51:00] Resolved file set for /home/ellen/Documents/APIModellingProj/Artifact/broken_groundTruth.ql hashes to 4e14cc8347a2c3e30f872eb298e88743064b3c9f.
+[2020-09-15 15:51:00] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/APIModellingProj/Artifact/broken_groundTruth.ql.
+[2020-09-15 15:51:00] ExternalModuleBindingPass ...

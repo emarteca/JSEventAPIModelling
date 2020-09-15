@@ -1,0 +1,173 @@
+[2020-03-18 17:04:17] This is codeql execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --warnings=show --output=/home/ellen/Documents/ASJProj/AsyncAnalysis/temp_swaps.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql
+[2020-03-18 17:04:17] Creating executor with 1 threads.
+[2020-03-18 17:04:17] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql --format=json
+[2020-03-18 17:04:17] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 17:04:17] [DETAILS] resolve library-path> Found enclosing pack 'await-reordering-analysis' at /home/ellen/Documents/ASJProj/AsyncAnalysis.
+[2020-03-18 17:04:17] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/ASJProj/AsyncAnalysis/.cache.
+[2020-03-18 17:04:17] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/ASJProj/AsyncAnalysis/qlpack.yml.
+[2020-03-18 17:04:17] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-03-18 17:04:17] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-03-18 17:04:17] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-03-18 17:04:17] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/ASJProj/AsyncAnalysis resolved OK.
+[2020-03-18 17:04:17] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-03-18 17:04:17] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis/.cache"
+                        ],
+                        "relativeName" : "await-reordering-analysis/console_getStmtAndSets.ql"
+                      }
+[2020-03-18 17:04:17] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 17:04:17] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 17:04:17] Resolved file set for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql hashes to 6ae5b7afddf98edec0d9b2719a3b3f69cf4c7c64.
+[2020-03-18 17:04:17] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 17:04:18] ExternalModuleBindingPass ...
+[2020-03-18 17:04:18] ExternalModuleBindingPass time: 00:00.465
+[2020-03-18 17:04:18] QLPredicateSynthesiser ...
+[2020-03-18 17:04:18] QLPredicateSynthesiser time: 00:00.032
+[2020-03-18 17:04:18] DeclarationBindingPass ...
+[2020-03-18 17:04:18] DeclarationBindingPass time: 00:00.056
+[2020-03-18 17:04:20] ReferenceBindingCheck ...
+[2020-03-18 17:04:20] ReferenceBindingCheck time: 00:00.107
+[2020-03-18 17:04:20] PredicateBodyBindingPass ...
+[2020-03-18 17:04:20] PredicateBodyBindingPass time: 00:00.412
+[2020-03-18 17:04:20] LanguagePragmaPropagationPass ...
+[2020-03-18 17:04:20] LanguagePragmaPropagationPass time: 00:00.019
+[2020-03-18 17:04:20] Ambiguity checks ...
+[2020-03-18 17:04:20] Ambiguity checks time: 00:00.044
+[2020-03-18 17:04:20] Ql checks ...
+[2020-03-18 17:04:21] Ql checks time: 00:00.408
+[2020-03-18 17:04:21] Compilation pipeline
+[2020-03-18 17:04:22] Type Inference ...
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,73,79
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,750,3877
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,573,2043
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,26,26
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,5,5
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,17,19
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,11,15
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,12,15
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,7,10
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,10,13
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:22] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:04:24] Type Inference time: 00:02.021
+[2020-03-18 17:04:24] Binding Checks ...
+[2020-03-18 17:04:24] Binding Checks time: 00:00.410
+[2020-03-18 17:04:25] [DETAILS] execute queries> Optimizing /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 17:04:25] Processing compilation pipeline
+[2020-03-18 17:04:25] Started compiling a query
+[2020-03-18 17:04:25] Initialising compiler...
+[2020-03-18 17:04:25] 	 ... compiler initialised
+[2020-03-18 17:04:25] About to start query optimisation
+[2020-03-18 17:04:25] Compilation cache miss for f0e1d613cafed8b08c2191c26a9d20516a801139.
+[2020-03-18 17:04:26] Stored compiled program for f0e1d613cafed8b08c2191c26a9d20516a801139.
+[2020-03-18 17:04:26] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2020-03-18 17:04:26] CSV_COMPILATION: 94,163,160,293
+[2020-03-18 17:04:26] [PROGRESS] execute queries> [1/1] Compiled /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql (8.7s).
+[2020-03-18 17:04:26] Of 49 predicates, 0 are used in more than one query.
+[2020-03-18 17:04:26] [PROGRESS] execute queries> Starting evaluation of await-reordering-analysis/console_getStmtAndSets.ql.
+[2020-03-18 17:04:26] Starting evaluation of /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql
+[2020-03-18 17:04:26] (0s) Start query execution
+[2020-03-18 17:04:26] (0s) Prepared IMB program for execution: took 0ms
+[2020-03-18 17:04:26] (0s) Beginning execution of program...
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation files with 404 rows and 5 columns.
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation stmts with 24676 rows and 5 columns.
+[2020-03-18 17:04:26] (0s) Starting to evaluate predicate stmts_0#antijoin_rhs/1@8b19d6
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation stmts_0#antijoin_rhs with 24676 rows and 1 columns.
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation hasLocation with 439344 rows and 2 columns.
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation typeexprs with 3046 rows and 5 columns.
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation properties with 4339 rows and 5 columns.
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation exprs with 121399 rows and 5 columns.
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation toplevels with 395 rows and 2 columns.
+[2020-03-18 17:04:26] (0s) Starting to evaluate predicate @ast_node#b/1@2bf7f8
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation @ast_node#b with 153855 rows and 1 columns.
+[2020-03-18 17:04:26] (0s) Starting to evaluate predicate AST::ASTNode::getLocation_dispred#bf/2@429bce
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation AST::ASTNode::getLocation_dispred#bf with 153855 rows and 2 columns.
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation locations_default with 354422 rows and 6 columns.
+[2020-03-18 17:04:26] (0s) Starting to evaluate predicate locations_default_021#join_rhs/3@ca3c43
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation locations_default_021#join_rhs with 354422 rows and 3 columns.
+[2020-03-18 17:04:26] (0s) Starting to evaluate predicate #select#f/1@53eeca
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation #select#f with 1 rows and 1 columns.
+[2020-03-18 17:04:26] (0s) Starting to evaluate predicate #select#query#fffffff#shared/2@d6a084
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation #select#query#fffffff#shared with 1 rows and 2 columns.
+[2020-03-18 17:04:26] (0s) Starting to evaluate predicate #select#query#fffffff#shared#1/3@6ca412
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation #select#query#fffffff#shared#1 with 1 rows and 3 columns.
+[2020-03-18 17:04:26] (0s) Starting to evaluate predicate Locations::Location::hasLocationInfo_dispred#bfffff/6@29a039
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation Locations::Location::hasLocationInfo_dispred#bfffff with 1 rows and 6 columns.
+[2020-03-18 17:04:26] (0s) Starting to evaluate predicate #select#query#fffffff#antijoin_rhs/2@c3c439
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation #select#query#fffffff#antijoin_rhs with 1 rows and 2 columns.
+[2020-03-18 17:04:26] (0s) Starting to evaluate predicate #select#query#fffffff/7@f4ad75
+[2020-03-18 17:04:26] (0s)  >>> Wrote relation #select#query#fffffff with 1 rows and 7 columns.
+[2020-03-18 17:04:26] (0s) Query done
+[2020-03-18 17:04:26] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2020-03-18 17:04:26] CSV_CACHE_DIFF: #select#query#fffffff (console_getStmtAndSets.ql),0.391,0.177,0.131,0.062,0,0,0,0,0,0,0,0,0
+[2020-03-18 17:04:26] (0s) Sequence stamp origin is -6748229176481954185
+[2020-03-18 17:04:26] (0s) Stopped the world to sync to disk at sequence stamp o+0
+[2020-03-18 17:04:26] (0s) Starting the world again
+[2020-03-18 17:04:26] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2020-03-18 17:04:26] CSV_IMB_QUERIES: Query,#select#query#fffffff,console_getStmtAndSets.ql,1,Success,0.391,1,403
+[2020-03-18 17:04:26] Evaluation of /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql produced BQRS results
+[2020-03-18 17:04:26] [PROGRESS] execute queries> [1/1] Evaluation done (413ms); writing results to /home/ellen/Documents/ASJProj/AsyncAnalysis/temp_swaps.bqrs.
+[2020-03-18 17:04:26] [PROGRESS] execute queries> Shutting down query evaluator.
+[2020-03-18 17:04:26] Stopped the world to close the cache at sequence stamp o+1
+[2020-03-18 17:04:26] The disk cache is freshly trimmed; leave it be.
+[2020-03-18 17:04:26] Starting the world again
+[2020-03-18 17:04:26] Terminating normally.

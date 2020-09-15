@@ -1,0 +1,527 @@
+[2020-03-18 15:50:32] This is codeql execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --warnings=show --output=/home/ellen/Documents/ASJProj/AsyncAnalysis/temp_swaps.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql
+[2020-03-18 15:50:32] Creating executor with 1 threads.
+[2020-03-18 15:50:33] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql --format=json
+[2020-03-18 15:50:33] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 15:50:33] [DETAILS] resolve library-path> Found enclosing pack 'await-reordering-analysis' at /home/ellen/Documents/ASJProj/AsyncAnalysis.
+[2020-03-18 15:50:33] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/ASJProj/AsyncAnalysis/.cache.
+[2020-03-18 15:50:33] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/ASJProj/AsyncAnalysis/qlpack.yml.
+[2020-03-18 15:50:33] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-03-18 15:50:33] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-03-18 15:50:33] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-03-18 15:50:33] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/ASJProj/AsyncAnalysis resolved OK.
+[2020-03-18 15:50:33] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-03-18 15:50:33] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis/.cache"
+                        ],
+                        "relativeName" : "await-reordering-analysis/console_getStmtAndSets.ql"
+                      }
+[2020-03-18 15:50:33] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 15:50:33] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 15:50:33] Resolved file set for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql hashes to 0b6e606f903f99055110490b220c00babf01de59.
+[2020-03-18 15:50:33] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 15:50:33] ExternalModuleBindingPass ...
+[2020-03-18 15:50:34] ExternalModuleBindingPass time: 00:00.500
+[2020-03-18 15:50:34] QLPredicateSynthesiser ...
+[2020-03-18 15:50:34] QLPredicateSynthesiser time: 00:00.031
+[2020-03-18 15:50:34] DeclarationBindingPass ...
+[2020-03-18 15:50:34] DeclarationBindingPass time: 00:00.052
+[2020-03-18 15:50:35] ReferenceBindingCheck ...
+[2020-03-18 15:50:36] ReferenceBindingCheck time: 00:00.111
+[2020-03-18 15:50:36] PredicateBodyBindingPass ...
+[2020-03-18 15:50:36] PredicateBodyBindingPass time: 00:00.398
+[2020-03-18 15:50:36] LanguagePragmaPropagationPass ...
+[2020-03-18 15:50:36] LanguagePragmaPropagationPass time: 00:00.016
+[2020-03-18 15:50:36] Ambiguity checks ...
+[2020-03-18 15:50:36] Ambiguity checks time: 00:00.028
+[2020-03-18 15:50:36] Ql checks ...
+[2020-03-18 15:50:36] Ql checks time: 00:00.345
+[2020-03-18 15:50:37] Compilation pipeline
+[2020-03-18 15:50:37] Type Inference ...
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,73,79
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,750,3877
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,573,2043
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,26,26
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,5,5
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,17,19
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,11,15
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,12,15
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,7,10
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,10,13
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:38] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 15:50:40] Type Inference time: 00:02.064
+[2020-03-18 15:50:40] Binding Checks ...
+[2020-03-18 15:50:40] Binding Checks time: 00:00.502
+[2020-03-18 15:50:41] [DETAILS] execute queries> Optimizing /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 15:50:41] Processing compilation pipeline
+[2020-03-18 15:50:41] Started compiling a query
+[2020-03-18 15:50:41] Initialising compiler...
+[2020-03-18 15:50:41] 	 ... compiler initialised
+[2020-03-18 15:50:41] About to start query optimisation
+[2020-03-18 15:50:42] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:42] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:42] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:43] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:43] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:43] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:43] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:44] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:44] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:44] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:45] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:45] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:46] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:46] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:47] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:48] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:48] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:49] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:50] Compilation cache hit - skipping compilation.
+[2020-03-18 15:50:50] Compilation cache miss for 2f8da8f8fa4b9b0ff23a7e043a4068d8eac3c1ad.
+[2020-03-18 15:50:52] Stored compiled program for 2f8da8f8fa4b9b0ff23a7e043a4068d8eac3c1ad.
+[2020-03-18 15:50:52] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2020-03-18 15:50:52] CSV_COMPILATION: 3219,6144,482,1008
+[2020-03-18 15:50:52] [PROGRESS] execute queries> [1/1] Compiled /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql (19.6s).
+[2020-03-18 15:50:52] Of 8130 predicates, 0 are used in more than one query.
+[2020-03-18 15:50:52] [PROGRESS] execute queries> Starting evaluation of await-reordering-analysis/console_getStmtAndSets.ql.
+[2020-03-18 15:50:52] Starting evaluation of /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql
+[2020-03-18 15:50:52] (0s) Start query execution
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,AST::ASTNode::getTopLevel_dispred#ff,console_getStmtAndSets.ql,1,NotRun,0.008,0,477
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-AST::ASTNode::getTopLevel_dispred#ff (console_getStmtAndSets.ql),0.008,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,JSDoc::Documentable::getDocumentation_dispred#ff,console_getStmtAndSets.ql,2,NotRun,0.001,0,480
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-JSDoc::Documentable::getDocumentation_dispred#ff (console_getStmtAndSets.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,BasicBlocks::Internal::bbLength#ff BasicBlocks::Internal::useAt#ffff BasicBlocks::Internal::defAt#ffff BasicBlocks::Internal::reachableBB#f BasicBlocks::Internal::bbIndex#fff,console_getStmtAndSets.ql,3,NotRun,0.002,0,483
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-BasicBlocks::Internal::bbLength#ff BasicBlocks::Internal::useAt#ffff BasicBlocks::Internal::defAt#ffff BasicBlocks::Internal::reachableBB#f BasicBlocks::Internal::bbIndex#fff (console_getStmtAndSets.ql),0.002,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,CFG::ControlFlowNode::getContainer_dispred#ff,console_getStmtAndSets.ql,4,NotRun,0,0,484
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-CFG::ControlFlowNode::getContainer_dispred#ff (console_getStmtAndSets.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,AST::StmtContainer::getEnclosingContainer_dispred#ff,console_getStmtAndSets.ql,5,NotRun,0,0,485
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-AST::StmtContainer::getEnclosingContainer_dispred#ff (console_getStmtAndSets.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,BasicBlocks::bbIDominates#ff,console_getStmtAndSets.ql,6,NotRun,0,0,486
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-BasicBlocks::bbIDominates#ff (console_getStmtAndSets.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,SSA::Internal::getDefReachingEndOf#fff SSA::Internal::getDefinition#ffff SSA::Internal::TCapture#ffff SSA::Internal::TImplicitInit#fff SSA::Internal::TExplicitDef#fffff SSA::Internal::TSsaDefinition#f SSA::Internal::TPhi#fff SSA::Internal::TRefinement#fffff SSA::Internal::Read#f SSA::Internal::Write#f SSA::Internal::RefKind#f,console_getStmtAndSets.ql,7,NotRun,0.004,0,490
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-SSA::Internal::getDefReachingEndOf#fff SSA::Internal::getDefinition#ffff SSA::Internal::TCapture#ffff SSA::Internal::TImplicitInit#fff SSA::Internal::TExplicitDef#fffff SSA::Internal::TSsaDefinition#f SSA::Internal::TPhi#fff SSA::Internal::TRefinement#fffff SSA::Internal::Read#f SSA::Internal::Write#f SSA::Internal::RefKind#f (console_getStmtAndSets.ql),0.004,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,AbstractValuesImpl::TAbstractNull#f AbstractValuesImpl::TAbstractUndefined#f AbstractValuesImpl::TAbstractBoolean#ff AbstractValuesImpl::TAbstractZero#f AbstractValuesImpl::TAbstractNonZero#f AbstractValuesImpl::TAbstractEmpty#f AbstractValuesImpl::TAbstractNumString#f AbstractValuesImpl::TAbstractOtherString#f AbstractValuesImpl::TAbstractRegExp#f AbstractValuesImpl::TAbstractDate#f AbstractValuesImpl::TAbstractArguments#ff AbstractValuesImpl::TAbstractGlobalObject#f AbstractValuesImpl::TAbstractModuleObject#ff AbstractValuesImpl::TAbstractExportsObject#ff AbstractValuesImpl::TAbstractObjectLiteral#ff AbstractValuesImpl::TAbstractFunction#ff AbstractValuesImpl::TAbstractClass#ff AbstractValuesImpl::TAbstractInstance#ff AbstractValuesImpl::TAbstractOtherObject#f AbstractValuesImpl::TIndefiniteFunctionOrClass#ff AbstractValuesImpl::TIndefiniteObject#ff AbstractValuesImpl::TIndefiniteAbstractValue#ff AbstractValuesImpl::TCustomAbstractValue#ff AbstractValuesImpl::TCustomAbstractValueFromDefinition#ff AbstractValuesImpl::TAbstractValue#f,console_getStmtAndSets.ql,8,NotRun,0.007,0,497
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-AbstractValuesImpl::TAbstractNull#f AbstractValuesImpl::TAbstractUndefined#f AbstractValuesImpl::TAbstractBoolean#ff AbstractValuesImpl::TAbstractZero#f AbstractValuesImpl::TAbstractNonZero#f AbstractValuesImpl::TAbstractEmpty#f AbstractValuesImpl::TAbstractNumString#f AbstractValuesImpl::TAbstractOtherString#f AbstractValuesImpl::TAbstractRegExp#f AbstractValuesImpl::TAbstractDate#f AbstractValuesImpl::TAbstractArguments#ff AbstractValuesImpl::TAbstractGlobalObject#f AbstractValuesImpl::TAbstractModuleObject#ff AbstractValuesImpl::TAbstractExportsObject#ff AbstractValuesImpl::TAbstractObjectLiteral#ff AbstractValuesImpl::TAbstractFunction#ff AbstractValuesImpl::TAbstractClass#ff AbstractValuesImpl::TAbstractInstance#ff AbstractValuesImpl::TAbstractOtherObject#f AbstractValuesImpl::TIndefiniteFunctionOrClass#ff AbstractValuesImpl::TIndefiniteObject#ff AbstractValuesImpl::TIndefiniteAbstractValue#ff AbstractValuesImpl::TCustomAbstractValue#ff AbstractValuesImpl::TCustomAbstractValueFromDefinition#ff AbstractValuesImpl::TAbstractValue#f (console_getStmtAndSets.ql),0.007,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,DataFlow::DataFlow::TValueNode#ff DataFlow::DataFlow::TSsaDefNode#ff DataFlow::DataFlow::TPropNode#ff DataFlow::DataFlow::TRestPatternNode#fff DataFlow::DataFlow::TDestructuringPatternNode#ff DataFlow::DataFlow::TElementPatternNode#fff DataFlow::DataFlow::TElementNode#fff DataFlow::DataFlow::TReflectiveCallNode#fff DataFlow::DataFlow::TThisNode#ff DataFlow::DataFlow::TUnusedParameterNode#ff DataFlow::DataFlow::TDestructuredModuleImportNode#ff DataFlow::DataFlow::THtmlAttributeNode#ff DataFlow::DataFlow::TExceptionalFunctionReturnNode#ff DataFlow::DataFlow::TExceptionalInvocationReturnNode#ff DataFlow::DataFlow::TGlobalAccessPathRoot#f DataFlow::DataFlow::TNode#f,console_getStmtAndSets.ql,9,NotRun,0.005,0,503
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-DataFlow::DataFlow::TValueNode#ff DataFlow::DataFlow::TSsaDefNode#ff DataFlow::DataFlow::TPropNode#ff DataFlow::DataFlow::TRestPatternNode#fff DataFlow::DataFlow::TDestructuringPatternNode#ff DataFlow::DataFlow::TElementPatternNode#fff DataFlow::DataFlow::TElementNode#fff DataFlow::DataFlow::TReflectiveCallNode#fff DataFlow::DataFlow::TThisNode#ff DataFlow::DataFlow::TUnusedParameterNode#ff DataFlow::DataFlow::TDestructuredModuleImportNode#ff DataFlow::DataFlow::THtmlAttributeNode#ff DataFlow::DataFlow::TExceptionalFunctionReturnNode#ff DataFlow::DataFlow::TExceptionalInvocationReturnNode#ff DataFlow::DataFlow::TGlobalAccessPathRoot#f DataFlow::DataFlow::TNode#f (console_getStmtAndSets.ql),0.005,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,NodeJS::Require#f,console_getStmtAndSets.ql,10,NotRun,0,0,504
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-NodeJS::Require#f (console_getStmtAndSets.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,DataFlow::DataFlow::localFlowStep#ff Sources::SourceNode::flowsTo_dispred#ff Sources::SourceNode::Range#class#f,console_getStmtAndSets.ql,11,NotRun,0.002,0,507
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-DataFlow::DataFlow::localFlowStep#ff Sources::SourceNode::flowsTo_dispred#ff Sources::SourceNode::Range#class#f (console_getStmtAndSets.ql),0.002,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,DataFlow::DataFlow::Node::getImmediatePredecessor_dispred#ff,console_getStmtAndSets.ql,12,NotRun,0,0,508
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-DataFlow::DataFlow::Node::getImmediatePredecessor_dispred#ff (console_getStmtAndSets.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,GlobalAccessPaths::AccessPath::fromReference#fff,console_getStmtAndSets.ql,13,NotRun,0.001,0,510
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-GlobalAccessPaths::AccessPath::fromReference#fff (console_getStmtAndSets.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,GlobalAccessPaths::AccessPath::fromRhs#fff,console_getStmtAndSets.ql,14,NotRun,0.001,0,511
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-GlobalAccessPaths::AccessPath::fromRhs#fff (console_getStmtAndSets.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,TypeInference::AnalyzedNode::getALocalValue_dispred#ff,console_getStmtAndSets.ql,15,NotRun,0.003,0,515
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-TypeInference::AnalyzedNode::getALocalValue_dispred#ff (console_getStmtAndSets.ql),0.003,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,TypeInference::AnalyzedNode::getAValue_dispred#ff,console_getStmtAndSets.ql,16,NotRun,0.003,0,519
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-TypeInference::AnalyzedNode::getAValue_dispred#ff (console_getStmtAndSets.ql),0.003,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,JSDoc::JSDocNamedTypeExpr::resolvedName_dispred#ff,console_getStmtAndSets.ql,17,NotRun,0,0,520
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-JSDoc::JSDocNamedTypeExpr::resolvedName_dispred#ff (console_getStmtAndSets.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,TypeTracking::TypeTracker::append_dispred#fff,console_getStmtAndSets.ql,18,NotRun,0.001,0,521
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-TypeTracking::TypeTracker::append_dispred#fff (console_getStmtAndSets.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] CSV_IMB_QUERIES: Stage,CallGraphs::CallGraph::getAFunctionReference#fff Nodes::ClassNode::getAClassReference_dispred#ff FlowSteps::CachedSteps::captures#fff FlowSteps::CachedSteps::exploratoryBoundInvokeStep#ff FlowSteps::CachedSteps::returnStep#ff FlowSteps::CachedSteps::globalFlowStep#ff FlowSteps::CachedSteps::basicStoreStep#fff FlowSteps::CachedSteps::basicLoadStep#fff FlowSteps::CachedSteps::callsBound#fff FlowSteps::CachedSteps::calls#ff FlowSteps::CachedSteps::argumentPassing#ffff FlowSteps::CachedSteps::callStep#ff FlowSteps::CachedSteps::callback#ff FlowSteps::CachedSteps::returnedPropWrite#ffff FlowSteps::CachedSteps::receiverPropWrite#fff FlowSteps::CachedSteps::propertyFlowStep#ff TypeTracking::StepSummary::step#fff CallGraphs::CallGraph::isIndefiniteGlobal#f CallGraphs::CallGraph::getAFunctionValue#ff CallGraphs::CallGraph::getABoundFunctionReference#ffff CallGraphs::CallGraph::getACallee#fff,console_getStmtAndSets.ql,19,NotRun,0.006,0,528
+[2020-03-18 15:50:53] CSV_CACHE_DIFF: NotRun-CallGraphs::CallGraph::getAFunctionReference#fff Nodes::ClassNode::getAClassReference_dispred#ff FlowSteps::CachedSteps::captures#fff FlowSteps::CachedSteps::exploratoryBoundInvokeStep#ff FlowSteps::CachedSteps::returnStep#ff FlowSteps::CachedSteps::globalFlowStep#ff FlowSteps::CachedSteps::basicStoreStep#fff FlowSteps::CachedSteps::basicLoadStep#fff FlowSteps::CachedSteps::callsBound#fff FlowSteps::CachedSteps::calls#ff FlowSteps::CachedSteps::argumentPassing#ffff FlowSteps::CachedSteps::callStep#ff FlowSteps::CachedSteps::callback#ff FlowSteps::CachedSteps::returnedPropWrite#ffff FlowSteps::CachedSteps::receiverPropWrite#fff FlowSteps::CachedSteps::propertyFlowStep#ff TypeTracking::StepSummary::step#fff CallGraphs::CallGraph::isIndefiniteGlobal#f CallGraphs::CallGraph::getAFunctionValue#ff CallGraphs::CallGraph::getABoundFunctionReference#ffff CallGraphs::CallGraph::getACallee#fff (console_getStmtAndSets.ql),0.006,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 15:50:53] (0s) Prepared IMB program for execution: took 0ms
+[2020-03-18 15:50:53] (0s) Beginning execution of program...
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation locations_default with 354422 rows and 6 columns.
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation files with 404 rows and 5 columns.
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation hasLocation with 439344 rows and 2 columns.
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation typeexprs with 3046 rows and 5 columns.
+[2020-03-18 15:50:53] (0s) Starting to evaluate predicate typeexprs_0#antijoin_rhs/1@c0e2bb
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation typeexprs_0#antijoin_rhs with 3046 rows and 1 columns.
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation properties with 4339 rows and 5 columns.
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation exprs with 121399 rows and 5 columns.
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation stmts with 24676 rows and 5 columns.
+[2020-03-18 15:50:53] (0s) Starting to evaluate predicate stmts_0#antijoin_rhs/1@8b19d6
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation stmts_0#antijoin_rhs with 24676 rows and 1 columns.
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation toplevels with 395 rows and 2 columns.
+[2020-03-18 15:50:53] (0s) Starting to evaluate predicate AST::ASTNode#class#b/1@c55a1c
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation AST::ASTNode#class#b with 153855 rows and 1 columns.
+[2020-03-18 15:50:53] (0s) Starting to evaluate predicate AST::ASTNode::getLocation_dispred#bf/2@2abe72
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation AST::ASTNode::getLocation_dispred#bf with 153855 rows and 2 columns.
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation enclosingStmt with 113456 rows and 2 columns.
+[2020-03-18 15:50:53] (0s) Starting to evaluate predicate exprs_10#join_rhs/2@265842
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation exprs_10#join_rhs with 121399 rows and 2 columns.
+[2020-03-18 15:50:53] (0s) Starting to evaluate predicate Expr::ExprOrType_not_ArrowFunctionExpr_FunctionExpr_TypeExpr#f#antijoin_rhs#1/1@e46852
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation Expr::ExprOrType_not_ArrowFunctionExpr_FunctionExpr_TypeExpr#f#antijoin_rhs#1 with 1575 rows and 1 columns.
+[2020-03-18 15:50:53] (0s) Starting to evaluate predicate Expr::ExprOrType_not_ArrowFunctionExpr_FunctionExpr_TypeExpr#f#antijoin_rhs/1@3db8fb
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation Expr::ExprOrType_not_ArrowFunctionExpr_FunctionExpr_TypeExpr#f#antijoin_rhs with 3450 rows and 1 columns.
+[2020-03-18 15:50:53] (0s) Starting to evaluate predicate Expr::ExprOrType#class#f/1@ec3f76
+[2020-03-18 15:50:53] (0s)  >>> Wrote relation Expr::ExprOrType#class#f with 124445 rows and 1 columns.
+[2020-03-18 15:50:53] (0s) Starting to evaluate predicate Expr::ExprOrType_not_ArrowFunctionExpr_FunctionExpr_TypeExpr#f/1@338c1b
+[2020-03-18 15:50:53] (1s)  >>> Wrote relation Expr::ExprOrType_not_ArrowFunctionExpr_FunctionExpr_TypeExpr#f with 116374 rows and 1 columns.
+[2020-03-18 15:50:53] (1s) Starting to evaluate predicate Expr::ExprOrType::getEnclosingStmt_dispred#ff/2@c6eda2
+[2020-03-18 15:50:53] (1s)  >>> Wrote relation Expr::ExprOrType::getEnclosingStmt_dispred#ff with 111598 rows and 2 columns.
+[2020-03-18 15:50:53] (1s) Starting to evaluate predicate Stmt::Stmt::nestedIn#ff#join_rhs/2@643738
+[2020-03-18 15:50:53] (1s)  >>> Wrote relation Stmt::Stmt::nestedIn#ff#join_rhs with 10863 rows and 2 columns.
+[2020-03-18 15:50:53] (1s) Starting to evaluate predicate stmts_20#join_rhs/2@e20e87
+[2020-03-18 15:50:53] (1s)  >>> Wrote relation stmts_20#join_rhs with 24676 rows and 2 columns.
+[2020-03-18 15:50:53] (1s) Starting to evaluate predicate Stmt::Stmt::getParentStmt_dispred#ff/2@ce33b9
+[2020-03-18 15:50:53] (1s)  >>> Wrote relation Stmt::Stmt::getParentStmt_dispred#ff with 8219 rows and 2 columns.
+[2020-03-18 15:50:53] (1s) Starting to evaluate predicate #Stmt::Stmt::getParentStmt_dispred#ffPlus/2@570510 = HOP fastTC(8219)
+[2020-03-18 15:50:53] (1s)  >>> Relation #Stmt::Stmt::getParentStmt_dispred#ffPlus: 12758 rows using 0 MB
+[2020-03-18 15:50:53] (1s) Starting to evaluate predicate Stmt::Stmt::nestedIn#ff#cur_delta/2[1]@8daa09 (iteration 1)
+[2020-03-18 15:50:53] (1s) 			 - Stmt::Stmt::nestedIn#ff_delta has 12758 rows (order for disjuncts: delta=<standard>).
+[2020-03-18 15:50:53] (1s) Starting to evaluate predicate Stmt::Stmt::nestedIn#ff#cur_delta/2[2]@3819e2 (iteration 2)
+[2020-03-18 15:50:53] (1s) 			 - Stmt::Stmt::nestedIn#ff_delta has 7372 rows (order for disjuncts: delta=10000).
+[2020-03-18 15:50:53] (1s) Starting to evaluate predicate Stmt::Stmt::nestedIn#ff#cur_delta/2[3]@0027e7 (iteration 3)
+[2020-03-18 15:50:53] (1s) 			 - Stmt::Stmt::nestedIn#ff_delta has 2904 rows (order for disjuncts: delta=10000).
+[2020-03-18 15:50:53] (1s) Starting to evaluate predicate Stmt::Stmt::nestedIn#ff#cur_delta/2[4]@009ab4 (iteration 4)
+[2020-03-18 15:50:53] (1s) 			 - Stmt::Stmt::nestedIn#ff_delta has 375 rows (order for disjuncts: delta=1000).
+[2020-03-18 15:50:53] (1s) Starting to evaluate predicate Stmt::Stmt::nestedIn#ff#cur_delta/2[5]@3b2a55 (iteration 5)
+[2020-03-18 15:50:53] (1s) 			 - Stmt::Stmt::nestedIn#ff_delta has 38 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:53] (1s) Starting to evaluate predicate Stmt::Stmt::nestedIn#ff#cur_delta/2[6]@cf79cb (iteration 6)
+[2020-03-18 15:50:53] (1s) Empty delta for Stmt::Stmt::nestedIn#ff_delta (order for disjuncts: delta=100).
+[2020-03-18 15:50:53] (1s) Accumulating deltas
+[2020-03-18 15:50:53] (1s)  >>> Wrote relation Stmt::Stmt::nestedIn#ff with 23447 rows and 2 columns.
+[2020-03-18 15:50:53] (1s) Starting to evaluate predicate stmts_10#join_rhs/2@3adef4
+[2020-03-18 15:50:53] (1s)  >>> Wrote relation stmts_10#join_rhs with 24676 rows and 2 columns.
+[2020-03-18 15:50:53] (1s) Starting to evaluate predicate Functions::Function#class#f/1@a24c9b
+[2020-03-18 15:50:53] (1s)  >>> Wrote relation Functions::Function#class#f with 5962 rows and 1 columns.
+[2020-03-18 15:50:53] (1s) Starting to evaluate predicate DataFlow::DataFlow::Node::asExpr_dispred#ff/2@b85bc7
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation DataFlow::DataFlow::Node::asExpr_dispred#ff with 121399 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::InvokeExpr#class#f/1@518887
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::InvokeExpr#class#f with 7225 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate DataFlow::DataFlow::Impl::ExplicitInvokeNode#class#ff/2@2c357c
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation DataFlow::DataFlow::Impl::ExplicitInvokeNode#class#ff with 7225 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate exprs_230#join_rhs/3@f7a3ae
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation exprs_230#join_rhs with 121399 rows and 3 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::InvokeExpr::getCallee_dispred#ff/2@28dbf8
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::InvokeExpr::getCallee_dispred#ff with 7225 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::InvokeExpr::getCallee_dispred#ff_10#join_rhs/2@035eba
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::InvokeExpr::getCallee_dispred#ff_10#join_rhs with 7225 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::PropAccess#class#f/1@0bce47
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::PropAccess#class#f with 26415 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::MethodCallExpr#class#f#join_rhs/2@f718ec
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::MethodCallExpr#class#f#join_rhs with 7010 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::ParExpr::getExpression_dispred#ff/2@3759e5
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::ParExpr::getExpression_dispred#ff with 531 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::ParExpr::getExpression_dispred#ff_10#join_rhs/2@d6d2a1
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::ParExpr::getExpression_dispred#ff_10#join_rhs with 531 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::Expr::stripParens_dispred#bf#antijoin_rhs/1@bb1502
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::Expr::stripParens_dispred#bf#antijoin_rhs with 531 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::Expr::stripParens_dispred#bf#cur_delta/2[1]@f403c0 (iteration 1)
+[2020-03-18 15:50:54] (1s) Empty delta for Expr::Expr::stripParens_dispred#bf_delta (order for disjuncts: delta=<standard>).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::MethodCallExpr#class#f#cur_delta/1[1]@122156 (iteration 1)
+[2020-03-18 15:50:54] (1s) Empty delta for Expr::MethodCallExpr#class#f_delta (order for disjuncts: delta=<standard>).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate m#Expr::Expr::stripParens_dispred#bf#cur_delta/1[1]@f90235 (iteration 1)
+[2020-03-18 15:50:54] (1s) 			 - m#Expr::Expr::stripParens_dispred#bf_delta has 7010 rows (order for disjuncts: delta=<standard>).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::Expr::stripParens_dispred#bf#cur_delta/2[2]@39b433 (iteration 2)
+[2020-03-18 15:50:54] (1s) 			 - Expr::Expr::stripParens_dispred#bf_delta has 7010 rows (order for disjuncts: delta=10000).
+[2020-03-18 15:50:54] (1s) Empty delta for Expr::MethodCallExpr#class#f_delta (order for disjuncts: delta=<standard>).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate m#Expr::Expr::stripParens_dispred#bf#cur_delta/1[2]@129a8d (iteration 2)
+[2020-03-18 15:50:54] (1s) Empty delta for m#Expr::Expr::stripParens_dispred#bf_delta (order for disjuncts: delta=10000).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::Expr::stripParens_dispred#bf#cur_delta/2[3]@157629 (iteration 3)
+[2020-03-18 15:50:54] (1s) Empty delta for Expr::Expr::stripParens_dispred#bf_delta (order for disjuncts: delta=10000).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::MethodCallExpr#class#f#cur_delta/1[3]@0dd795 (iteration 3)
+[2020-03-18 15:50:54] (1s) 			 - Expr::MethodCallExpr#class#f_delta has 3893 rows (order for disjuncts: delta=10000).
+[2020-03-18 15:50:54] (1s) Empty delta for m#Expr::Expr::stripParens_dispred#bf_delta (order for disjuncts: delta=10000).
+[2020-03-18 15:50:54] (1s) Empty delta for Expr::Expr::stripParens_dispred#bf_delta (order for disjuncts: delta=10000).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::MethodCallExpr#class#f#cur_delta/1[4]@1b3e1a (iteration 4)
+[2020-03-18 15:50:54] (1s) Empty delta for Expr::MethodCallExpr#class#f_delta (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate m#Expr::Expr::stripParens_dispred#bf#cur_delta/1[4]@0812a0 (iteration 4)
+[2020-03-18 15:50:54] (1s) Empty delta for m#Expr::Expr::stripParens_dispred#bf_delta (order for disjuncts: delta=1000).
+[2020-03-18 15:50:54] (1s) Accumulating deltas
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::Expr::stripParens_dispred#bf with 7010 rows and 2 columns.
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::MethodCallExpr#class#f with 3893 rows and 1 columns.
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation m#Expr::Expr::stripParens_dispred#bf with 7010 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate DataFlow::DataFlow::Impl::ExplicitMethodCallNode#class#ff/2@f343ec
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation DataFlow::DataFlow::Impl::ExplicitMethodCallNode#class#ff with 3893 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate DataFlow::DataFlow::Impl::CallNodeDef#class#f/1@e011bc
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation DataFlow::DataFlow::Impl::CallNodeDef#class#f with 7010 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate DataFlow::DataFlow::Impl::InvokeNodeDef#class#f/1@524980
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation DataFlow::DataFlow::Impl::InvokeNodeDef#class#f with 7225 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Nodes::InvokeNode#ff/2@19f877
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Nodes::InvokeNode#ff with 7225 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate DataFlow::DataFlow::Impl::ExplicitInvokeNode#class#ff_10#join_rhs/2@7d18d3
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation DataFlow::DataFlow::Impl::ExplicitInvokeNode#class#ff_10#join_rhs with 7225 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::InvokeExpr::getArgument_dispred#fff/3@5d1dc4
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::InvokeExpr::getArgument_dispred#fff with 7310 rows and 3 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate DataFlow::DataFlow::Impl::InvokeNodeDef::getAnArgument_dispred#fb#antijoin_rhs/1@577bd8
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation DataFlow::DataFlow::Impl::InvokeNodeDef::getAnArgument_dispred#fb#antijoin_rhs with 93 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate DataFlow::DataFlow::Impl::InvokeNodeDef::getAnArgument_dispred#fb/2@0cf1d0
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation DataFlow::DataFlow::Impl::InvokeNodeDef::getAnArgument_dispred#fb with 7283 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Nodes::InvokeNode::getAnArgument_dispred#fb/2@c67ace
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Nodes::InvokeNode::getAnArgument_dispred#fb with 7283 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Nodes::InvokeNode::getAnArgument_dispred#fb_10#join_rhs/2@291ed0
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Nodes::InvokeNode::getAnArgument_dispred#fb_10#join_rhs with 7283 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Nodes::FunctionNode::getFunction_dispred#ff/2@f74aab
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Nodes::FunctionNode::getFunction_dispred#ff with 5962 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate CallGraphs::CallGraph::getACallee#fff_120#join_rhs/3@cc76a0
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation CallGraphs::CallGraph::getACallee#fff_120#join_rhs with 7563 rows and 3 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Nodes::InvokeNode::getACallee_dispred#2#ff/2@6ee47a
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Nodes::InvokeNode::getACallee_dispred#2#ff with 3199 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Nodes::InvokeNode::getACallee_dispred#2#ff_10#join_rhs/2@4f967d
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Nodes::InvokeNode::getACallee_dispred#2#ff_10#join_rhs with 3199 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate AST::ASTNode::getChild_dispred#fff/3@ac5288
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation AST::ASTNode::getChild_dispred#fff with 146075 rows and 3 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Functions::Function::getBody_dispred#ff/2@916ae9
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Functions::Function::getBody_dispred#ff with 5944 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Functions::Function::getBody_dispred#ff_10#join_rhs/2@fbfa4d
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Functions::Function::getBody_dispred#ff_10#join_rhs with 5944 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Functions::Function::getABodyStmt_dispred#ff/2@c94981
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Functions::Function::getABodyStmt_dispred#ff with 5596 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Functions::Function::getABodyStmt_dispred#ff_10#join_rhs/2@d8bd85
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Functions::Function::getABodyStmt_dispred#ff_10#join_rhs with 5596 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Nodes::MethodCallNode#class#ff/2@cc0ff0
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Nodes::MethodCallNode#class#ff with 3893 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Nodes::CallNode#class#bf/2@52d283
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Nodes::CallNode#class#bf with 3893 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::MethodCallExpr::getMethodRef_dispred#ff/2@398961
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::MethodCallExpr::getMethodRef_dispred#ff with 3893 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate DataFlow::DataFlow::Impl::CallNodeDef::getReceiver_dispred#ff/2@805a96
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation DataFlow::DataFlow::Impl::CallNodeDef::getReceiver_dispred#ff with 3893 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate TypeScript::TypeAssertion#class#f/1@972b9c
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation TypeScript::TypeAssertion#class#f with 509 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate exprs_032#join_rhs/3@6d0b98
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation exprs_032#join_rhs with 121399 rows and 3 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::SeqExpr::getOperand_dispred#fff#antijoin_rhs/1@5410b8
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::SeqExpr::getOperand_dispred#fff#antijoin_rhs with 0 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Inferred that non-rec relation Expr::SeqExpr::getLastOperand_dispred#bf/2 is empty
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::SeqExpr::getLastOperand_dispred#bf with 0 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Inferred that non-rec relation Expr::SeqExpr::getLastOperand_dispred#bf_10#join_rhs/2 is empty
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::SeqExpr::getLastOperand_dispred#bf_10#join_rhs with 0 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate m#Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs/1@65eb3d
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation m#Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs with 4753 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate m#Expr::ExprOrType::getUnderlyingValue_dispred#bf#cur_delta/1[1]@ab2305 (iteration 1)
+[2020-03-18 15:50:54] (1s) 			 - m#Expr::ExprOrType::getUnderlyingValue_dispred#bf_delta has 7225 rows (order for disjuncts: delta=<standard>).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate m#Expr::ExprOrType::getUnderlyingValue_dispred#bf#cur_delta/1[2]@a8f781 (iteration 2)
+[2020-03-18 15:50:54] (1s) Empty delta for m#Expr::ExprOrType::getUnderlyingValue_dispred#bf_delta (order for disjuncts: delta=10000).
+[2020-03-18 15:50:54] (1s) Accumulating deltas
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation m#Expr::ExprOrType::getUnderlyingValue_dispred#bf with 7225 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs#3/2@eb41ae
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs#3 with 0 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs#2/2@1e4cc1
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs#2 with 0 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Inferred that non-rec relation Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs#1/2 is empty
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs#1 with 0 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs/2@38ec38
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs with 0 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::ExprOrType_not_AssignExpr_ParExpr_SeqExpr_TypeAssertion#b/1@3c9d8e
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::ExprOrType_not_AssignExpr_ParExpr_SeqExpr_TypeAssertion#b with 7225 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::ExprOrType::getUnderlyingValue_dispred#bf#cur_delta/2[1]@d85394 (iteration 1)
+[2020-03-18 15:50:54] (1s) 			 - Expr::ExprOrType::getUnderlyingValue_dispred#bf_delta has 7225 rows (order for disjuncts: delta=<standard>).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::ExprOrType::getUnderlyingValue_dispred#bf#cur_delta/2[2]@634681 (iteration 2)
+[2020-03-18 15:50:54] (1s) Empty delta for Expr::ExprOrType::getUnderlyingValue_dispred#bf_delta (order for disjuncts: delta=10000).
+[2020-03-18 15:50:54] (1s) Accumulating deltas
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::ExprOrType::getUnderlyingValue_dispred#bf with 7225 rows and 2 columns.
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation literals with 71220 rows and 3 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate literals_20#join_rhs/2@a9f2af
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation literals_20#join_rhs with 71220 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::Literal#class#b/1@15ba84
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::Literal#class#b with 244 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate @varref#f/1@69ec91
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation @varref#f with 30593 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::Identifier#class#f/1@fb5f36
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::Identifier#class#f with 61906 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::Identifier::getName#ff/2@d5ee58
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::Identifier::getName#ff with 61906 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::Identifier::getName_dispred#ff/2@d434c8
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::Identifier::getName_dispred#ff with 61906 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::PropAccess::getPropertyName_dispred#ff/2@e49f69
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::PropAccess::getPropertyName_dispred#ff with 26286 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Expr::InvokeExpr::getCalleeName_dispred#ff/2@fe6b0f
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Expr::InvokeExpr::getCalleeName_dispred#ff with 7173 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate m#Nodes::InvokeNode::getCalleeName_dispred#fb/1@15b0d9
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation m#Nodes::InvokeNode::getCalleeName_dispred#fb with 5 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Nodes::InvokeNode::getCalleeName_dispred#fb/2@d34308
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Nodes::InvokeNode::getCalleeName_dispred#fb with 972 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::testGlobalSideEffect#f/1@575ce4
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation ReorderingUtils::testGlobalSideEffect#f with 282 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Nodes::InvokeNode::getCalleeName_dispred#fb_10#join_rhs/2@8eec51
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Nodes::InvokeNode::getCalleeName_dispred#fb_10#join_rhs with 972 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#shared/1@ee97f0
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation ReorderingUtils::argHasGlobalSideEffect#f#shared with 323 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#recursive_body/1@c18e9e
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation ReorderingUtils::stmtHasGlobalSideEffects#f#recursive_body with 322 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Nodes::FunctionNode::getFunction_dispred#ff_10#join_rhs/2@5fdf51
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Nodes::FunctionNode::getFunction_dispred#ff_10#join_rhs with 5962 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[1]@881f29 (iteration 1)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::argHasGlobalSideEffect#f_delta has 242 rows (order for disjuncts: delta=<standard>).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[1]@e1b2e2 (iteration 1)
+[2020-03-18 15:50:54] (1s) Empty delta for ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta (order for disjuncts: delta=<standard>).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[1]@bdc9d0 (iteration 1)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::stmtHasGlobalSideEffects#f_delta has 322 rows (order for disjuncts: delta=<standard>).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[2]@e9fcb0 (iteration 2)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::argHasGlobalSideEffect#f_delta has 112 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[2]@a86cd2 (iteration 2)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta has 249 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[2]@367cdf (iteration 2)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::stmtHasGlobalSideEffects#f_delta has 666 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[3]@7a8240 (iteration 3)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::argHasGlobalSideEffect#f_delta has 43 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[3]@1b561a (iteration 3)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta has 145 rows (order for disjuncts: delta=1000).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[3]@117bf1 (iteration 3)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::stmtHasGlobalSideEffects#f_delta has 138 rows (order for disjuncts: delta=1000).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[4]@a9853f (iteration 4)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::argHasGlobalSideEffect#f_delta has 3 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[4]@48f8eb (iteration 4)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta has 14 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[4]@52147f (iteration 4)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::stmtHasGlobalSideEffects#f_delta has 65 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[5]@9ba20e (iteration 5)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::argHasGlobalSideEffect#f_delta has 17 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[5]@57a856 (iteration 5)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta has 3 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[5]@c99d9a (iteration 5)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::stmtHasGlobalSideEffects#f_delta has 33 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[6]@48b4dc (iteration 6)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::argHasGlobalSideEffect#f_delta has 3 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[6]@6ad789 (iteration 6)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta has 20 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[6]@ce12b8 (iteration 6)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::stmtHasGlobalSideEffects#f_delta has 46 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[7]@9c806d (iteration 7)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::argHasGlobalSideEffect#f_delta has 17 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[7]@4bc058 (iteration 7)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta has 4 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[7]@a84179 (iteration 7)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::stmtHasGlobalSideEffects#f_delta has 30 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[8]@f93d1e (iteration 8)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::argHasGlobalSideEffect#f_delta has 4 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[8]@f6abd4 (iteration 8)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta has 16 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[8]@055940 (iteration 8)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::stmtHasGlobalSideEffects#f_delta has 40 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[9]@47ebc8 (iteration 9)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::argHasGlobalSideEffect#f_delta has 3 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[9]@334f7a (iteration 9)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta has 4 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[9]@cd5483 (iteration 9)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::stmtHasGlobalSideEffects#f_delta has 12 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[10]@2f19a7 (iteration 10)
+[2020-03-18 15:50:54] (1s) Empty delta for ReorderingUtils::argHasGlobalSideEffect#f_delta (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[10]@2e45b0 (iteration 10)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta has 3 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[10]@e7d43b (iteration 10)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::stmtHasGlobalSideEffects#f_delta has 10 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[11]@330ecb (iteration 11)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::argHasGlobalSideEffect#f_delta has 3 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[11]@5ca4dc (iteration 11)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta has 1 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[11]@6b3449 (iteration 11)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::stmtHasGlobalSideEffects#f_delta has 4 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[12]@e47465 (iteration 12)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::argHasGlobalSideEffect#f_delta has 1 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[12]@26189e (iteration 12)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta has 4 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[12]@ec2a9b (iteration 12)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::stmtHasGlobalSideEffects#f_delta has 12 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[13]@6e57b2 (iteration 13)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::argHasGlobalSideEffect#f_delta has 4 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[13]@69b01e (iteration 13)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta has 1 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[13]@23e5d7 (iteration 13)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::stmtHasGlobalSideEffects#f_delta has 5 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[14]@64f723 (iteration 14)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::argHasGlobalSideEffect#f_delta has 1 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[14]@20ee1b (iteration 14)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta has 4 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[14]@b0f7ec (iteration 14)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::stmtHasGlobalSideEffects#f_delta has 8 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[15]@8c93cd (iteration 15)
+[2020-03-18 15:50:54] (1s) Empty delta for ReorderingUtils::argHasGlobalSideEffect#f_delta (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[15]@6f5c9b (iteration 15)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta has 1 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[15]@4a1e7e (iteration 15)
+[2020-03-18 15:50:54] (1s) 			 - ReorderingUtils::stmtHasGlobalSideEffects#f_delta has 3 rows (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::argHasGlobalSideEffect#f#cur_delta/1[16]@27ecab (iteration 16)
+[2020-03-18 15:50:54] (1s) Empty delta for ReorderingUtils::argHasGlobalSideEffect#f_delta (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::fctHasGlobalSideEffectsForPkg#f#cur_delta/1[16]@0d7a6d (iteration 16)
+[2020-03-18 15:50:54] (1s) Empty delta for ReorderingUtils::fctHasGlobalSideEffectsForPkg#f_delta (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate ReorderingUtils::stmtHasGlobalSideEffects#f#cur_delta/1[16]@2cf75f (iteration 16)
+[2020-03-18 15:50:54] (1s) Empty delta for ReorderingUtils::stmtHasGlobalSideEffects#f_delta (order for disjuncts: delta=100).
+[2020-03-18 15:50:54] (1s) Accumulating deltas
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation ReorderingUtils::argHasGlobalSideEffect#f with 453 rows and 1 columns.
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation ReorderingUtils::fctHasGlobalSideEffectsForPkg#f with 469 rows and 1 columns.
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation ReorderingUtils::stmtHasGlobalSideEffects#f with 1394 rows and 1 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate #select#ff/2@a01a32
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation #select#ff with 36 rows and 2 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate #select#query#ffffffff#shared/3@f7a646
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation #select#query#ffffffff#shared with 36 rows and 3 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate #select#query#ffffffff#shared#1/4@c945e9
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation #select#query#ffffffff#shared#1 with 36 rows and 4 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate Locations::Location::hasLocationInfo_dispred#bfffff/6@f25952
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation Locations::Location::hasLocationInfo_dispred#bfffff with 36 rows and 6 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate #select#query#ffffffff#antijoin_rhs/3@09e9f8
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation #select#query#ffffffff#antijoin_rhs with 36 rows and 3 columns.
+[2020-03-18 15:50:54] (1s) Starting to evaluate predicate #select#query#ffffffff/8@13955a
+[2020-03-18 15:50:54] (1s)  >>> Wrote relation #select#query#ffffffff with 36 rows and 8 columns.
+[2020-03-18 15:50:54] (1s) Query done
+[2020-03-18 15:50:54] CSV_CACHE_DIFF: #select#query#ffffffff (console_getStmtAndSets.ql),1.138,0.694,0.178,0.151,0.078,0.026,0,0,0,0,0,0,0
+[2020-03-18 15:50:54] (1s) Sequence stamp origin is -6748248178501209167
+[2020-03-18 15:50:54] (1s) Stopped the world to sync to disk at sequence stamp o+0
+[2020-03-18 15:50:54] (1s) Starting the world again
+[2020-03-18 15:50:54] CSV_IMB_QUERIES: Query,#select#query#ffffffff,console_getStmtAndSets.ql,20,Success,1.138,36,1673
+[2020-03-18 15:50:54] Evaluation of /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql produced BQRS results
+[2020-03-18 15:50:54] [PROGRESS] execute queries> [1/1] Evaluation done (1.7s); writing results to /home/ellen/Documents/ASJProj/AsyncAnalysis/temp_swaps.bqrs.
+[2020-03-18 15:50:54] [PROGRESS] execute queries> Shutting down query evaluator.
+[2020-03-18 15:50:54] Stopped the world to close the cache at sequence stamp o+1
+[2020-03-18 15:50:54] The disk cache is freshly trimmed; leave it be.
+[2020-03-18 15:50:54] Starting the world again
+[2020-03-18 15:50:54] Terminating normally.

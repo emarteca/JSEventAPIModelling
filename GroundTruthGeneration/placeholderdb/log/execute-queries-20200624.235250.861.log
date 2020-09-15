@@ -1,0 +1,161 @@
+[2020-06-24 23:52:50] This is codeql execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --ml-model-path= --native-library-path= --warnings=show --output=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/temp.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql
+[2020-06-24 23:52:50] Creating executor with 1 threads.
+[2020-06-24 23:52:51] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql --format=json
+[2020-06-24 23:52:51] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 23:52:51] [DETAILS] resolve library-path> Found enclosing pack 'api-modelling-analysis' at /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data.
+[2020-06-24 23:52:51] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/.cache.
+[2020-06-24 23:52:51] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/qlpack.yml.
+[2020-06-24 23:52:51] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-06-24 23:52:51] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-06-24 23:52:51] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-06-24 23:52:51] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data resolved OK.
+[2020-06-24 23:52:51] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-06-24 23:52:51] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/.cache"
+                        ],
+                        "relativeName" : "api-modelling-analysis/analyse.ql"
+                      }
+[2020-06-24 23:52:51] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 23:52:51] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 23:52:54] Resolved file set for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql hashes to e7c5274de633765cf77622b5c5efe65b8cfd378d.
+[2020-06-24 23:52:54] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 23:52:54] ExternalModuleBindingPass ...
+[2020-06-24 23:53:00] ExternalModuleBindingPass time: 00:06.499
+[2020-06-24 23:53:00] QLPredicateSynthesiser ...
+[2020-06-24 23:53:01] QLPredicateSynthesiser time: 00:00.063
+[2020-06-24 23:53:01] DeclarationBindingPass ...
+[2020-06-24 23:53:01] DeclarationBindingPass time: 00:00.477
+[2020-06-24 23:53:01] Fixed point time ...
+[2020-06-24 23:53:02] Fixed point time time: 00:00.741
+[2020-06-24 23:53:02] ReferenceBindingPass ...
+[2020-06-24 23:53:02] ReferenceBindingPass time: 00:00.140
+[2020-06-24 23:53:02] EntityTypeUpdateBindingPass ...
+[2020-06-24 23:53:02] EntityTypeUpdateBindingPass time: 00:00.125
+[2020-06-24 23:53:02] ReferenceBindingCheck ...
+[2020-06-24 23:53:02] ReferenceBindingCheck time: 00:00.088
+[2020-06-24 23:53:02] PredicateBodyBindingPass ...
+[2020-06-24 23:53:03] PredicateBodyBindingPass time: 00:00.766
+[2020-06-24 23:53:03] LanguagePragmaPropagationPass ...
+[2020-06-24 23:53:03] LanguagePragmaPropagationPass time: 00:00.098
+[2020-06-24 23:53:03] Ambiguity checks ...
+[2020-06-24 23:53:03] Ambiguity checks time: 00:00.089
+[2020-06-24 23:53:03] Ql checks ...
+[2020-06-24 23:53:04] Ql checks time: 00:01.112
+[2020-06-24 23:53:07] Compilation pipeline
+[2020-06-24 23:53:08] Type Inference ...
+[2020-06-24 23:53:08] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2020-06-24 23:53:08] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-06-24 23:53:08] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:08] CSV_TYPE_HIERARCHY: 0,0,79,85
+[2020-06-24 23:53:08] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-06-24 23:53:08] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,749,3855
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,623,2259
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,7,7
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,26,26
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,17,19
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,7,10
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,12,15
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,10,13
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:09] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:53:11] Type Inference time: 00:03.507
+[2020-06-24 23:53:11] Binding Checks ...
+[2020-06-24 23:53:12] Binding Checks time: 00:00.634
+[2020-06-24 23:53:13] [WARN] execute queries> WARNING: Unused predicate incorrect (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:925,11-20)
+[2020-06-24 23:53:13] [WARN] execute queries> WARNING: Unused predicate correct (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:960,11-18)
+[2020-06-24 23:53:13] [DETAILS] execute queries> Optimizing /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 23:53:13] Processing compilation pipeline
+[2020-06-24 23:53:13] Started compiling a query
+[2020-06-24 23:53:13] Initialising compiler...
+[2020-06-24 23:53:13] 	 ... compiler initialised
+[2020-06-24 23:53:13] About to start query optimisation
+[2020-06-24 23:53:15] Compilation cache miss for 0f7bc6bfa766089954bdb809da12ec7959d67457.
+[2020-06-24 23:53:20] Stored compiled program for 0f7bc6bfa766089954bdb809da12ec7959d67457.
+[2020-06-24 23:53:21] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2020-06-24 23:53:21] CSV_COMPILATION: 1224,829,2270,2610
+[2020-06-24 23:53:21] [PROGRESS] execute queries> [1/1] Compiled /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql (30s).
+[2020-06-24 23:53:21] Of 6 predicates, 0 are used in more than one query.
+[2020-06-24 23:53:21] [PROGRESS] execute queries> Starting evaluation of api-modelling-analysis/analyse.ql.
+[2020-06-24 23:53:21] Starting evaluation of /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql
+[2020-06-24 23:53:21] (0s) Start query execution
+[2020-06-24 23:53:21] (0s) Prepared IMB program for execution: took 0ms
+[2020-06-24 23:53:21] (0s) Beginning execution of program...
+[2020-06-24 23:53:21] (0s) Starting to evaluate predicate #select#ff#join_rhs/1@a962b5
+[2020-06-24 23:53:21] (0s)  >>> Wrote relation #select#ff#join_rhs with 37922 rows and 1 columns.
+[2020-06-24 23:53:21] (0s) Starting to evaluate predicate #select#ff#join_rhs#1/2@b97042
+[2020-06-24 23:53:22] (1s)  >>> Wrote relation #select#ff#join_rhs#1 with 116636 rows and 2 columns.
+[2020-06-24 23:53:22] (1s) Starting to evaluate predicate #select#ff#join_rhs#2/1@d105f8
+[2020-06-24 23:53:22] (1s)  >>> Wrote relation #select#ff#join_rhs#2 with 21249 rows and 1 columns.
+[2020-06-24 23:53:22] (1s) Starting to evaluate predicate #select#ff/2@17e110
+[2020-06-24 23:53:23] (2s)  >>> Wrote relation #select#ff with 20674 rows and 2 columns.
+[2020-06-24 23:53:23] (2s) Starting to evaluate predicate #select#ff_01_expr_#antijoin_rhs/3@d455a7
+[2020-06-24 23:53:23] (2s)  >>> Wrote relation #select#ff_01_expr_#antijoin_rhs with 20674 rows and 3 columns.
+[2020-06-24 23:53:23] (2s) Starting to evaluate predicate #select#query#ffff/4@ea1822
+[2020-06-24 23:53:23] (2s)  >>> Wrote relation #select#query#ffff with 20674 rows and 4 columns.
+[2020-06-24 23:53:23] (2s) Query done
+[2020-06-24 23:53:23] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2020-06-24 23:53:23] CSV_CACHE_DIFF: #select#query#ffff (analyse.ql),1.813,1.465,0,0.078,0.051,0.024,0,0,0,0,0,0,0
+[2020-06-24 23:53:23] (2s) Sequence stamp origin is -6711757543375261734
+[2020-06-24 23:53:23] (2s) Stopped the world to sync to disk at sequence stamp o+0
+[2020-06-24 23:53:23] (2s) Starting the world again
+[2020-06-24 23:53:23] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2020-06-24 23:53:23] CSV_IMB_QUERIES: Query,#select#query#ffff,analyse.ql,1,Success,1.813,20674,2168
+[2020-06-24 23:53:23] Evaluation of /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql produced BQRS results
+[2020-06-24 23:53:23] [PROGRESS] execute queries> [1/1] Evaluation done (2.2s); writing results to /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/temp.bqrs.
+[2020-06-24 23:53:23] [PROGRESS] execute queries> Shutting down query evaluator.
+[2020-06-24 23:53:23] Stopped the world to close the cache at sequence stamp o+1
+[2020-06-24 23:53:23] The disk cache is freshly trimmed; leave it be.
+[2020-06-24 23:53:23] Starting the world again
+[2020-06-24 23:53:23] Terminating normally.

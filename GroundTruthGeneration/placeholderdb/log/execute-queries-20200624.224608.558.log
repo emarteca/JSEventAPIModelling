@@ -1,0 +1,50 @@
+[2020-06-24 22:46:08] This is codeql execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --ml-model-path= --native-library-path= --warnings=show --output=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/temp.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql
+[2020-06-24 22:46:08] Creating executor with 1 threads.
+[2020-06-24 22:46:08] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql --format=json
+[2020-06-24 22:46:08] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 22:46:08] [DETAILS] resolve library-path> Found enclosing pack 'api-modelling-analysis' at /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data.
+[2020-06-24 22:46:08] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/.cache.
+[2020-06-24 22:46:08] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/qlpack.yml.
+[2020-06-24 22:46:08] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-06-24 22:46:08] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-06-24 22:46:08] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-06-24 22:46:08] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data resolved OK.
+[2020-06-24 22:46:08] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-06-24 22:46:08] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/.cache"
+                        ],
+                        "relativeName" : "api-modelling-analysis/analyse.ql"
+                      }
+[2020-06-24 22:46:08] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 22:46:08] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 22:46:10] Resolved file set for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql hashes to 71c7bec7142b58853486375494ad8f281de0ff0e.
+[2020-06-24 22:46:10] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 22:46:10] ExternalModuleBindingPass ...
+[2020-06-24 22:46:13] ExternalModuleBindingPass time: 00:02.623
+[2020-06-24 22:46:13] QLPredicateSynthesiser ...
+[2020-06-24 22:46:13] QLPredicateSynthesiser time: 00:00.043
+[2020-06-24 22:46:13] DeclarationBindingPass ...
+[2020-06-24 22:46:13] DeclarationBindingPass time: 00:00.136
+[2020-06-24 22:46:13] Fixed point time ...
+[2020-06-24 22:46:13] Fixed point time time: 00:00.389
+[2020-06-24 22:46:13] ReferenceBindingPass ...
+[2020-06-24 22:46:13] ReferenceBindingPass time: 00:00.091
+[2020-06-24 22:46:13] EntityTypeUpdateBindingPass ...
+[2020-06-24 22:46:13] EntityTypeUpdateBindingPass time: 00:00.060
+[2020-06-24 22:46:13] ReferenceBindingCheck ...
+[2020-06-24 22:46:13] ReferenceBindingCheck time: 00:00.065
+[2020-06-24 22:46:13] PredicateBodyBindingPass ...
+[2020-06-24 22:46:14] PredicateBodyBindingPass time: 00:00.788
+[2020-06-24 22:46:14] LanguagePragmaPropagationPass ...
+[2020-06-24 22:46:14] LanguagePragmaPropagationPass time: 00:00.068
+[2020-06-24 22:46:14] Ambiguity checks ...
+[2020-06-24 22:46:14] Ambiguity checks time: 00:00.086
+[2020-06-24 22:46:14] Ql checks ...
+[2020-06-24 22:46:15] Ql checks time: 00:00.909

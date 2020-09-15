@@ -1,0 +1,55 @@
+[2020-09-15 15:50:50] This is codeql execute queries -J-Xmx3968M --off-heap-ram=3968 --verbosity=progress --logdir=/home/ellen/Documents/APIModellingProj/Artifact/placeholderdb/log --ml-model-path= --native-library-path= --warnings=show --output=/home/ellen/Documents/APIModellingProj/Artifact/temp.bqrs -- /home/ellen/Documents/APIModellingProj/Artifact/placeholderdb/db-javascript /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql
+[2020-09-15 15:50:50] Creating executor with 1 threads.
+[2020-09-15 15:50:50] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql --format=json
+[2020-09-15 15:50:50] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql.
+[2020-09-15 15:50:50] [DETAILS] resolve library-path> Found no enclosing pack; trying after symlink resolution with /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql.
+[2020-09-15 15:50:50] [DETAILS] resolve library-path> Found enclosing pack 'Artifact' at /home/ellen/Documents/APIModellingProj/Artifact.
+[2020-09-15 15:50:50] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/APIModellingProj/Artifact/.cache.
+[2020-09-15 15:50:50] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql.
+[2020-09-15 15:50:50] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/APIModellingProj/Artifact resolved OK.
+[2020-09-15 15:50:50] [DETAILS] resolve library-path> Found no dbscheme through dependencies.
+[2020-09-15 15:50:50] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/APIModellingProj/Artifact"
+                        ],
+                        "compilationCache" : [
+                          "/home/ellen/Documents/APIModellingProj/Artifact/.cache"
+                        ],
+                        "relativeName" : "Artifact/knownUnknown_groundTruth.ql",
+                        "possibleAdvice" : "There should probably be a qlpack.yml file declaring dependencies in /home/ellen/Documents/APIModellingProj/Artifact or an enclosing directory."
+                      }
+[2020-09-15 15:50:50] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql.
+[2020-09-15 15:50:50] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql.
+[2020-09-15 15:50:51] Resolved file set for /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql hashes to be4a2f945812c31f18f6f047e1d2fefe23b7dc6d.
+[2020-09-15 15:50:51] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql.
+[2020-09-15 15:50:52] ExternalModuleBindingPass ...
+[2020-09-15 15:50:55] ExternalModuleBindingPass time: 00:03.374
+[2020-09-15 15:50:55] QLPredicateSynthesiser ...
+[2020-09-15 15:50:55] QLPredicateSynthesiser time: 00:00.038
+[2020-09-15 15:50:55] DeclarationBindingPass ...
+[2020-09-15 15:50:55] DeclarationBindingPass time: 00:00.173
+[2020-09-15 15:50:55] Fixed point time ...
+[2020-09-15 15:50:55] Fixed point time time: 00:00.009
+[2020-09-15 15:50:55] ReferenceBindingPass ...
+[2020-09-15 15:50:55] ReferenceBindingPass time: 00:00.060
+[2020-09-15 15:50:55] EntityTypeUpdateBindingPass ...
+[2020-09-15 15:50:55] EntityTypeUpdateBindingPass time: 00:00.067
+[2020-09-15 15:50:55] ReferenceBindingCheck ...
+[2020-09-15 15:50:55] ReferenceBindingCheck time: 00:00.065
+[2020-09-15 15:50:55] PredicateBodyBindingPass ...
+[2020-09-15 15:50:56] PredicateBodyBindingPass time: 00:00.108
+[2020-09-15 15:50:56] LanguagePragmaPropagationPass ...
+[2020-09-15 15:50:56] LanguagePragmaPropagationPass time: 00:00.053
+[2020-09-15 15:50:56] Ambiguity checks ...
+[2020-09-15 15:50:56] Ambiguity checks time: 00:00.004
+[2020-09-15 15:50:56] Ql checks ...
+[2020-09-15 15:50:56] Ql checks time: 00:00.696
+[2020-09-15 15:50:56] [ERROR] execute queries> ERROR: Could not resolve module javascript. There should probably be a qlpack.yml file declaring dependencies in /home/ellen/Documents/APIModellingProj/Artifact or an enclosing directory. (/home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql:1,8-18)
+[2020-09-15 15:50:56] [ERROR] execute queries> ERROR: Could not resolve module javascript. There should probably be a qlpack.yml file declaring dependencies in /home/ellen/Documents/APIModellingProj/Artifact or an enclosing directory. (/home/ellen/Documents/APIModellingProj/Artifact/Analyze.qll:1,8-18)
+[2020-09-15 15:50:56] [ERROR] execute queries> ERROR: Could not resolve module javascript. There should probably be a qlpack.yml file declaring dependencies in /home/ellen/Documents/APIModellingProj/Artifact or an enclosing directory. (/home/ellen/Documents/APIModellingProj/Artifact/new_externalData.qll:1,8-18)
+[2020-09-15 15:50:56] Sequence stamp origin is -6681081687740069489
+[2020-09-15 15:50:56] Stopped the world to close the cache at sequence stamp o+0
+[2020-09-15 15:50:56] The disk cache is freshly trimmed; leave it be.
+[2020-09-15 15:50:56] Starting the world again
+[2020-09-15 15:50:56] Exiting with code 1

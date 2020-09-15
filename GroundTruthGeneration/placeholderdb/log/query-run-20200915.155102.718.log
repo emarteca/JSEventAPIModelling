@@ -1,0 +1,9 @@
+[2020-09-15 15:51:02] This is codeql query run --database=placeholderdb --output=temp.bqrs correct_groundTruth.ql
+[2020-09-15 15:51:02] Log file was started late.
+[2020-09-15 15:51:02] Calling plumbing command: codeql resolve ram --format=json
+[2020-09-15 15:51:02] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx3968M",
+                        "--off-heap-ram=3968"
+                      ]
+[2020-09-15 15:51:02] Spawning plumbing command: execute queries -J-Xmx3968M --off-heap-ram=3968 --verbosity=progress --logdir=/home/ellen/Documents/APIModellingProj/Artifact/placeholderdb/log --ml-model-path= --native-library-path= --warnings=show --output=/home/ellen/Documents/APIModellingProj/Artifact/temp.bqrs -- /home/ellen/Documents/APIModellingProj/Artifact/placeholderdb/db-javascript /home/ellen/Documents/APIModellingProj/Artifact/correct_groundTruth.ql

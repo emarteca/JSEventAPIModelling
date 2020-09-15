@@ -1,0 +1,58 @@
+[2020-06-24 23:40:12] This is codeql execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --ml-model-path= --native-library-path= --warnings=show --output=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/temp.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql
+[2020-06-24 23:40:12] Creating executor with 1 threads.
+[2020-06-24 23:40:12] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql --format=json
+[2020-06-24 23:40:12] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 23:40:12] [DETAILS] resolve library-path> Found enclosing pack 'api-modelling-analysis' at /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data.
+[2020-06-24 23:40:12] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/.cache.
+[2020-06-24 23:40:12] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/qlpack.yml.
+[2020-06-24 23:40:12] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-06-24 23:40:12] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-06-24 23:40:12] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-06-24 23:40:12] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data resolved OK.
+[2020-06-24 23:40:12] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-06-24 23:40:12] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/.cache"
+                        ],
+                        "relativeName" : "api-modelling-analysis/analyse.ql"
+                      }
+[2020-06-24 23:40:12] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 23:40:12] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 23:40:15] Resolved file set for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql hashes to f735e08fb273cd90b4318f88998f56541d4d0b68.
+[2020-06-24 23:40:15] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 23:40:15] ExternalModuleBindingPass ...
+[2020-06-24 23:40:21] ExternalModuleBindingPass time: 00:05.958
+[2020-06-24 23:40:21] QLPredicateSynthesiser ...
+[2020-06-24 23:40:21] QLPredicateSynthesiser time: 00:00.082
+[2020-06-24 23:40:21] DeclarationBindingPass ...
+[2020-06-24 23:40:22] DeclarationBindingPass time: 00:00.387
+[2020-06-24 23:40:22] Fixed point time ...
+[2020-06-24 23:40:22] Fixed point time time: 00:00.347
+[2020-06-24 23:40:22] ReferenceBindingPass ...
+[2020-06-24 23:40:22] ReferenceBindingPass time: 00:00.316
+[2020-06-24 23:40:22] EntityTypeUpdateBindingPass ...
+[2020-06-24 23:40:22] EntityTypeUpdateBindingPass time: 00:00.128
+[2020-06-24 23:40:22] ReferenceBindingCheck ...
+[2020-06-24 23:40:23] ReferenceBindingCheck time: 00:00.093
+[2020-06-24 23:40:23] PredicateBodyBindingPass ...
+[2020-06-24 23:40:23] PredicateBodyBindingPass time: 00:00.816
+[2020-06-24 23:40:23] LanguagePragmaPropagationPass ...
+[2020-06-24 23:40:23] LanguagePragmaPropagationPass time: 00:00.080
+[2020-06-24 23:40:23] Ambiguity checks ...
+[2020-06-24 23:40:24] Ambiguity checks time: 00:00.091
+[2020-06-24 23:40:24] Ql checks ...
+[2020-06-24 23:40:25] Ql checks time: 00:01.217
+[2020-06-24 23:40:25] [ERROR] execute queries> ERROR: 'bindingset' is incompatible with pragma 'noinline' (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:251,1-23)
+[2020-06-24 23:40:25] [WARN] execute queries> WARNING: Unused predicate incorrect (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:925,11-20)
+[2020-06-24 23:40:25] [WARN] execute queries> WARNING: Unused predicate knownUnknown (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:973,11-23)
+[2020-06-24 23:40:25] Sequence stamp origin is -6711760801796421853
+[2020-06-24 23:40:25] Stopped the world to close the cache at sequence stamp o+0
+[2020-06-24 23:40:25] The disk cache is freshly trimmed; leave it be.
+[2020-06-24 23:40:25] Starting the world again
+[2020-06-24 23:40:25] Exiting with code 1

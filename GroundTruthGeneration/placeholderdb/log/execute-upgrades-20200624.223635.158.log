@@ -1,0 +1,15 @@
+[2020-06-24 22:36:35] This is codeql execute upgrades -J-Xmx3968M --off-heap-ram=3968 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --ml-model-path=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data --native-library-path=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/codeql_home/ql/javascript/upgrades/03c078a7e6eec294f1457b3d20f9fec4427cb4af
+[2020-06-24 22:36:35] [PROGRESS] execute upgrades> Will apply 1 upgrade scripts.
+[2020-06-24 22:36:35] Creating executor with 1 threads.
+[2020-06-24 22:36:35] [SPAMMIER] execute upgrades> Recursing into /home/ellen/codeql_home.
+[2020-06-24 22:36:35] [SPAMMIER] execute upgrades> Recursing into /home/ellen/codeql_home/ql.
+[2020-06-24 22:36:35] [SPAMMIER] execute upgrades> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-06-24 22:36:35] [DETAILS] execute upgrades> Dbscheme is now 03c078a7e6eec294f1457b3d20f9fec4427cb4af.
+[2020-06-24 22:36:35] [SPAMMY] execute upgrades> Reading upgrade specification from /home/ellen/codeql_home/ql/javascript/upgrades/03c078a7e6eec294f1457b3d20f9fec4427cb4af.
+[2020-06-24 22:36:35] [PROGRESS] execute upgrades> [1/1] Applying: add @node_in_stmt_container type.
+[2020-06-24 22:36:35] [SPAMMY] execute upgrades> Compiling upgrade script /home/ellen/codeql_home/ql/javascript/upgrades/03c078a7e6eec294f1457b3d20f9fec4427cb4af.
+[2020-06-24 22:36:35] [SPAMMY] execute upgrades> Executing 0 instructions in /home/ellen/codeql_home/ql/javascript/upgrades/03c078a7e6eec294f1457b3d20f9fec4427cb4af.
+[2020-06-24 22:36:35] 	-> Cleaning up...
+[2020-06-24 22:36:35] 	-> Upgrade completed.
+[2020-06-24 22:36:35] [DETAILS] execute upgrades> Final dbscheme is 2dc7a0389827d235763a3748aba73c2d4a677b15.
+[2020-06-24 22:36:35] Terminating normally.

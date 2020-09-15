@@ -1,0 +1,12 @@
+[2020-03-18 10:58:31] This is codeql execute upgrades -J-Xmx3968M --off-heap-ram=3968 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/codeql_home/ql/javascript/upgrades/dad09eeeff5cf8c9c2b674d5053c63ab44e091df
+[2020-03-18 10:58:31] [PROGRESS] execute upgrades> Will apply 1 upgrade scripts.
+[2020-03-18 10:58:31] Creating executor with 1 threads.
+[2020-03-18 10:58:31] [DETAILS] execute upgrades> Dbscheme is now dad09eeeff5cf8c9c2b674d5053c63ab44e091df.
+[2020-03-18 10:58:31] [SPAMMY] execute upgrades> Reading upgrade specification from /home/ellen/codeql_home/ql/javascript/upgrades/dad09eeeff5cf8c9c2b674d5053c63ab44e091df.
+[2020-03-18 10:58:31] [PROGRESS] execute upgrades> [1/1] Applying: add support for TypeScript 3.8.
+[2020-03-18 10:58:31] [SPAMMY] execute upgrades> Compiling upgrade script /home/ellen/codeql_home/ql/javascript/upgrades/dad09eeeff5cf8c9c2b674d5053c63ab44e091df.
+[2020-03-18 10:58:31] [SPAMMY] execute upgrades> Executing 0 instructions in /home/ellen/codeql_home/ql/javascript/upgrades/dad09eeeff5cf8c9c2b674d5053c63ab44e091df.
+[2020-03-18 10:58:31] 	-> Cleaning up...
+[2020-03-18 10:58:31] 	-> Upgrade completed.
+[2020-03-18 10:58:31] [DETAILS] execute upgrades> Final dbscheme is 03c078a7e6eec294f1457b3d20f9fec4427cb4af.
+[2020-03-18 10:58:31] Terminating normally.

@@ -1,0 +1,824 @@
+[2020-03-18 17:25:28] This is codeql execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --warnings=show --output=/home/ellen/Documents/ASJProj/AsyncAnalysis/temp_swaps.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql
+[2020-03-18 17:25:28] Creating executor with 1 threads.
+[2020-03-18 17:25:29] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql --format=json
+[2020-03-18 17:25:29] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 17:25:29] [DETAILS] resolve library-path> Found enclosing pack 'await-reordering-analysis' at /home/ellen/Documents/ASJProj/AsyncAnalysis.
+[2020-03-18 17:25:29] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/ASJProj/AsyncAnalysis/.cache.
+[2020-03-18 17:25:29] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/ASJProj/AsyncAnalysis/qlpack.yml.
+[2020-03-18 17:25:29] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-03-18 17:25:29] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-03-18 17:25:29] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-03-18 17:25:29] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/ASJProj/AsyncAnalysis resolved OK.
+[2020-03-18 17:25:29] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-03-18 17:25:29] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis/.cache"
+                        ],
+                        "relativeName" : "await-reordering-analysis/console_getStmtAndSets.ql"
+                      }
+[2020-03-18 17:25:29] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 17:25:29] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 17:25:29] Resolved file set for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql hashes to 5aed0a9f82725c186b16eb913d02b1be0ca86e26.
+[2020-03-18 17:25:29] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 17:25:29] ExternalModuleBindingPass ...
+[2020-03-18 17:25:30] ExternalModuleBindingPass time: 00:00.534
+[2020-03-18 17:25:30] QLPredicateSynthesiser ...
+[2020-03-18 17:25:30] QLPredicateSynthesiser time: 00:00.028
+[2020-03-18 17:25:30] DeclarationBindingPass ...
+[2020-03-18 17:25:30] DeclarationBindingPass time: 00:00.053
+[2020-03-18 17:25:31] ReferenceBindingCheck ...
+[2020-03-18 17:25:31] ReferenceBindingCheck time: 00:00.143
+[2020-03-18 17:25:31] PredicateBodyBindingPass ...
+[2020-03-18 17:25:32] PredicateBodyBindingPass time: 00:00.456
+[2020-03-18 17:25:32] LanguagePragmaPropagationPass ...
+[2020-03-18 17:25:32] LanguagePragmaPropagationPass time: 00:00.015
+[2020-03-18 17:25:32] Ambiguity checks ...
+[2020-03-18 17:25:32] Ambiguity checks time: 00:00.054
+[2020-03-18 17:25:32] Ql checks ...
+[2020-03-18 17:25:32] Ql checks time: 00:00.343
+[2020-03-18 17:25:33] Compilation pipeline
+[2020-03-18 17:25:33] Type Inference ...
+[2020-03-18 17:25:33] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2020-03-18 17:25:33] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-03-18 17:25:33] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:33] CSV_TYPE_HIERARCHY: 0,0,73,79
+[2020-03-18 17:25:33] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-03-18 17:25:33] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,750,3877
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,573,2043
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,26,26
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,5,5
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,17,19
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,11,15
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,12,15
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,7,10
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,10,13
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:34] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 17:25:35] Type Inference time: 00:01.937
+[2020-03-18 17:25:35] Binding Checks ...
+[2020-03-18 17:25:36] Binding Checks time: 00:00.485
+[2020-03-18 17:25:37] [DETAILS] execute queries> Optimizing /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 17:25:37] Processing compilation pipeline
+[2020-03-18 17:25:37] Started compiling a query
+[2020-03-18 17:25:37] Initialising compiler...
+[2020-03-18 17:25:37] 	 ... compiler initialised
+[2020-03-18 17:25:37] About to start query optimisation
+[2020-03-18 17:25:37] Compilation cache hit - skipping compilation.
+[2020-03-18 17:25:37] Compilation cache hit - skipping compilation.
+[2020-03-18 17:25:38] Compilation cache hit - skipping compilation.
+[2020-03-18 17:25:38] Compilation cache hit - skipping compilation.
+[2020-03-18 17:25:38] Compilation cache hit - skipping compilation.
+[2020-03-18 17:25:38] Compilation cache hit - skipping compilation.
+[2020-03-18 17:25:38] Compilation cache hit - skipping compilation.
+[2020-03-18 17:25:39] Compilation cache hit - skipping compilation.
+[2020-03-18 17:25:39] Compilation cache hit - skipping compilation.
+[2020-03-18 17:25:39] Compilation cache hit - skipping compilation.
+[2020-03-18 17:25:40] Compilation cache miss for 6a64bcd4a71dd0ce3851ce8aeee5a9f9a65b56e1.
+[2020-03-18 17:25:43] Stored compiled program for 6a64bcd4a71dd0ce3851ce8aeee5a9f9a65b56e1.
+[2020-03-18 17:25:44] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2020-03-18 17:25:44] CSV_COMPILATION: 952,2106,1059,2780
+[2020-03-18 17:25:44] [PROGRESS] execute queries> [1/1] Compiled /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql (15s).
+[2020-03-18 17:25:44] Of 2000 predicates, 0 are used in more than one query.
+[2020-03-18 17:25:44] [PROGRESS] execute queries> Starting evaluation of await-reordering-analysis/console_getStmtAndSets.ql.
+[2020-03-18 17:25:44] Starting evaluation of /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql
+[2020-03-18 17:25:44] (0s) Start query execution
+[2020-03-18 17:25:44] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2020-03-18 17:25:44] CSV_IMB_QUERIES: Stage,AST::ASTNode::getTopLevel_dispred#ff,console_getStmtAndSets.ql,1,NotRun,0.01,0,126
+[2020-03-18 17:25:44] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2020-03-18 17:25:44] CSV_CACHE_DIFF: NotRun-AST::ASTNode::getTopLevel_dispred#ff (console_getStmtAndSets.ql),0.01,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 17:25:44] CSV_IMB_QUERIES: Stage,JSDoc::Documentable::getDocumentation_dispred#ff,console_getStmtAndSets.ql,2,NotRun,0.001,0,128
+[2020-03-18 17:25:44] CSV_CACHE_DIFF: NotRun-JSDoc::Documentable::getDocumentation_dispred#ff (console_getStmtAndSets.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 17:25:44] CSV_IMB_QUERIES: Stage,BasicBlocks::Internal::bbLength#ff BasicBlocks::Internal::useAt#ffff BasicBlocks::Internal::defAt#ffff BasicBlocks::Internal::reachableBB#f BasicBlocks::Internal::bbIndex#fff,console_getStmtAndSets.ql,3,NotRun,0.003,0,132
+[2020-03-18 17:25:44] CSV_CACHE_DIFF: NotRun-BasicBlocks::Internal::bbLength#ff BasicBlocks::Internal::useAt#ffff BasicBlocks::Internal::defAt#ffff BasicBlocks::Internal::reachableBB#f BasicBlocks::Internal::bbIndex#fff (console_getStmtAndSets.ql),0.003,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 17:25:44] CSV_IMB_QUERIES: Stage,CFG::ControlFlowNode::getContainer_dispred#ff,console_getStmtAndSets.ql,4,NotRun,0.001,0,134
+[2020-03-18 17:25:44] CSV_CACHE_DIFF: NotRun-CFG::ControlFlowNode::getContainer_dispred#ff (console_getStmtAndSets.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 17:25:44] CSV_IMB_QUERIES: Stage,AST::StmtContainer::getEnclosingContainer_dispred#ff,console_getStmtAndSets.ql,5,NotRun,0.001,0,135
+[2020-03-18 17:25:44] CSV_CACHE_DIFF: NotRun-AST::StmtContainer::getEnclosingContainer_dispred#ff (console_getStmtAndSets.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 17:25:44] CSV_IMB_QUERIES: Stage,BasicBlocks::bbIDominates#ff,console_getStmtAndSets.ql,6,NotRun,0.001,0,137
+[2020-03-18 17:25:44] CSV_CACHE_DIFF: NotRun-BasicBlocks::bbIDominates#ff (console_getStmtAndSets.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 17:25:44] CSV_IMB_QUERIES: Stage,SSA::Internal::getDefReachingEndOf#fff SSA::Internal::getDefinition#ffff SSA::Internal::TCapture#ffff SSA::Internal::TImplicitInit#fff SSA::Internal::TExplicitDef#fffff SSA::Internal::TSsaDefinition#f SSA::Internal::TPhi#fff SSA::Internal::TRefinement#fffff SSA::Internal::Read#f SSA::Internal::Write#f SSA::Internal::RefKind#f,console_getStmtAndSets.ql,7,NotRun,0.006,0,144
+[2020-03-18 17:25:44] CSV_CACHE_DIFF: NotRun-SSA::Internal::getDefReachingEndOf#fff SSA::Internal::getDefinition#ffff SSA::Internal::TCapture#ffff SSA::Internal::TImplicitInit#fff SSA::Internal::TExplicitDef#fffff SSA::Internal::TSsaDefinition#f SSA::Internal::TPhi#fff SSA::Internal::TRefinement#fffff SSA::Internal::Read#f SSA::Internal::Write#f SSA::Internal::RefKind#f (console_getStmtAndSets.ql),0.006,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 17:25:44] CSV_IMB_QUERIES: Stage,DataFlow::DataFlow::TValueNode#ff DataFlow::DataFlow::TSsaDefNode#ff DataFlow::DataFlow::TPropNode#ff DataFlow::DataFlow::TRestPatternNode#fff DataFlow::DataFlow::TDestructuringPatternNode#ff DataFlow::DataFlow::TElementPatternNode#fff DataFlow::DataFlow::TElementNode#fff DataFlow::DataFlow::TReflectiveCallNode#fff DataFlow::DataFlow::TThisNode#ff DataFlow::DataFlow::TUnusedParameterNode#ff DataFlow::DataFlow::TDestructuredModuleImportNode#ff DataFlow::DataFlow::THtmlAttributeNode#ff DataFlow::DataFlow::TExceptionalFunctionReturnNode#ff DataFlow::DataFlow::TExceptionalInvocationReturnNode#ff DataFlow::DataFlow::TGlobalAccessPathRoot#f DataFlow::DataFlow::TNode#f,console_getStmtAndSets.ql,8,NotRun,0.007,0,151
+[2020-03-18 17:25:44] CSV_CACHE_DIFF: NotRun-DataFlow::DataFlow::TValueNode#ff DataFlow::DataFlow::TSsaDefNode#ff DataFlow::DataFlow::TPropNode#ff DataFlow::DataFlow::TRestPatternNode#fff DataFlow::DataFlow::TDestructuringPatternNode#ff DataFlow::DataFlow::TElementPatternNode#fff DataFlow::DataFlow::TElementNode#fff DataFlow::DataFlow::TReflectiveCallNode#fff DataFlow::DataFlow::TThisNode#ff DataFlow::DataFlow::TUnusedParameterNode#ff DataFlow::DataFlow::TDestructuredModuleImportNode#ff DataFlow::DataFlow::THtmlAttributeNode#ff DataFlow::DataFlow::TExceptionalFunctionReturnNode#ff DataFlow::DataFlow::TExceptionalInvocationReturnNode#ff DataFlow::DataFlow::TGlobalAccessPathRoot#f DataFlow::DataFlow::TNode#f (console_getStmtAndSets.ql),0.007,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 17:25:44] CSV_IMB_QUERIES: Stage,NodeJS::Require#f,console_getStmtAndSets.ql,9,NotRun,0,0,153
+[2020-03-18 17:25:44] CSV_CACHE_DIFF: NotRun-NodeJS::Require#f (console_getStmtAndSets.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 17:25:44] CSV_IMB_QUERIES: Stage,Sources::SourceNode::flowsTo_dispred#ff Sources::SourceNode::Range#class#f DataFlow::DataFlow::localFlowStep#ff,console_getStmtAndSets.ql,10,NotRun,0.004,0,157
+[2020-03-18 17:25:44] CSV_CACHE_DIFF: NotRun-Sources::SourceNode::flowsTo_dispred#ff Sources::SourceNode::Range#class#f DataFlow::DataFlow::localFlowStep#ff (console_getStmtAndSets.ql),0.004,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 17:25:44] (0s) Prepared IMB program for execution: took 0ms
+[2020-03-18 17:25:44] (0s) Beginning execution of program...
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation exit_cfg_node with 6339 rows and 2 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate Locations::Locatable::toString_dispred#ff#join_rhs#1/2@bd0716
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation Locations::Locatable::toString_dispred#ff#join_rhs#1 with 6339 rows and 2 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation entry_cfg_node with 6339 rows and 2 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate Locations::Locatable::toString_dispred#ff#join_rhs/2@66ca94
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation Locations::Locatable::toString_dispred#ff#join_rhs with 6339 rows and 2 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation files with 404 rows and 5 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation yaml with 89 rows and 6 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation properties with 4339 rows and 5 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate properties_10234#join_rhs/5@61939f
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation properties_10234#join_rhs with 4339 rows and 5 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation exprs with 121399 rows and 5 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate exprs_10#join_rhs/2@265842
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation exprs_10#join_rhs with 121399 rows and 2 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation typeexprs with 3046 rows and 5 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation tokeninfo with 196576 rows and 5 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation regexpterm with 11271 rows and 5 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation lines with 0 rows and 4 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate properties_304#join_rhs/3@00bb03
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation properties_304#join_rhs with 4339 rows and 3 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation json with 140 rows and 5 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation jsdoc_type_exprs with 23925 rows and 5 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation jsdoc with 9496 rows and 3 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation xmlComments with 0 rows and 4 columns.
+[2020-03-18 17:25:44] (0s) Inferred that non-rec relation xmlComments_3012#join_rhs/4 is empty
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation xmlComments_3012#join_rhs with 0 rows and 4 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation xmlChars with 0 rows and 6 columns.
+[2020-03-18 17:25:44] (0s) Inferred that non-rec relation xmlChars_501234#join_rhs/6 is empty
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation xmlChars_501234#join_rhs with 0 rows and 6 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation xmlAttrs with 33 rows and 6 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate Files::FileType#class#f/1@3735f1
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation Files::FileType#class#f with 5 rows and 1 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation filetype with 404 rows and 2 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate filetype_10#join_rhs/2@846b78
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation filetype_10#join_rhs with 404 rows and 2 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate HTML::HTML::Attribute#class#f#shared/1@753453
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation HTML::HTML::Attribute#class#f#shared with 15 rows and 1 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate xmlAttrs_50#join_rhs/2@8ac010
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation xmlAttrs_50#join_rhs with 33 rows and 2 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate HTML::HTML::Attribute#class#f/1@8c87fc
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation HTML::HTML::Attribute#class#f with 33 rows and 1 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate HTML::HTML::Attribute::toString_dispred#ff/2@d38bf7
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation HTML::HTML::Attribute::toString_dispred#ff with 33 rows and 2 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation xmlElements with 107 rows and 5 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate xmlElements_40123#join_rhs/5@fd41b4
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation xmlElements_40123#join_rhs with 107 rows and 5 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation jsdoc_tags with 18622 rows and 5 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate properties_10#join_rhs/2@bd76e4
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation properties_10#join_rhs with 4339 rows and 2 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate Expr::Property#f/1@aaa756
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation Expr::Property#f with 2240 rows and 1 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation yaml_errors with 0 rows and 2 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation regexpParseErrors with 0 rows and 3 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation json_errors with 0 rows and 2 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation jsParseErrors with 0 rows and 4 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation comments with 11415 rows and 5 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate typeexprs_10#join_rhs/2@2ba3b4
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation typeexprs_10#join_rhs with 3046 rows and 2 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation stmts with 24676 rows and 5 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate stmts_10#join_rhs/2@3adef4
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation stmts_10#join_rhs with 24676 rows and 2 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate @interfacedefinition#f#antijoin_rhs/1@0b54a3
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation @interfacedefinition#f#antijoin_rhs with 70 rows and 1 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate @interfacedefinition#f/1@2eb757
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation @interfacedefinition#f with 92 rows and 1 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate @classdefinition#f/1@763471
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation @classdefinition#f with 68 rows and 1 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate Classes::ClassOrInterface#class#f/1@b44084
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation Classes::ClassOrInterface#class#f with 160 rows and 1 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate Classes::MemberDeclaration#f/1@221533
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation Classes::MemberDeclaration#f with 866 rows and 1 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation guard_node with 1102 rows and 3 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate guard_node_10#join_rhs/2@c48586
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation guard_node_10#join_rhs with 1102 rows and 2 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate CFG::ConditionGuardNode::getOutcome_dispred#ff/2@aa6001
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation CFG::ConditionGuardNode::getOutcome_dispred#ff with 1102 rows and 2 columns.
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation toplevels with 395 rows and 2 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate Locations::Locatable::toString_dispred#ff#cur_delta/2[1]@1f13f0 (iteration 1)
+[2020-03-18 17:25:44] (0s) 			 - Locations::Locatable::toString_dispred#ff_delta has 427035 rows (order for disjuncts: delta=<standard>).
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate Locations::Locatable::toString_dispred#ff#cur_delta/2[2]@d1cb9f (iteration 2)
+[2020-03-18 17:25:44] (0s) 			 - Locations::Locatable::toString_dispred#ff_delta has 12678 rows (order for disjuncts: delta=10000).
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate Locations::Locatable::toString_dispred#ff#cur_delta/2[3]@24f0fe (iteration 3)
+[2020-03-18 17:25:44] (0s) Empty delta for Locations::Locatable::toString_dispred#ff_delta (order for disjuncts: delta=10000).
+[2020-03-18 17:25:44] (0s) Accumulating deltas
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation Locations::Locatable::toString_dispred#ff with 439713 rows and 2 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate project#Locations::Locatable::toString_dispred#ff/1@dabd88
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation project#Locations::Locatable::toString_dispred#ff with 439713 rows and 1 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate DataFlow::DataFlow::TElementNode#fff_12#join_rhs/2@e750b5
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation DataFlow::DataFlow::TElementNode#fff_12#join_rhs with 444 rows and 2 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate @function#f#antijoin_rhs/1@a61501
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation @function#f#antijoin_rhs with 937 rows and 1 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate @function#f/1@c5e8a7
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation @function#f with 5962 rows and 1 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate TypeScript::FunctionTypeExpr#class#f/1@4c572e
+[2020-03-18 17:25:44] (0s)  >>> Wrote relation TypeScript::FunctionTypeExpr#class#f with 16 rows and 1 columns.
+[2020-03-18 17:25:44] (0s) Starting to evaluate predicate exprs_12304#join_rhs/5@fd4ca4
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation exprs_12304#join_rhs with 121399 rows and 5 columns.
+[2020-03-18 17:25:45] (0s) Starting to evaluate predicate exprs_01243#join_rhs/5@1f361b
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation exprs_01243#join_rhs with 121399 rows and 5 columns.
+[2020-03-18 17:25:45] (0s) Starting to evaluate predicate Functions::Function::inferNameFromFunctionType_dispred#cpe#1#f/1@a04bae
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation Functions::Function::inferNameFromFunctionType_dispred#cpe#1#f with 16 rows and 1 columns.
+[2020-03-18 17:25:45] (0s) Starting to evaluate predicate properties_30#join_rhs/2@a7d590
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation properties_30#join_rhs with 4339 rows and 2 columns.
+[2020-03-18 17:25:45] (0s) Starting to evaluate predicate @call_signature#f/1@415d39
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation @call_signature#f with 0 rows and 1 columns.
+[2020-03-18 17:25:45] (0s) Starting to evaluate predicate m#Classes::MemberSignature#b/1@28abc5
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation m#Classes::MemberSignature#b with 1 rows and 1 columns.
+[2020-03-18 17:25:45] (0s) Starting to evaluate predicate Classes::MemberDeclaration::isConcrete_dispred#b#shared/1@8b94e2
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation Classes::MemberDeclaration::isConcrete_dispred#b#shared with 1 rows and 1 columns.
+[2020-03-18 17:25:45] (0s) Starting to evaluate predicate stmts_230#join_rhs/3@18a8bb
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation stmts_230#join_rhs with 24676 rows and 3 columns.
+[2020-03-18 17:25:45] (0s) Starting to evaluate predicate exprs_230#join_rhs/3@f7a3ae
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation exprs_230#join_rhs with 121399 rows and 3 columns.
+[2020-03-18 17:25:45] (0s) Starting to evaluate predicate AST::ASTNode::getChild_dispred#fff/3@cb5139
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation AST::ASTNode::getChild_dispred#fff with 150414 rows and 3 columns.
+[2020-03-18 17:25:45] (0s) Starting to evaluate predicate Functions::Function::hasBody_dispred#f/1@5b4601
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation Functions::Function::hasBody_dispred#f with 5944 rows and 1 columns.
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation isMethod with 340 rows and 1 columns.
+[2020-03-18 17:25:45] (0s) Starting to evaluate predicate Classes::MethodDeclaration#f/1@c082d8
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation Classes::MethodDeclaration#f with 322 rows and 1 columns.
+[2020-03-18 17:25:45] (0s) Starting to evaluate predicate Classes::MethodDeclaration::getBody_dispred#ff/2@373be3
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation Classes::MethodDeclaration::getBody_dispred#ff with 322 rows and 2 columns.
+[2020-03-18 17:25:45] (0s) Starting to evaluate predicate stmts_0#antijoin_rhs/1@8b19d6
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation stmts_0#antijoin_rhs with 24676 rows and 1 columns.
+[2020-03-18 17:25:45] (0s) Starting to evaluate predicate Variables::Parameterized#class#f/1@735b77
+[2020-03-18 17:25:45] (0s)  >>> Wrote relation Variables::Parameterized#class#f with 6014 rows and 1 columns.
+[2020-03-18 17:25:45] (0s) Starting to evaluate predicate @varref#f/1@69ec91
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation @varref#f with 30593 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate @pattern#f/1@e335a8
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation @pattern#f with 30875 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Variables::Parameter#f/1@221d98
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Variables::Parameter#f with 5588 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::ASTNode::getParent_dispred#ff/2@6f1439
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation AST::ASTNode::getParent_dispred#ff with 150414 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate @field#f/1@dba7f3
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation @field#f with 543 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::FieldDeclaration#class#f/1@9851e9
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::FieldDeclaration#class#f with 543 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::ASTNode::isAmbient_dispred#f#join_rhs#3/2@91e1b6
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation AST::ASTNode::isAmbient_dispred#f#join_rhs#3 with 543 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::Stmt_not_EnumDeclaration_ExportAsNamespaceDeclaration_ExportDeclaration_ExternalModuleDeclaration_FunctionDeclStmt_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_TypeAliasDeclaration#f#antijoin_rhs/1@9b2d8c
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Stmt::Stmt_not_EnumDeclaration_ExportAsNamespaceDeclaration_ExportDeclaration_ExternalModuleDeclaration_FunctionDeclStmt_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_TypeAliasDeclaration#f#antijoin_rhs with 12 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::ASTNode::isAmbient_dispred#f#join_rhs#2/2@3acb12
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation AST::ASTNode::isAmbient_dispred#f#join_rhs#2 with 12 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate ES2015Modules::ExportDeclaration#class#f#antijoin_rhs/1@f1c5ed
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation ES2015Modules::ExportDeclaration#class#f#antijoin_rhs with 299 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::ASTNode::isAmbient_dispred#f#join_rhs#1/2@7d73d3
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation AST::ASTNode::isAmbient_dispred#f#join_rhs#1 with 299 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::Stmt_not_EnumDeclaration_ExportAsNamespaceDeclaration_ExportDeclaration_ExternalModuleDeclaration_FunctionDeclStmt_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_TypeAliasDeclaration#f#antijoin_rhs#5/1@be8ffe
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Stmt::Stmt_not_EnumDeclaration_ExportAsNamespaceDeclaration_ExportDeclaration_ExternalModuleDeclaration_FunctionDeclStmt_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_TypeAliasDeclaration#f#antijoin_rhs#5 with 3 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::Stmt_not_EnumDeclaration_ExportAsNamespaceDeclaration_ExportDeclaration_ExternalModuleDeclaration_FunctionDeclStmt_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_TypeAliasDeclaration#f#antijoin_rhs#4/1@e11b34
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Stmt::Stmt_not_EnumDeclaration_ExportAsNamespaceDeclaration_ExportDeclaration_ExternalModuleDeclaration_FunctionDeclStmt_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_TypeAliasDeclaration#f#antijoin_rhs#4 with 0 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::Stmt_not_EnumDeclaration_ExportAsNamespaceDeclaration_ExportDeclaration_ExternalModuleDeclaration_FunctionDeclStmt_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_TypeAliasDeclaration#f#antijoin_rhs#3/1@33cea8
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Stmt::Stmt_not_EnumDeclaration_ExportAsNamespaceDeclaration_ExportDeclaration_ExternalModuleDeclaration_FunctionDeclStmt_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_TypeAliasDeclaration#f#antijoin_rhs#3 with 813 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate ES2015Modules::ExportDeclaration#class#f/1@5cc638
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation ES2015Modules::ExportDeclaration#class#f with 299 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::Stmt_not_EnumDeclaration_ExportAsNamespaceDeclaration_ExportDeclaration_ExternalModuleDeclaration_FunctionDeclStmt_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_TypeAliasDeclaration#f#antijoin_rhs#2/1@b1605e
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Stmt::Stmt_not_EnumDeclaration_ExportAsNamespaceDeclaration_ExportDeclaration_ExternalModuleDeclaration_FunctionDeclStmt_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_TypeAliasDeclaration#f#antijoin_rhs#2 with 2 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::Stmt_not_EnumDeclaration_ExportAsNamespaceDeclaration_ExportDeclaration_ExternalModuleDeclaration_FunctionDeclStmt_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_TypeAliasDeclaration#f#antijoin_rhs#1/1@f79c15
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Stmt::Stmt_not_EnumDeclaration_ExportAsNamespaceDeclaration_ExportDeclaration_ExternalModuleDeclaration_FunctionDeclStmt_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_TypeAliasDeclaration#f#antijoin_rhs#1 with 6 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::Stmt_not_EnumDeclaration_ExportAsNamespaceDeclaration_ExportDeclaration_ExternalModuleDeclaration_FunctionDeclStmt_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_TypeAliasDeclaration#f/1@aeb97a
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Stmt::Stmt_not_EnumDeclaration_ExportAsNamespaceDeclaration_ExportDeclaration_ExternalModuleDeclaration_FunctionDeclStmt_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_TypeAliasDeclaration#f with 22534 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate typeexprs_0#antijoin_rhs/1@c0e2bb
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation typeexprs_0#antijoin_rhs with 3046 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate toplevels_0#antijoin_rhs/1@13d7a0
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation toplevels_0#antijoin_rhs with 395 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::ASTNode#class#f/1@f340d6
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation AST::ASTNode#class#f with 153855 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::ASTNode_not_EnumDeclaration_ExternalModuleDeclaration_FieldDeclaration_Function_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_Stmt_TopLevel_TypeAliasDeclaration_TypeExpr#f/1@3363bd
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation AST::ASTNode_not_EnumDeclaration_ExternalModuleDeclaration_FieldDeclaration_Function_GlobalAugmentationDeclaration_ImportDeclaration_InterfaceDeclaration_Stmt_TopLevel_TypeAliasDeclaration_TypeExpr#f with 120170 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::ASTNode::isAmbient_dispred#f#join_rhs/2@3c723e
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation AST::ASTNode::isAmbient_dispred#f#join_rhs with 120170 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::ASTNode::getChild_dispred#fff_120#join_rhs/3@c25148
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation AST::ASTNode::getChild_dispred#fff_120#join_rhs with 150414 rows and 3 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation hasDeclareKeyword with 5 rows and 1 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation hasTypeKeyword with 0 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Files::Container::getBaseName_dispred#ff/2@eb6d59
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Files::Container::getBaseName_dispred#ff with 404 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate m#Files::File::getFileType_dispred#bf/1@35f435
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation m#Files::File::getFileType_dispred#bf with 4 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Files::File::getFileType_dispred#bf/2@b0bd1f
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Files::File::getFileType_dispred#bf with 4 rows and 2 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation locations_default with 354422 rows and 6 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate m#Locations::Locatable::getFile_dispred#bf/1@4b2057
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation m#Locations::Locatable::getFile_dispred#bf with 25071 rows and 1 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation hasLocation with 439344 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate @synthetic_cfg_node#f/1@27f0ee
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation @synthetic_cfg_node#f with 13780 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate CFG::SyntheticControlFlowNode::getLocation_dispred#ff/2@00a703
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation CFG::SyntheticControlFlowNode::getLocation_dispred#ff with 13780 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::ASTNode::getLocation_dispred#ff/2@399abf
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation AST::ASTNode::getLocation_dispred#ff with 153855 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Locations::Locatable::getLocation_dispred#ff/2@54a7bb
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Locations::Locatable::getLocation_dispred#ff with 167635 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Locations::Locatable::getFile_dispred#bf/2@0a0306
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Locations::Locatable::getFile_dispred#bf with 25071 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::ASTNode::isAmbient_dispred#f#cur_delta/1[1]@c67fb5 (iteration 1)
+[2020-03-18 17:25:45] (1s) 			 - AST::ASTNode::isAmbient_dispred#f_delta has 3131 rows (order for disjuncts: delta=<standard>).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Functions::Function::isAmbient#f#cur_delta/1[1]@ab7c4b (iteration 1)
+[2020-03-18 17:25:45] (1s) 			 - Functions::Function::isAmbient#f_delta has 18 rows (order for disjuncts: delta=<standard>).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::Stmt::isAmbient#f#cur_delta/1[1]@560016 (iteration 1)
+[2020-03-18 17:25:45] (1s) 			 - Stmt::Stmt::isAmbient#f_delta has 5 rows (order for disjuncts: delta=<standard>).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::ASTNode::isAmbient_dispred#f#cur_delta/1[2]@4fa69b (iteration 2)
+[2020-03-18 17:25:45] (1s) 			 - AST::ASTNode::isAmbient_dispred#f_delta has 196 rows (order for disjuncts: delta=1000).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Functions::Function::isAmbient#f#cur_delta/1[2]@e89a56 (iteration 2)
+[2020-03-18 17:25:45] (1s) Empty delta for Functions::Function::isAmbient#f_delta (order for disjuncts: delta=1000).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::Stmt::isAmbient#f#cur_delta/1[2]@9d64bf (iteration 2)
+[2020-03-18 17:25:45] (1s) 			 - Stmt::Stmt::isAmbient#f_delta has 13 rows (order for disjuncts: delta=1000).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::ASTNode::isAmbient_dispred#f#cur_delta/1[3]@53c178 (iteration 3)
+[2020-03-18 17:25:45] (1s) 			 - AST::ASTNode::isAmbient_dispred#f_delta has 202 rows (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Functions::Function::isAmbient#f#cur_delta/1[3]@547e3d (iteration 3)
+[2020-03-18 17:25:45] (1s) Empty delta for Functions::Function::isAmbient#f_delta (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::Stmt::isAmbient#f#cur_delta/1[3]@fe240e (iteration 3)
+[2020-03-18 17:25:45] (1s) Empty delta for Stmt::Stmt::isAmbient#f_delta (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::ASTNode::isAmbient_dispred#f#cur_delta/1[4]@081b56 (iteration 4)
+[2020-03-18 17:25:45] (1s) 			 - AST::ASTNode::isAmbient_dispred#f_delta has 18 rows (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Functions::Function::isAmbient#f#cur_delta/1[4]@ee9d00 (iteration 4)
+[2020-03-18 17:25:45] (1s) Empty delta for Functions::Function::isAmbient#f_delta (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::Stmt::isAmbient#f#cur_delta/1[4]@acef45 (iteration 4)
+[2020-03-18 17:25:45] (1s) Empty delta for Stmt::Stmt::isAmbient#f_delta (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::ASTNode::isAmbient_dispred#f#cur_delta/1[5]@212964 (iteration 5)
+[2020-03-18 17:25:45] (1s) 			 - AST::ASTNode::isAmbient_dispred#f_delta has 17 rows (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Functions::Function::isAmbient#f#cur_delta/1[5]@2b8d69 (iteration 5)
+[2020-03-18 17:25:45] (1s) Empty delta for Functions::Function::isAmbient#f_delta (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::Stmt::isAmbient#f#cur_delta/1[5]@5031d8 (iteration 5)
+[2020-03-18 17:25:45] (1s) Empty delta for Stmt::Stmt::isAmbient#f_delta (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::ASTNode::isAmbient_dispred#f#cur_delta/1[6]@fa8cbe (iteration 6)
+[2020-03-18 17:25:45] (1s) Empty delta for AST::ASTNode::isAmbient_dispred#f_delta (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Functions::Function::isAmbient#f#cur_delta/1[6]@8473c0 (iteration 6)
+[2020-03-18 17:25:45] (1s) Empty delta for Functions::Function::isAmbient#f_delta (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::Stmt::isAmbient#f#cur_delta/1[6]@653e7b (iteration 6)
+[2020-03-18 17:25:45] (1s) Empty delta for Stmt::Stmt::isAmbient#f_delta (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Accumulating deltas
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation AST::ASTNode::isAmbient_dispred#f with 3564 rows and 1 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Functions::Function::isAmbient#f with 18 rows and 1 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Stmt::Stmt::isAmbient#f with 18 rows and 1 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation isAbstractMember with 177 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::MemberDeclaration::isConcrete_dispred#b#antijoin_rhs/1@d038a5
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::MemberDeclaration::isConcrete_dispred#b#antijoin_rhs with 1 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::MemberDeclaration::isConcrete_dispred#b/1@707b5a
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::MemberDeclaration::isConcrete_dispred#b with 0 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::MemberSignature#b/1@af7d21
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::MemberSignature#b with 1 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::IndexSignature#class#f/1@025583
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::IndexSignature#class#f with 1 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::IndexSignature::getBody_dispred#ff/2@ca144f
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::IndexSignature::getBody_dispred#ff with 1 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::MemberDeclaration::getDeclaringType#ff/2@eaa018
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::MemberDeclaration::getDeclaringType#ff with 866 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Inferred that non-rec relation Classes::CallSignature#class#f/1 is empty
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::CallSignature#class#f with 0 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::ClassOrInterface::getAMember_dispred#ff/2@6255ab
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::ClassOrInterface::getAMember_dispred#ff with 866 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::ClassOrInterface::getAMember_dispred#ff_10#join_rhs/2@8bbbc8
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::ClassOrInterface::getAMember_dispred#ff_10#join_rhs with 866 rows and 2 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation literals with 71220 rows and 3 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate literals_20#join_rhs/2@a9f2af
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation literals_20#join_rhs with 71220 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Identifier#class#f/1@0f6921
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::Identifier#class#f with 63288 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Identifier::getName#ff/2@6719e7
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::Identifier::getName#ff with 63288 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Variables::VarRef::getName_dispred#ff/2@2f7fd4
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Variables::VarRef::getName_dispred#ff with 30593 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Identifier::getName_dispred#ff/2@015dd9
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::Identifier::getName_dispred#ff with 63288 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate typeexprs_230#join_rhs/3@f652cb
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation typeexprs_230#join_rhs with 3046 rows and 3 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate TypeScript::EnumMember::getInitializer_dispred#ff/2@5cddc9
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation TypeScript::EnumMember::getInitializer_dispred#ff with 55 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate TypeScript::EnumMember::getInitializer_dispred#ff_0#antijoin_rhs/1@d7d780
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation TypeScript::EnumMember::getInitializer_dispred#ff_0#antijoin_rhs with 55 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate TypeScript::EnumMember::getIdentifier_dispred#ff/2@02bd31
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation TypeScript::EnumMember::getIdentifier_dispred#ff with 55 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::ComprehensionBlock#class#f/1@0abc9e
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::ComprehensionBlock#class#f with 0 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Variables::VariableDeclarator::getBindingPattern_dispred#ff/2@6e009d
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Variables::VariableDeclarator::getBindingPattern_dispred#ff with 1852 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::InvokeExpr#class#f/1@518887
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::InvokeExpr#class#f with 7225 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::InvokeExpr::getCallee_dispred#ff/2@28dbf8
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::InvokeExpr::getCallee_dispred#ff with 7225 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::EnhancedForLoop#class#f/1@577d00
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Stmt::EnhancedForLoop#class#f with 17 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate m#Stmt::ExprOrVarDecl#class#b/1@859939
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation m#Stmt::ExprOrVarDecl#class#b with 17 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::DeclStmt#class#f/1@1d02f0
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Stmt::DeclStmt#class#f with 1852 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::ExprOrVarDecl#class#b/1@a10957
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Stmt::ExprOrVarDecl#class#b with 17 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::EnhancedForLoop::getIterator_dispred#ff/2@369fc4
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Stmt::EnhancedForLoop::getIterator_dispred#ff with 17 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate exprs_12034#join_rhs/5@58b3b3
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation exprs_12034#join_rhs with 121399 rows and 5 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::DeclStmt::getADecl_dispred#ff/2@df594f
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Stmt::DeclStmt::getADecl_dispred#ff with 1852 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::EnhancedForLoop::getIteratorExpr_dispred#ff/2@06ec5c
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Stmt::EnhancedForLoop::getIteratorExpr_dispred#ff with 17 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Assignment#class#f#join_rhs/1@65eb3d
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::Assignment#class#f#join_rhs with 4753 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Assignment#class#f/1@68a21b
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::Assignment#class#f with 4768 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::InvokeExpr::getCallee_dispred#ff_10#join_rhs/2@035eba
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::InvokeExpr::getCallee_dispred#ff_10#join_rhs with 7225 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::PropAccess#class#f/1@0bce47
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::PropAccess#class#f with 26415 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::MethodCallExpr#class#f#join_rhs/2@f718ec
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::MethodCallExpr#class#f#join_rhs with 7010 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::ParExpr::getExpression_dispred#ff/2@3759e5
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::ParExpr::getExpression_dispred#ff with 531 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::ParExpr::getExpression_dispred#ff_10#join_rhs/2@d6d2a1
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::ParExpr::getExpression_dispred#ff_10#join_rhs with 531 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Expr::stripParens_dispred#bf#antijoin_rhs/1@bb1502
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::Expr::stripParens_dispred#bf#antijoin_rhs with 531 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Expr::stripParens_dispred#bf#cur_delta/2[1]@189fdf (iteration 1)
+[2020-03-18 17:25:45] (1s) Empty delta for Expr::Expr::stripParens_dispred#bf_delta (order for disjuncts: delta=<standard>).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::MethodCallExpr#class#f#cur_delta/1[1]@2818bb (iteration 1)
+[2020-03-18 17:25:45] (1s) Empty delta for Expr::MethodCallExpr#class#f_delta (order for disjuncts: delta=<standard>).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate m#Expr::Expr::stripParens_dispred#bf#cur_delta/1[1]@7b5460 (iteration 1)
+[2020-03-18 17:25:45] (1s) 			 - m#Expr::Expr::stripParens_dispred#bf_delta has 11795 rows (order for disjuncts: delta=<standard>).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Expr::stripParens_dispred#bf#cur_delta/2[2]@27ce65 (iteration 2)
+[2020-03-18 17:25:45] (1s) 			 - Expr::Expr::stripParens_dispred#bf_delta has 11787 rows (order for disjuncts: delta=10000).
+[2020-03-18 17:25:45] (1s) Empty delta for Expr::MethodCallExpr#class#f_delta (order for disjuncts: delta=<standard>).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate m#Expr::Expr::stripParens_dispred#bf#cur_delta/1[2]@2d3a90 (iteration 2)
+[2020-03-18 17:25:45] (1s) 			 - m#Expr::Expr::stripParens_dispred#bf_delta has 8 rows (order for disjuncts: delta=10000).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Expr::stripParens_dispred#bf#cur_delta/2[3]@17fd14 (iteration 3)
+[2020-03-18 17:25:45] (1s) 			 - Expr::Expr::stripParens_dispred#bf_delta has 8 rows (order for disjuncts: delta=10000).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::MethodCallExpr#class#f#cur_delta/1[3]@2aed19 (iteration 3)
+[2020-03-18 17:25:45] (1s) 			 - Expr::MethodCallExpr#class#f_delta has 3893 rows (order for disjuncts: delta=10000).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate m#Expr::Expr::stripParens_dispred#bf#cur_delta/1[3]@d0ff17 (iteration 3)
+[2020-03-18 17:25:45] (1s) Empty delta for m#Expr::Expr::stripParens_dispred#bf_delta (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Expr::stripParens_dispred#bf#cur_delta/2[4]@7cd456 (iteration 4)
+[2020-03-18 17:25:45] (1s) 			 - Expr::Expr::stripParens_dispred#bf_delta has 8 rows (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::MethodCallExpr#class#f#cur_delta/1[4]@c73cf1 (iteration 4)
+[2020-03-18 17:25:45] (1s) Empty delta for Expr::MethodCallExpr#class#f_delta (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate m#Expr::Expr::stripParens_dispred#bf#cur_delta/1[4]@dd90f0 (iteration 4)
+[2020-03-18 17:25:45] (1s) Empty delta for m#Expr::Expr::stripParens_dispred#bf_delta (order for disjuncts: delta=1000).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Expr::stripParens_dispred#bf#cur_delta/2[5]@2239f6 (iteration 5)
+[2020-03-18 17:25:45] (1s) Empty delta for Expr::Expr::stripParens_dispred#bf_delta (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::MethodCallExpr#class#f#cur_delta/1[5]@3162b4 (iteration 5)
+[2020-03-18 17:25:45] (1s) Empty delta for Expr::MethodCallExpr#class#f_delta (order for disjuncts: delta=100).
+[2020-03-18 17:25:45] (1s) Empty delta for m#Expr::Expr::stripParens_dispred#bf_delta (order for disjuncts: delta=1000).
+[2020-03-18 17:25:45] (1s) Accumulating deltas
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::Expr::stripParens_dispred#bf with 11803 rows and 2 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::MethodCallExpr#class#f with 3893 rows and 1 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation m#Expr::Expr::stripParens_dispred#bf with 11803 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Functions::Function::getParameter_dispred#fff/3@9f5eb2
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Functions::Function::getParameter_dispred#fff with 5536 rows and 3 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Variables::Parameter::getDefault_dispred#ff/2@1cb15d
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Variables::Parameter::getDefault_dispred#ff with 16 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::ClassDefinition::getIdentifier_dispred#ff/2@ad3943
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::ClassDefinition::getIdentifier_dispred#ff with 68 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate DefUse::defn#2#fff#antijoin_rhs/2@eb0102
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation DefUse::defn#2#fff#antijoin_rhs with 0 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Functions::Function::getId_dispred#ff/2@88ceee
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Functions::Function::getId_dispred#ff with 939 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Variables::VariableDeclarator::getInit#ff/2@01a5f9
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Variables::VariableDeclarator::getInit#ff with 1652 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Externs::ExternalGlobalVarDecl#class#f#shared/1@c5637b
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Externs::ExternalGlobalVarDecl#class#f#shared with 1605 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate jsdoc_tags_12#join_rhs/2@f25328
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation jsdoc_tags_12#join_rhs with 16199 rows and 2 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation isExterns with 110 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate AST::TopLevel::isExterns_dispred#f/1@3f4ca2
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation AST::TopLevel::isExterns_dispred#f with 110 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Stmt::DeclStmt::getADecl_dispred#ff_10#join_rhs/2@942b7b
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Stmt::DeclStmt::getADecl_dispred#ff_10#join_rhs with 1852 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Externs::hasTypedefAnnotation#b/1@bb2bd2
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Externs::hasTypedefAnnotation#b with 82 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Externs::ExternalGlobalVarDecl#class#f#antijoin_rhs/1@6115bb
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Externs::ExternalGlobalVarDecl#class#f#antijoin_rhs with 82 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Externs::ExternalGlobalVarDecl#class#f/1@d0d7d4
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Externs::ExternalGlobalVarDecl#class#f with 154 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Variables::VariableDeclarator::getInit_dispred#ff/2@69a001
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Variables::VariableDeclarator::getInit_dispred#ff with 1652 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Assignment::getRhs_dispred#ff/2@a692c9
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::Assignment::getRhs_dispred#ff with 4768 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate DefUse::defn#2#fff/3@973291
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation DefUse::defn#2#fff with 7495 rows and 3 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate DefUse::defn#ff/2@f7c095
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation DefUse::defn#ff with 13101 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate project#DefUse::defn#ff/1@5da0b9
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation project#DefUse::defn#ff with 13084 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Variables::DestructuringPattern#class#f/1@552d55
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Variables::DestructuringPattern#class#f with 282 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate DefUse::VarDef::getSource_dispred#ff/2@f97863
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation DefUse::VarDef::getSource_dispred#ff with 7250 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate DefUse::VarDef::getSource_dispred#ff_10#join_rhs/2@61a0a8
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation DefUse::VarDef::getSource_dispred#ff_10#join_rhs with 7250 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::ClassDefinition::getIdentifier_dispred#ff_0#antijoin_rhs/1@090e0a
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::ClassDefinition::getIdentifier_dispred#ff_0#antijoin_rhs with 68 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate m#DefUse::VarDef::getTarget_dispred#bf#shared/1@f4a002
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation m#DefUse::VarDef::getTarget_dispred#bf#shared with 0 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Functions::Function::getId_dispred#ff_0#antijoin_rhs/1@ecfe28
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Functions::Function::getId_dispred#ff_0#antijoin_rhs with 939 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate m#DefUse::VarDef::getTarget_dispred#bf/1@baab2e
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation m#DefUse::VarDef::getTarget_dispred#bf with 6309 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate DefUse::VarDef::getTarget_dispred#bf/2@a8f073
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation DefUse::VarDef::getTarget_dispred#bf with 6309 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::ClassDefinition::inferNameFromVarDef_dispred#ff/2@166d40
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::ClassDefinition::inferNameFromVarDef_dispred#ff with 68 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate project#Classes::ClassDefinition::inferNameFromVarDef_dispred#ff/1@2622d9
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation project#Classes::ClassDefinition::inferNameFromVarDef_dispred#ff with 68 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::ClassOrInterface::describe_dispred#ff/2@d023ce
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::ClassOrInterface::describe_dispred#ff with 160 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Functions::Function::inferNameFromIndexSig_dispred#ff/2@398a65
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Functions::Function::inferNameFromIndexSig_dispred#ff with 1 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Functions::Function::inferNameFromIndexSig_dispred#ff_0#antijoin_rhs/1@9bca77
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Functions::Function::inferNameFromIndexSig_dispred#ff_0#antijoin_rhs with 1 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Inferred that non-rec relation Functions::Function::inferNameFromCallSig_dispred#ff/2 is empty
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Functions::Function::inferNameFromCallSig_dispred#ff with 0 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Inferred that non-rec relation project#Functions::Function::inferNameFromCallSig_dispred#ff/1 is empty
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation project#Functions::Function::inferNameFromCallSig_dispred#ff with 0 rows and 1 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation parameter_fields with 6 rows and 3 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::ParameterField#class#f/1@3f006f
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::ParameterField#class#f with 6 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::MemberDeclaration::getNameExpr_dispred#ff/2@f29c73
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::MemberDeclaration::getNameExpr_dispred#ff with 865 rows and 2 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation isComputed with 10 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::MemberDeclaration::isComputed_dispred#f/1@bdd223
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::MemberDeclaration::isComputed_dispred#f with 0 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Property::getNameExpr_dispred#ff/2@297b8c
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::Property::getNameExpr_dispred#ff with 2192 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate m#Expr::Literal::getValue_dispred#bf/1@fece88
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation m#Expr::Literal::getValue_dispred#bf with 3430 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Literal#class#b/1@00de16
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::Literal#class#b with 336 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Literal::getValue_dispred#bf/2@d8fc96
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::Literal::getValue_dispred#bf with 336 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::MemberDeclaration::getName_dispred#ff/2@eedd01
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::MemberDeclaration::getName_dispred#ff with 865 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::SetterMethodDeclaration#class#f/1@2af4a3
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::SetterMethodDeclaration#class#f with 0 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate properties_03#join_rhs/2@a3f7fb
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation properties_03#join_rhs with 4339 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::GetterMethodDeclaration#class#f/1@1f68e0
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::GetterMethodDeclaration#class#f with 11 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::ConstructorDeclaration#class#f#shared/1@49a3a2
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::ConstructorDeclaration#class#f#shared with 68 rows and 1 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation isStatic with 19 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::ConstructorDeclaration#class#f#antijoin_rhs/1@24365f
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::ConstructorDeclaration#class#f#antijoin_rhs with 0 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::ConstructorDeclaration#class#f/1@4bf8b2
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::ConstructorDeclaration#class#f with 68 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Locations::Location::isEmpty_dispred#b/1@52f1b0
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Locations::Location::isEmpty_dispred#b with 27 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Classes::ConstructorDeclaration::isSynthetic_dispred#f/1@d35a0b
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Classes::ConstructorDeclaration::isSynthetic_dispred#f with 27 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Functions::Function::inferNameFromMemberDef_dispred#ff/2@062d49
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Functions::Function::inferNameFromMemberDef_dispred#ff with 324 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate project#Functions::Function::inferNameFromMemberDef_dispred#ff/1@3066c0
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation project#Functions::Function::inferNameFromMemberDef_dispred#ff with 324 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Property::getInit#ff/2@a509ed
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::Property::getInit#ff with 2240 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate @property_accessor#f/1@782e15
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation @property_accessor#f with 30 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::PropertyAccessor#class#f/1@f52d79
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::PropertyAccessor#class#f with 19 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Property::getInit_dispred#ff/2@2f8047
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::Property::getInit_dispred#ff with 2240 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Property::getName_dispred#ff#antijoin_rhs/2@b7edde
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::Property::getName_dispred#ff#antijoin_rhs with 10 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Expr::Property::getName_dispred#ff/2@cde584
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Expr::Property::getName_dispred#ff with 2182 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Functions::Function::inferNameFromProp_dispred#ff/2@d356a6
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Functions::Function::inferNameFromProp_dispred#ff with 162 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate project#Functions::Function::inferNameFromProp_dispred#ff/1@ad6b61
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation project#Functions::Function::inferNameFromProp_dispred#ff with 162 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Functions::Function::inferNameFromVarDef_dispred#ff/2@18be2f
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Functions::Function::inferNameFromVarDef_dispred#ff with 1035 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate project#Functions::Function::inferNameFromVarDef_dispred#ff/1@e8da29
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation project#Functions::Function::inferNameFromVarDef_dispred#ff with 1035 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Functions::Function::describe_dispred#ff/2@05bf8c
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Functions::Function::describe_dispred#ff with 5962 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate SSA::SsaDefinition::getSourceVariable_dispred#ff/2@1d7813
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation SSA::SsaDefinition::getSourceVariable_dispred#ff with 8012 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate SSA::SsaDefinition::getSourceVariable_dispred#ff_10#join_rhs/2@b0a990
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation SSA::SsaDefinition::getSourceVariable_dispred#ff_10#join_rhs with 8012 rows and 2 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation variables with 14628 rows and 3 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate DataFlow::DataFlow::Node::toString_dispred#ff/2@c4923c
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation DataFlow::DataFlow::Node::toString_dispred#ff with 163542 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate project#DataFlow::DataFlow::Node::toString_dispred#ff#2/1@cf1868
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation project#DataFlow::DataFlow::Node::toString_dispred#ff#2 with 163542 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Locations::Locatable::getFile_dispred#bf_10#join_rhs/2@9d9864
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Locations::Locatable::getFile_dispred#bf_10#join_rhs with 25071 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate locations_default_02#join_rhs/2@2de5c4
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation locations_default_02#join_rhs with 354422 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate #select#cpe#1#f/1@d63f71
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation #select#cpe#1#f with 1 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate let0#shared/2@06e8be
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation let0#shared with 1 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate let0#shared#1/3@8f407e
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation let0#shared#1 with 1 rows and 3 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate locations_default_102345#join_rhs/6@054ef2
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation locations_default_102345#join_rhs with 354422 rows and 6 columns.
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation xmllocations with 140 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate m#Locations::Location::hasLocationInfo_dispred#bfffff/1@d5026a
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation m#Locations::Location::hasLocationInfo_dispred#bfffff with 162577 rows and 1 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate Locations::Location::hasLocationInfo_dispred#bfffff/6@c0a54b
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation Locations::Location::hasLocationInfo_dispred#bfffff with 162577 rows and 6 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate let0#antijoin_rhs/2@40a01b
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation let0#antijoin_rhs with 1 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate let0#shared#2/7@ae6c7f
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation let0#shared#2 with 1 rows and 7 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate DataFlow::DataFlow::Impl::ExplicitMethodCallNode#class#ff/2@eaa590
+[2020-03-18 17:25:45] (1s)  >>> Wrote relation DataFlow::DataFlow::Impl::ExplicitMethodCallNode#class#ff with 3893 rows and 2 columns.
+[2020-03-18 17:25:45] (1s) Starting to evaluate predicate DataFlow::DataFlow::Impl::ExplicitInvokeNode#class#ff/2@2c357c
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation DataFlow::DataFlow::Impl::ExplicitInvokeNode#class#ff with 7225 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate DataFlow::DataFlow::Impl::CallNodeDef#class#f/1@7ee460
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation DataFlow::DataFlow::Impl::CallNodeDef#class#f with 7010 rows and 1 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate DataFlow::DataFlow::Impl::InvokeNodeDef#class#f/1@e4b05b
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation DataFlow::DataFlow::Impl::InvokeNodeDef#class#f with 7225 rows and 1 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Nodes::InvokeNode#ff/2@75010b
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Nodes::InvokeNode#ff with 7225 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Nodes::MethodCallNode#class#ff/2@79954f
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Nodes::MethodCallNode#class#ff with 3893 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate TypeScript::TypeAssertion#class#f/1@972b9c
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation TypeScript::TypeAssertion#class#f with 509 rows and 1 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate TypeScript::TypeAssertion::getExpression_dispred#ff/2@9fc04e
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation TypeScript::TypeAssertion::getExpression_dispred#ff with 509 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate TypeScript::TypeAssertion::getExpression_dispred#ff_10#join_rhs/2@032ec1
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation TypeScript::TypeAssertion::getExpression_dispred#ff_10#join_rhs with 509 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Expr::Assignment::getRhs_dispred#ff_10#join_rhs/2@1753b3
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Expr::Assignment::getRhs_dispred#ff_10#join_rhs with 4768 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Expr::SeqExpr::getOperand_dispred#fff#antijoin_rhs/1@5410b8
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Expr::SeqExpr::getOperand_dispred#fff#antijoin_rhs with 0 rows and 1 columns.
+[2020-03-18 17:25:46] (1s) Inferred that non-rec relation Expr::SeqExpr::getLastOperand_dispred#bf/2 is empty
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Expr::SeqExpr::getLastOperand_dispred#bf with 0 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Inferred that non-rec relation Expr::SeqExpr::getLastOperand_dispred#bf_10#join_rhs/2 is empty
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Expr::SeqExpr::getLastOperand_dispred#bf_10#join_rhs with 0 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate m#Expr::ExprOrType::getUnderlyingValue_dispred#bf#cur_delta/1[1]@1cfeaf (iteration 1)
+[2020-03-18 17:25:46] (1s) 			 - m#Expr::ExprOrType::getUnderlyingValue_dispred#bf_delta has 7225 rows (order for disjuncts: delta=<standard>).
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate m#Expr::ExprOrType::getUnderlyingValue_dispred#bf#cur_delta/1[2]@0e76c0 (iteration 2)
+[2020-03-18 17:25:46] (1s) Empty delta for m#Expr::ExprOrType::getUnderlyingValue_dispred#bf_delta (order for disjuncts: delta=10000).
+[2020-03-18 17:25:46] (1s) Accumulating deltas
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation m#Expr::ExprOrType::getUnderlyingValue_dispred#bf with 7225 rows and 1 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs#3/2@7721c6
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs#3 with 0 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs#2/2@e76d6f
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs#2 with 0 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Inferred that non-rec relation Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs#1/2 is empty
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs#1 with 0 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs/2@d7ba77
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Expr::ExprOrType::getUnderlyingValue_dispred#bf#join_rhs with 0 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Expr::ExprOrType_not_AssignExpr_ParExpr_SeqExpr_TypeAssertion#b/1@f31967
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Expr::ExprOrType_not_AssignExpr_ParExpr_SeqExpr_TypeAssertion#b with 7225 rows and 1 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Expr::ExprOrType::getUnderlyingValue_dispred#bf#cur_delta/2[1]@34bf1f (iteration 1)
+[2020-03-18 17:25:46] (1s) 			 - Expr::ExprOrType::getUnderlyingValue_dispred#bf_delta has 7225 rows (order for disjuncts: delta=<standard>).
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Expr::ExprOrType::getUnderlyingValue_dispred#bf#cur_delta/2[2]@092a81 (iteration 2)
+[2020-03-18 17:25:46] (1s) Empty delta for Expr::ExprOrType::getUnderlyingValue_dispred#bf_delta (order for disjuncts: delta=10000).
+[2020-03-18 17:25:46] (1s) Accumulating deltas
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Expr::ExprOrType::getUnderlyingValue_dispred#bf with 7225 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Expr::PropAccess::getPropertyName_dispred#ff/2@f3486d
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Expr::PropAccess::getPropertyName_dispred#ff with 26286 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Expr::InvokeExpr::getCalleeName_dispred#ff/2@de0b97
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Expr::InvokeExpr::getCalleeName_dispred#ff with 7173 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Nodes::InvokeNode::getCalleeName_dispred#fb/2@6820f6
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Nodes::InvokeNode::getCalleeName_dispred#fb with 7173 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate project#DataFlow::DataFlow::Node::toString_dispred#ff/1@4e52fd
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation project#DataFlow::DataFlow::Node::toString_dispred#ff with 34761 rows and 1 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Expr::MethodCallExpr::getMethodRef_dispred#ff/2@eacc53
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Expr::MethodCallExpr::getMethodRef_dispred#ff with 3893 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate DataFlow::DataFlow::Impl::CallNodeDef::getReceiver_dispred#ff/2@626eb5
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation DataFlow::DataFlow::Impl::CallNodeDef::getReceiver_dispred#ff with 3893 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Nodes::CallNode#class#bf/2@c8c038
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Nodes::CallNode#class#bf with 7010 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Nodes::CallNode::getReceiver_dispred#bf/2@6a22ee
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Nodes::CallNode::getReceiver_dispred#bf with 3893 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate ReorderingUtils::testGlobalSideEffect#f/1@6be76a
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation ReorderingUtils::testGlobalSideEffect#f with 742 rows and 1 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate DataFlow::DataFlow::Node::getContainer_dispred#bf#shared/1@900dc7
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation DataFlow::DataFlow::Node::getContainer_dispred#bf#shared with 518 rows and 1 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate DataFlow::DataFlow::Node::asExpr_dispred#bf/2@b85bc7
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation DataFlow::DataFlow::Node::asExpr_dispred#bf with 121399 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate Nodes::InvokeNode::getCalleeName_dispred#bf/2@d1611d
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation Nodes::InvokeNode::getCalleeName_dispred#bf with 518 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate DataFlow::DataFlow::TValueNode#ff_10#join_rhs/2@f9fde9
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation DataFlow::DataFlow::TValueNode#ff_10#join_rhs with 126754 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate project#BasicBlocks::Internal::bbIndex/2@31a721
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation project#BasicBlocks::Internal::bbIndex with 160866 rows and 2 columns.
+[2020-03-18 17:25:46] (1s) Starting to evaluate predicate project#BasicBlocks::Internal::bbIndex_10#join_rhs/2@e2e1d0
+[2020-03-18 17:25:46] (1s)  >>> Wrote relation project#BasicBlocks::Internal::bbIndex_10#join_rhs with 160866 rows and 2 columns.
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation successor with 155552 rows and 2 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate CFG::ControlFlowNode::isBranch_dispred#f/1@0c7dfe
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation CFG::ControlFlowNode::isBranch_dispred#f with 1024 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate successor_10#count_range/2@8df032
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation successor_10#count_range with 155552 rows and 2 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate successor_1#antijoin_rhs/1@68de48
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation successor_1#antijoin_rhs with 154527 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate BasicBlocks::BasicBlock#f/1@584ce9
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation BasicBlocks::BasicBlock#f with 8438 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate DataFlow::DataFlow::Node::getContainer_dispred#bf/2@69c6ff
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::Node::getContainer_dispred#bf with 518 rows and 2 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate #select#cpe#23456#fffff/5@47bcbc
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation #select#cpe#23456#fffff with 2 rows and 5 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate let0#shared#3/13@a20e7e
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation let0#shared#3 with 2 rows and 13 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate let0#antijoin_rhs#1/12@9ba2dd
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation let0#antijoin_rhs#1 with 2 rows and 12 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate let0/20@effae8
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation let0 with 2 rows and 20 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate SSA::Internal::TRefinement#fffff_24#join_rhs/2@a5526c
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation SSA::Internal::TRefinement#fffff_24#join_rhs with 144 rows and 2 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate SSA::SsaPhiNode::hasLocationInfo#ffffff/6@e3a295
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation SSA::SsaPhiNode::hasLocationInfo#ffffff with 47 rows and 6 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate BasicBlocks::Internal::bbIndex#fff_021#join_rhs/3@fadfba
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation BasicBlocks::Internal::bbIndex#fff_021#join_rhs with 160866 rows and 3 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate SSA::SsaImplicitDefinition::hasLocationInfo#ffffff/6@3c3ec5
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation SSA::SsaImplicitDefinition::hasLocationInfo#ffffff with 1393 rows and 6 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate SSA::Internal::TExplicitDef#fffff_24#join_rhs/2@d8731e
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation SSA::Internal::TExplicitDef#fffff_24#join_rhs with 3455 rows and 2 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate SSA::SsaDefinition::hasLocationInfo_dispred#ffffff/6@a9c61f
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation SSA::SsaDefinition::hasLocationInfo_dispred#ffffff with 8012 rows and 6 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate DataFlow::DataFlow::TValueNode#ff_1#antijoin_rhs/1@b2fcd3
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::TValueNode#ff_1#antijoin_rhs with 126754 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate DataFlow::DataFlow::TUnusedParameterNode#ff_1#antijoin_rhs/1@aa1525
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::TUnusedParameterNode#ff_1#antijoin_rhs with 4999 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate DataFlow::DataFlow::TThisNode#ff_1#antijoin_rhs/1@44ce49
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::TThisNode#ff_1#antijoin_rhs with 4782 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate DataFlow::DataFlow::TSsaDefNode#ff_1#antijoin_rhs/1@0ac62f
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::TSsaDefNode#ff_1#antijoin_rhs with 8012 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Inferred that non-rec relation DataFlow::DataFlow::TRestPatternNode#fff_2#antijoin_rhs/1 is empty
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::TRestPatternNode#fff_2#antijoin_rhs with 0 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Inferred that non-rec relation DataFlow::DataFlow::TReflectiveCallNode#fff_2#antijoin_rhs/1 is empty
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::TReflectiveCallNode#fff_2#antijoin_rhs with 0 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate DataFlow::DataFlow::TPropNode#ff_1#antijoin_rhs/1@fe9f8e
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::TPropNode#ff_1#antijoin_rhs with 4339 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate DataFlow::DataFlow::THtmlAttributeNode#ff_1#antijoin_rhs/1@37a44b
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::THtmlAttributeNode#ff_1#antijoin_rhs with 33 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate DataFlow::DataFlow::TExceptionalInvocationReturnNode#ff_1#antijoin_rhs/1@81095e
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::TExceptionalInvocationReturnNode#ff_1#antijoin_rhs with 7225 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate DataFlow::DataFlow::TExceptionalFunctionReturnNode#ff_1#antijoin_rhs/1@8b23b4
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::TExceptionalFunctionReturnNode#ff_1#antijoin_rhs with 5962 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate DataFlow::DataFlow::TElementPatternNode#fff_2#antijoin_rhs/1@0e29ee
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::TElementPatternNode#fff_2#antijoin_rhs with 25 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate DataFlow::DataFlow::TElementNode#fff_2#antijoin_rhs/1@7e82bc
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::TElementNode#fff_2#antijoin_rhs with 444 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate DataFlow::DataFlow::TDestructuringPatternNode#ff_1#antijoin_rhs/1@38ceef
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::TDestructuringPatternNode#ff_1#antijoin_rhs with 282 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate DataFlow::DataFlow::TDestructuredModuleImportNode#ff_1#antijoin_rhs/1@24ed6e
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::TDestructuredModuleImportNode#ff_1#antijoin_rhs with 684 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate DataFlow::DataFlow::Node_not_DestructuredModuleImportNode_DestructuringPatternNode_ElementNode_ElementPatternNode_ExceptionalFunctionReturnNode_ExceptionalInvocationReturnNode_HtmlAttributeNode_PropNode_ReflectiveCallNode_RestPatternNode_SsaDefinitionNode_ThisNodeInternal_UnusedParameterNode_ValueNode#f/1@52880f
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::Node_not_DestructuredModuleImportNode_DestructuringPatternNode_ElementNode_ElementPatternNode_ExceptionalFunctionReturnNode_ExceptionalInvocationReturnNode_HtmlAttributeNode_PropNode_ReflectiveCallNode_RestPatternNode_SsaDefinitionNode_ThisNodeInternal_UnusedParameterNode_ValueNode#f with 1 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate DataFlow::DataFlow::Node::hasLocationInfo_dispred#ffffff/6@66165f
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation DataFlow::DataFlow::Node::hasLocationInfo_dispred#ffffff with 163524 rows and 6 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate project#DataFlow::DataFlow::Node::hasLocationInfo_dispred#ffffff/1@f673e3
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation project#DataFlow::DataFlow::Node::hasLocationInfo_dispred#ffffff with 163524 rows and 1 columns.
+[2020-03-18 17:25:46] (2s) Starting to evaluate predicate #select#query#ffffffffffffffffffffffffffffff/30@e1db15
+[2020-03-18 17:25:46] (2s)  >>> Wrote relation #select#query#ffffffffffffffffffffffffffffff with 2 rows and 30 columns.
+[2020-03-18 17:25:46] (2s) Query done
+[2020-03-18 17:25:46] CSV_CACHE_DIFF: #select#query#ffffffffffffffffffffffffffffff (console_getStmtAndSets.ql),2.105,1.41,0.266,0.236,0.148,0.033,0,0,0,0,0,0,0
+[2020-03-18 17:25:46] (2s) Sequence stamp origin is -6748223714476078953
+[2020-03-18 17:25:46] (2s) Stopped the world to sync to disk at sequence stamp o+0
+[2020-03-18 17:25:46] (2s) Starting the world again
+[2020-03-18 17:25:46] CSV_IMB_QUERIES: Query,#select#query#ffffffffffffffffffffffffffffff,console_getStmtAndSets.ql,11,Success,2.105,2,2268
+[2020-03-18 17:25:46] Evaluation of /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql produced BQRS results
+[2020-03-18 17:25:46] [PROGRESS] execute queries> [1/1] Evaluation done (2.3s); writing results to /home/ellen/Documents/ASJProj/AsyncAnalysis/temp_swaps.bqrs.
+[2020-03-18 17:25:46] [PROGRESS] execute queries> Shutting down query evaluator.
+[2020-03-18 17:25:46] Stopped the world to close the cache at sequence stamp o+1
+[2020-03-18 17:25:46] The disk cache is freshly trimmed; leave it be.
+[2020-03-18 17:25:46] Starting the world again
+[2020-03-18 17:25:46] Terminating normally.

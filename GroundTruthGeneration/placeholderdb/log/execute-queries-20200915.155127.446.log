@@ -1,0 +1,161 @@
+[2020-09-15 15:51:27] This is codeql execute queries -J-Xmx3968M --off-heap-ram=3968 --verbosity=progress --logdir=/home/ellen/Documents/APIModellingProj/Artifact/placeholderdb/log --ml-model-path= --native-library-path= --warnings=show --output=/home/ellen/Documents/APIModellingProj/Artifact/temp.bqrs -- /home/ellen/Documents/APIModellingProj/Artifact/placeholderdb/db-javascript /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql
+[2020-09-15 15:51:27] Creating executor with 1 threads.
+[2020-09-15 15:51:27] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql --format=json
+[2020-09-15 15:51:27] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql.
+[2020-09-15 15:51:27] [DETAILS] resolve library-path> Found enclosing pack 'api-modelling-analysis' at /home/ellen/Documents/APIModellingProj/Artifact.
+[2020-09-15 15:51:27] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/APIModellingProj/Artifact/.cache.
+[2020-09-15 15:51:27] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/APIModellingProj/Artifact/qlpack.yml.
+[2020-09-15 15:51:27] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-09-15 15:51:27] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-09-15 15:51:27] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-09-15 15:51:27] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/APIModellingProj/Artifact resolved OK.
+[2020-09-15 15:51:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-09-15 15:51:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/APIModellingProj/Artifact",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/APIModellingProj/Artifact/.cache"
+                        ],
+                        "relativeName" : "api-modelling-analysis/knownUnknown_groundTruth.ql"
+                      }
+[2020-09-15 15:51:27] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql.
+[2020-09-15 15:51:27] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql.
+[2020-09-15 15:51:29] Resolved file set for /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql hashes to 8021a1a46fb7d23a98a73d64c41d1a9c84b00264.
+[2020-09-15 15:51:29] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql.
+[2020-09-15 15:51:30] ExternalModuleBindingPass ...
+[2020-09-15 15:51:34] ExternalModuleBindingPass time: 00:04.362
+[2020-09-15 15:51:34] QLPredicateSynthesiser ...
+[2020-09-15 15:51:34] QLPredicateSynthesiser time: 00:00.057
+[2020-09-15 15:51:34] DeclarationBindingPass ...
+[2020-09-15 15:51:35] DeclarationBindingPass time: 00:00.585
+[2020-09-15 15:51:35] Fixed point time ...
+[2020-09-15 15:51:35] Fixed point time time: 00:00.472
+[2020-09-15 15:51:35] ReferenceBindingPass ...
+[2020-09-15 15:51:35] ReferenceBindingPass time: 00:00.144
+[2020-09-15 15:51:35] EntityTypeUpdateBindingPass ...
+[2020-09-15 15:51:35] EntityTypeUpdateBindingPass time: 00:00.138
+[2020-09-15 15:51:35] ReferenceBindingCheck ...
+[2020-09-15 15:51:36] ReferenceBindingCheck time: 00:00.116
+[2020-09-15 15:51:36] PredicateBodyBindingPass ...
+[2020-09-15 15:51:36] PredicateBodyBindingPass time: 00:00.852
+[2020-09-15 15:51:36] LanguagePragmaPropagationPass ...
+[2020-09-15 15:51:37] LanguagePragmaPropagationPass time: 00:00.256
+[2020-09-15 15:51:37] Ambiguity checks ...
+[2020-09-15 15:51:37] Ambiguity checks time: 00:00.124
+[2020-09-15 15:51:37] Ql checks ...
+[2020-09-15 15:51:38] Ql checks time: 00:01.270
+[2020-09-15 15:51:41] Compilation pipeline
+[2020-09-15 15:51:42] Type Inference ...
+[2020-09-15 15:51:42] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2020-09-15 15:51:42] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-09-15 15:51:42] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:42] CSV_TYPE_HIERARCHY: 0,0,81,87
+[2020-09-15 15:51:42] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-09-15 15:51:42] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,750,3856
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,623,2259
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,7,7
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,26,26
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,17,19
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,7,10
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,12,15
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,10,13
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:43] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-09-15 15:51:45] Type Inference time: 00:03.125
+[2020-09-15 15:51:45] Binding Checks ...
+[2020-09-15 15:51:46] Binding Checks time: 00:00.897
+[2020-09-15 15:51:48] [DETAILS] execute queries> Optimizing /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql.
+[2020-09-15 15:51:48] Processing compilation pipeline
+[2020-09-15 15:51:48] Started compiling a query
+[2020-09-15 15:51:48] Initialising compiler...
+[2020-09-15 15:51:48] 	 ... compiler initialised
+[2020-09-15 15:51:48] About to start query optimisation
+[2020-09-15 15:51:49] Compilation cache miss for 08bfe6481c49865f361ab21f3ef109e5da9f6a01.
+[2020-09-15 15:51:53] Stored compiled program for 08bfe6481c49865f361ab21f3ef109e5da9f6a01.
+[2020-09-15 15:51:54] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2020-09-15 15:51:54] CSV_COMPILATION: 1196,911,1262,2338
+[2020-09-15 15:51:54] [PROGRESS] execute queries> [1/1] Compiled /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql (26.7s).
+[2020-09-15 15:51:54] Of 7 predicates, 0 are used in more than one query.
+[2020-09-15 15:51:54] [PROGRESS] execute queries> Starting evaluation of api-modelling-analysis/knownUnknown_groundTruth.ql.
+[2020-09-15 15:51:54] Starting evaluation of /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql
+[2020-09-15 15:51:54] (0s) Start query execution
+[2020-09-15 15:51:54] (0s) Prepared IMB program for execution: took 0ms
+[2020-09-15 15:51:54] (0s) Beginning execution of program...
+[2020-09-15 15:51:54] (0s) Starting to evaluate predicate Analyze::AnalyzedExtAPString#class#ff#join_rhs/1@a962b5
+[2020-09-15 15:51:55] (0s)  >>> Wrote relation Analyze::AnalyzedExtAPString#class#ff#join_rhs with 37922 rows and 1 columns.
+[2020-09-15 15:51:55] (0s) Starting to evaluate predicate Analyze::AnalyzedExtAPString#class#ff/2@12e485
+[2020-09-15 15:51:55] (1s)  >>> Wrote relation Analyze::AnalyzedExtAPString#class#ff with 4338 rows and 2 columns.
+[2020-09-15 15:51:55] (1s) Starting to evaluate predicate #select#ff#join_rhs/2@b97042
+[2020-09-15 15:51:56] (1s)  >>> Wrote relation #select#ff#join_rhs with 116636 rows and 2 columns.
+[2020-09-15 15:51:56] (1s) Starting to evaluate predicate #select#ff#join_rhs#1/1@d105f8
+[2020-09-15 15:51:56] (1s)  >>> Wrote relation #select#ff#join_rhs#1 with 21249 rows and 1 columns.
+[2020-09-15 15:51:56] (1s) Starting to evaluate predicate #select#ff/2@183099
+[2020-09-15 15:51:56] (1s)  >>> Wrote relation #select#ff with 6046 rows and 2 columns.
+[2020-09-15 15:51:56] (1s) Starting to evaluate predicate #select#ff_01_expr_#antijoin_rhs/3@0d0369
+[2020-09-15 15:51:56] (1s)  >>> Wrote relation #select#ff_01_expr_#antijoin_rhs with 6046 rows and 3 columns.
+[2020-09-15 15:51:56] (1s) Starting to evaluate predicate #select#query#ffff/4@d4e3ec
+[2020-09-15 15:51:56] (1s)  >>> Wrote relation #select#query#ffff with 6046 rows and 4 columns.
+[2020-09-15 15:51:56] (2s) Query done
+[2020-09-15 15:51:56] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2020-09-15 15:51:56] CSV_CACHE_DIFF: #select#query#ffff (knownUnknown_groundTruth.ql),1.642,1.287,0,0.054,0.047,0.017,0,0,0,0,0,0,0
+[2020-09-15 15:51:56] (2s) Sequence stamp origin is -6681081527484630510
+[2020-09-15 15:51:56] (2s) Stopped the world to sync to disk at sequence stamp o+0
+[2020-09-15 15:51:56] (2s) Starting the world again
+[2020-09-15 15:51:56] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2020-09-15 15:51:56] CSV_IMB_QUERIES: Query,#select#query#ffff,knownUnknown_groundTruth.ql,1,Success,1.642,6046,2026
+[2020-09-15 15:51:56] Evaluation of /home/ellen/Documents/APIModellingProj/Artifact/knownUnknown_groundTruth.ql produced BQRS results
+[2020-09-15 15:51:56] [PROGRESS] execute queries> [1/1] Evaluation done (2s); writing results to /home/ellen/Documents/APIModellingProj/Artifact/temp.bqrs.
+[2020-09-15 15:51:56] [PROGRESS] execute queries> Shutting down query evaluator.
+[2020-09-15 15:51:56] Stopped the world to close the cache at sequence stamp o+1
+[2020-09-15 15:51:56] The disk cache is freshly trimmed; leave it be.
+[2020-09-15 15:51:56] Starting the world again
+[2020-09-15 15:51:56] Terminating normally.

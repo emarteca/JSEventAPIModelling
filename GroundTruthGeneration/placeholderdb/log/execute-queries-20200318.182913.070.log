@@ -1,0 +1,257 @@
+[2020-03-18 18:29:13] This is codeql execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --warnings=show --output=/home/ellen/Documents/ASJProj/AsyncAnalysis/temp_swaps.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql
+[2020-03-18 18:29:13] Creating executor with 1 threads.
+[2020-03-18 18:29:13] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql --format=json
+[2020-03-18 18:29:13] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 18:29:13] [DETAILS] resolve library-path> Found enclosing pack 'await-reordering-analysis' at /home/ellen/Documents/ASJProj/AsyncAnalysis.
+[2020-03-18 18:29:13] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/ASJProj/AsyncAnalysis/.cache.
+[2020-03-18 18:29:13] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/ASJProj/AsyncAnalysis/qlpack.yml.
+[2020-03-18 18:29:13] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-03-18 18:29:13] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-03-18 18:29:13] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-03-18 18:29:13] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/ASJProj/AsyncAnalysis resolved OK.
+[2020-03-18 18:29:13] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-03-18 18:29:13] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis/.cache"
+                        ],
+                        "relativeName" : "await-reordering-analysis/console_getStmtAndSets.ql"
+                      }
+[2020-03-18 18:29:13] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 18:29:13] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 18:29:13] Resolved file set for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql hashes to 6f3d43b71b88a239c9eb509b3dfd91d7eaa35f48.
+[2020-03-18 18:29:13] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 18:29:14] ExternalModuleBindingPass ...
+[2020-03-18 18:29:14] ExternalModuleBindingPass time: 00:00.535
+[2020-03-18 18:29:14] QLPredicateSynthesiser ...
+[2020-03-18 18:29:14] QLPredicateSynthesiser time: 00:00.028
+[2020-03-18 18:29:14] DeclarationBindingPass ...
+[2020-03-18 18:29:14] DeclarationBindingPass time: 00:00.052
+[2020-03-18 18:29:16] ReferenceBindingCheck ...
+[2020-03-18 18:29:16] ReferenceBindingCheck time: 00:00.099
+[2020-03-18 18:29:16] PredicateBodyBindingPass ...
+[2020-03-18 18:29:16] PredicateBodyBindingPass time: 00:00.404
+[2020-03-18 18:29:16] LanguagePragmaPropagationPass ...
+[2020-03-18 18:29:16] LanguagePragmaPropagationPass time: 00:00.019
+[2020-03-18 18:29:16] Ambiguity checks ...
+[2020-03-18 18:29:16] Ambiguity checks time: 00:00.030
+[2020-03-18 18:29:16] Ql checks ...
+[2020-03-18 18:29:17] Ql checks time: 00:00.406
+[2020-03-18 18:29:17] Compilation pipeline
+[2020-03-18 18:29:18] Type Inference ...
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,73,79
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,750,3877
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,573,2043
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,26,26
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,5,5
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,17,19
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,11,15
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,12,15
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,7,10
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,10,13
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:18] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 18:29:20] Type Inference time: 00:02.027
+[2020-03-18 18:29:20] Binding Checks ...
+[2020-03-18 18:29:20] Binding Checks time: 00:00.449
+[2020-03-18 18:29:21] [DETAILS] execute queries> Optimizing /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 18:29:21] Processing compilation pipeline
+[2020-03-18 18:29:21] Started compiling a query
+[2020-03-18 18:29:21] Initialising compiler...
+[2020-03-18 18:29:21] 	 ... compiler initialised
+[2020-03-18 18:29:21] About to start query optimisation
+[2020-03-18 18:29:21] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:22] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:22] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:22] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:23] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:23] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:23] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:23] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:24] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:24] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:24] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:25] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:25] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:26] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:27] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:27] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:28] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:28] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:29] Compilation cache hit - skipping compilation.
+[2020-03-18 18:29:29] Compilation cache miss for 1a42ab0f3a43120c9cbc6c060cdc25aa5837ac61.
+[2020-03-18 18:29:31] Stored compiled program for 1a42ab0f3a43120c9cbc6c060cdc25aa5837ac61.
+[2020-03-18 18:29:32] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2020-03-18 18:29:32] CSV_COMPILATION: 3230,5412,588,1103
+[2020-03-18 18:29:32] [PROGRESS] execute queries> [1/1] Compiled /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql (18.7s).
+[2020-03-18 18:29:32] Of 8156 predicates, 0 are used in more than one query.
+[2020-03-18 18:29:32] [PROGRESS] execute queries> Starting evaluation of await-reordering-analysis/console_getStmtAndSets.ql.
+[2020-03-18 18:29:32] Starting evaluation of /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql
+[2020-03-18 18:29:32] (0s) Start query execution
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,AST::ASTNode::getTopLevel_dispred#ff,console_getStmtAndSets.ql,1,NotRun,0.009,0,391
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-AST::ASTNode::getTopLevel_dispred#ff (console_getStmtAndSets.ql),0.009,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,JSDoc::Documentable::getDocumentation_dispred#ff,console_getStmtAndSets.ql,2,NotRun,0.001,0,393
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-JSDoc::Documentable::getDocumentation_dispred#ff (console_getStmtAndSets.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,BasicBlocks::Internal::bbLength#ff BasicBlocks::Internal::useAt#ffff BasicBlocks::Internal::defAt#ffff BasicBlocks::Internal::reachableBB#f BasicBlocks::Internal::bbIndex#fff,console_getStmtAndSets.ql,3,NotRun,0.002,0,396
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-BasicBlocks::Internal::bbLength#ff BasicBlocks::Internal::useAt#ffff BasicBlocks::Internal::defAt#ffff BasicBlocks::Internal::reachableBB#f BasicBlocks::Internal::bbIndex#fff (console_getStmtAndSets.ql),0.002,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,CFG::ControlFlowNode::getContainer_dispred#ff,console_getStmtAndSets.ql,4,NotRun,0.001,0,397
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-CFG::ControlFlowNode::getContainer_dispred#ff (console_getStmtAndSets.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,AST::StmtContainer::getEnclosingContainer_dispred#ff,console_getStmtAndSets.ql,5,NotRun,0,0,399
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-AST::StmtContainer::getEnclosingContainer_dispred#ff (console_getStmtAndSets.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,BasicBlocks::bbIDominates#ff,console_getStmtAndSets.ql,6,NotRun,0,0,400
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-BasicBlocks::bbIDominates#ff (console_getStmtAndSets.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,SSA::Internal::getDefReachingEndOf#fff SSA::Internal::getDefinition#ffff SSA::Internal::TCapture#ffff SSA::Internal::TImplicitInit#fff SSA::Internal::TExplicitDef#fffff SSA::Internal::TSsaDefinition#f SSA::Internal::TPhi#fff SSA::Internal::TRefinement#fffff SSA::Internal::Read#f SSA::Internal::Write#f SSA::Internal::RefKind#f,console_getStmtAndSets.ql,7,NotRun,0.005,0,405
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-SSA::Internal::getDefReachingEndOf#fff SSA::Internal::getDefinition#ffff SSA::Internal::TCapture#ffff SSA::Internal::TImplicitInit#fff SSA::Internal::TExplicitDef#fffff SSA::Internal::TSsaDefinition#f SSA::Internal::TPhi#fff SSA::Internal::TRefinement#fffff SSA::Internal::Read#f SSA::Internal::Write#f SSA::Internal::RefKind#f (console_getStmtAndSets.ql),0.005,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,AbstractValuesImpl::TAbstractNull#f AbstractValuesImpl::TAbstractUndefined#f AbstractValuesImpl::TAbstractBoolean#ff AbstractValuesImpl::TAbstractZero#f AbstractValuesImpl::TAbstractNonZero#f AbstractValuesImpl::TAbstractEmpty#f AbstractValuesImpl::TAbstractNumString#f AbstractValuesImpl::TAbstractOtherString#f AbstractValuesImpl::TAbstractRegExp#f AbstractValuesImpl::TAbstractDate#f AbstractValuesImpl::TAbstractArguments#ff AbstractValuesImpl::TAbstractGlobalObject#f AbstractValuesImpl::TAbstractModuleObject#ff AbstractValuesImpl::TAbstractExportsObject#ff AbstractValuesImpl::TAbstractObjectLiteral#ff AbstractValuesImpl::TAbstractFunction#ff AbstractValuesImpl::TAbstractClass#ff AbstractValuesImpl::TAbstractInstance#ff AbstractValuesImpl::TAbstractOtherObject#f AbstractValuesImpl::TIndefiniteFunctionOrClass#ff AbstractValuesImpl::TIndefiniteObject#ff AbstractValuesImpl::TIndefiniteAbstractValue#ff AbstractValuesImpl::TCustomAbstractValue#ff AbstractValuesImpl::TCustomAbstractValueFromDefinition#ff AbstractValuesImpl::TAbstractValue#f,console_getStmtAndSets.ql,8,NotRun,0.007,0,413
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-AbstractValuesImpl::TAbstractNull#f AbstractValuesImpl::TAbstractUndefined#f AbstractValuesImpl::TAbstractBoolean#ff AbstractValuesImpl::TAbstractZero#f AbstractValuesImpl::TAbstractNonZero#f AbstractValuesImpl::TAbstractEmpty#f AbstractValuesImpl::TAbstractNumString#f AbstractValuesImpl::TAbstractOtherString#f AbstractValuesImpl::TAbstractRegExp#f AbstractValuesImpl::TAbstractDate#f AbstractValuesImpl::TAbstractArguments#ff AbstractValuesImpl::TAbstractGlobalObject#f AbstractValuesImpl::TAbstractModuleObject#ff AbstractValuesImpl::TAbstractExportsObject#ff AbstractValuesImpl::TAbstractObjectLiteral#ff AbstractValuesImpl::TAbstractFunction#ff AbstractValuesImpl::TAbstractClass#ff AbstractValuesImpl::TAbstractInstance#ff AbstractValuesImpl::TAbstractOtherObject#f AbstractValuesImpl::TIndefiniteFunctionOrClass#ff AbstractValuesImpl::TIndefiniteObject#ff AbstractValuesImpl::TIndefiniteAbstractValue#ff AbstractValuesImpl::TCustomAbstractValue#ff AbstractValuesImpl::TCustomAbstractValueFromDefinition#ff AbstractValuesImpl::TAbstractValue#f (console_getStmtAndSets.ql),0.007,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,DataFlow::DataFlow::TValueNode#ff DataFlow::DataFlow::TSsaDefNode#ff DataFlow::DataFlow::TPropNode#ff DataFlow::DataFlow::TRestPatternNode#fff DataFlow::DataFlow::TDestructuringPatternNode#ff DataFlow::DataFlow::TElementPatternNode#fff DataFlow::DataFlow::TElementNode#fff DataFlow::DataFlow::TReflectiveCallNode#fff DataFlow::DataFlow::TThisNode#ff DataFlow::DataFlow::TUnusedParameterNode#ff DataFlow::DataFlow::TDestructuredModuleImportNode#ff DataFlow::DataFlow::THtmlAttributeNode#ff DataFlow::DataFlow::TExceptionalFunctionReturnNode#ff DataFlow::DataFlow::TExceptionalInvocationReturnNode#ff DataFlow::DataFlow::TGlobalAccessPathRoot#f DataFlow::DataFlow::TNode#f,console_getStmtAndSets.ql,9,NotRun,0.004,0,417
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-DataFlow::DataFlow::TValueNode#ff DataFlow::DataFlow::TSsaDefNode#ff DataFlow::DataFlow::TPropNode#ff DataFlow::DataFlow::TRestPatternNode#fff DataFlow::DataFlow::TDestructuringPatternNode#ff DataFlow::DataFlow::TElementPatternNode#fff DataFlow::DataFlow::TElementNode#fff DataFlow::DataFlow::TReflectiveCallNode#fff DataFlow::DataFlow::TThisNode#ff DataFlow::DataFlow::TUnusedParameterNode#ff DataFlow::DataFlow::TDestructuredModuleImportNode#ff DataFlow::DataFlow::THtmlAttributeNode#ff DataFlow::DataFlow::TExceptionalFunctionReturnNode#ff DataFlow::DataFlow::TExceptionalInvocationReturnNode#ff DataFlow::DataFlow::TGlobalAccessPathRoot#f DataFlow::DataFlow::TNode#f (console_getStmtAndSets.ql),0.004,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,NodeJS::Require#f,console_getStmtAndSets.ql,10,NotRun,0,0,418
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-NodeJS::Require#f (console_getStmtAndSets.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,DataFlow::DataFlow::localFlowStep#ff Sources::SourceNode::flowsTo_dispred#ff Sources::SourceNode::Range#class#f,console_getStmtAndSets.ql,11,NotRun,0.002,0,421
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-DataFlow::DataFlow::localFlowStep#ff Sources::SourceNode::flowsTo_dispred#ff Sources::SourceNode::Range#class#f (console_getStmtAndSets.ql),0.002,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,DataFlow::DataFlow::Node::getImmediatePredecessor_dispred#ff,console_getStmtAndSets.ql,12,NotRun,0.001,0,422
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-DataFlow::DataFlow::Node::getImmediatePredecessor_dispred#ff (console_getStmtAndSets.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,GlobalAccessPaths::AccessPath::fromReference#fff,console_getStmtAndSets.ql,13,NotRun,0.002,0,425
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-GlobalAccessPaths::AccessPath::fromReference#fff (console_getStmtAndSets.ql),0.002,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,GlobalAccessPaths::AccessPath::fromRhs#fff,console_getStmtAndSets.ql,14,NotRun,0.001,0,427
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-GlobalAccessPaths::AccessPath::fromRhs#fff (console_getStmtAndSets.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,TypeInference::AnalyzedNode::getALocalValue_dispred#ff,console_getStmtAndSets.ql,15,NotRun,0.005,0,432
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-TypeInference::AnalyzedNode::getALocalValue_dispred#ff (console_getStmtAndSets.ql),0.005,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,TypeInference::AnalyzedNode::getAValue_dispred#ff,console_getStmtAndSets.ql,16,NotRun,0.004,0,436
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-TypeInference::AnalyzedNode::getAValue_dispred#ff (console_getStmtAndSets.ql),0.004,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,JSDoc::JSDocNamedTypeExpr::resolvedName_dispred#ff,console_getStmtAndSets.ql,17,NotRun,0,0,437
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-JSDoc::JSDocNamedTypeExpr::resolvedName_dispred#ff (console_getStmtAndSets.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,TypeTracking::TypeTracker::append_dispred#fff,console_getStmtAndSets.ql,18,NotRun,0.001,0,439
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-TypeTracking::TypeTracker::append_dispred#fff (console_getStmtAndSets.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] CSV_IMB_QUERIES: Stage,CallGraphs::CallGraph::getAFunctionReference#fff Nodes::ClassNode::getAClassReference_dispred#ff FlowSteps::CachedSteps::captures#fff FlowSteps::CachedSteps::exploratoryBoundInvokeStep#ff FlowSteps::CachedSteps::returnStep#ff FlowSteps::CachedSteps::globalFlowStep#ff FlowSteps::CachedSteps::basicStoreStep#fff FlowSteps::CachedSteps::basicLoadStep#fff FlowSteps::CachedSteps::callsBound#fff FlowSteps::CachedSteps::calls#ff FlowSteps::CachedSteps::argumentPassing#ffff FlowSteps::CachedSteps::callStep#ff FlowSteps::CachedSteps::callback#ff FlowSteps::CachedSteps::returnedPropWrite#ffff FlowSteps::CachedSteps::receiverPropWrite#fff FlowSteps::CachedSteps::propertyFlowStep#ff TypeTracking::StepSummary::step#fff CallGraphs::CallGraph::isIndefiniteGlobal#f CallGraphs::CallGraph::getAFunctionValue#ff CallGraphs::CallGraph::getABoundFunctionReference#ffff CallGraphs::CallGraph::getACallee#fff,console_getStmtAndSets.ql,19,NotRun,0.006,0,446
+[2020-03-18 18:29:32] CSV_CACHE_DIFF: NotRun-CallGraphs::CallGraph::getAFunctionReference#fff Nodes::ClassNode::getAClassReference_dispred#ff FlowSteps::CachedSteps::captures#fff FlowSteps::CachedSteps::exploratoryBoundInvokeStep#ff FlowSteps::CachedSteps::returnStep#ff FlowSteps::CachedSteps::globalFlowStep#ff FlowSteps::CachedSteps::basicStoreStep#fff FlowSteps::CachedSteps::basicLoadStep#fff FlowSteps::CachedSteps::callsBound#fff FlowSteps::CachedSteps::calls#ff FlowSteps::CachedSteps::argumentPassing#ffff FlowSteps::CachedSteps::callStep#ff FlowSteps::CachedSteps::callback#ff FlowSteps::CachedSteps::returnedPropWrite#ffff FlowSteps::CachedSteps::receiverPropWrite#fff FlowSteps::CachedSteps::propertyFlowStep#ff TypeTracking::StepSummary::step#fff CallGraphs::CallGraph::isIndefiniteGlobal#f CallGraphs::CallGraph::getAFunctionValue#ff CallGraphs::CallGraph::getABoundFunctionReference#ffff CallGraphs::CallGraph::getACallee#fff (console_getStmtAndSets.ql),0.006,0,0,0,0,0,0,0,0,0,0,0,0
+[2020-03-18 18:29:32] (0s) Prepared IMB program for execution: took 0ms
+[2020-03-18 18:29:32] (0s) Beginning execution of program...
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation hasLocation with 439344 rows and 2 columns.
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation lines with 0 rows and 4 columns.
+[2020-03-18 18:29:32] (0s) Inferred that non-rec relation lines_0#antijoin_rhs/1 is empty
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation lines_0#antijoin_rhs with 0 rows and 1 columns.
+[2020-03-18 18:29:32] (0s) Inferred that non-rec relation Lines::Line::getLocation_dispred#ff/2 is empty
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation Lines::Line::getLocation_dispred#ff with 0 rows and 2 columns.
+[2020-03-18 18:29:32] (0s) Inferred that non-rec relation #select#query#ffffffffffffff#shared#3/5 is empty
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation #select#query#ffffffffffffff#shared#3 with 0 rows and 5 columns.
+[2020-03-18 18:29:32] (0s) Inferred that non-rec relation #select#query#ffffffffffffff#antijoin_rhs/4 is empty
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation #select#query#ffffffffffffff#antijoin_rhs with 0 rows and 4 columns.
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation files with 404 rows and 5 columns.
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation locations_default with 354422 rows and 6 columns.
+[2020-03-18 18:29:32] (0s) Starting to evaluate predicate locations_default_10#join_rhs/2@a8fd24
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation locations_default_10#join_rhs with 354422 rows and 2 columns.
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation typeexprs with 3046 rows and 5 columns.
+[2020-03-18 18:29:32] (0s) Starting to evaluate predicate typeexprs_0#antijoin_rhs/1@c0e2bb
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation typeexprs_0#antijoin_rhs with 3046 rows and 1 columns.
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation properties with 4339 rows and 5 columns.
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation exprs with 121399 rows and 5 columns.
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation stmts with 24676 rows and 5 columns.
+[2020-03-18 18:29:32] (0s) Starting to evaluate predicate stmts_0#antijoin_rhs/1@8b19d6
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation stmts_0#antijoin_rhs with 24676 rows and 1 columns.
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation toplevels with 395 rows and 2 columns.
+[2020-03-18 18:29:32] (0s) Starting to evaluate predicate AST::ASTNode#class#f/1@c55a1c
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation AST::ASTNode#class#f with 153855 rows and 1 columns.
+[2020-03-18 18:29:32] (0s) Starting to evaluate predicate AST::ASTNode::getLocation_dispred#ff/2@2abe72
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation AST::ASTNode::getLocation_dispred#ff with 153855 rows and 2 columns.
+[2020-03-18 18:29:32] (0s) Starting to evaluate predicate AST::ASTNode::getLocation_dispred#ff_10#join_rhs/2@126da8
+[2020-03-18 18:29:32] (0s)  >>> Wrote relation AST::ASTNode::getLocation_dispred#ff_10#join_rhs with 153855 rows and 2 columns.
+[2020-03-18 18:29:32] (0s) Starting to evaluate predicate locations_default_120#join_rhs/3@54359d
+[2020-03-18 18:29:33] (1s)  >>> Wrote relation locations_default_120#join_rhs with 354422 rows and 3 columns.
+[2020-03-18 18:29:33] (1s) Inferred that non-rec relation Lines::Line::getLocation_dispred#ff_10#join_rhs/2 is empty
+[2020-03-18 18:29:33] (1s)  >>> Wrote relation Lines::Line::getLocation_dispred#ff_10#join_rhs with 0 rows and 2 columns.
+[2020-03-18 18:29:33] (1s) Inferred that non-rec relation Locations::Locatable::getStartLine_dispred#bf/2 is empty
+[2020-03-18 18:29:33] (1s)  >>> Wrote relation Locations::Locatable::getStartLine_dispred#bf with 0 rows and 2 columns.
+[2020-03-18 18:29:33] (1s) Inferred that non-rec relation #select#ff/2 is empty
+[2020-03-18 18:29:33] (1s)  >>> Wrote relation #select#ff with 0 rows and 2 columns.
+[2020-03-18 18:29:33] (1s) Inferred that non-rec relation #select#query#ffffffffffffff#shared/2 is empty
+[2020-03-18 18:29:33] (1s)  >>> Wrote relation #select#query#ffffffffffffff#shared with 0 rows and 2 columns.
+[2020-03-18 18:29:33] (1s) Starting to evaluate predicate #select#query#ffffffffffffff#shared#2/3@6a99c1
+[2020-03-18 18:29:33] (1s)  >>> Wrote relation #select#query#ffffffffffffff#shared#2 with 0 rows and 3 columns.
+[2020-03-18 18:29:33] (1s) Starting to evaluate predicate #select#query#ffffffffffffff#shared#1/3@02c18c
+[2020-03-18 18:29:33] (1s)  >>> Wrote relation #select#query#ffffffffffffff#shared#1 with 0 rows and 3 columns.
+[2020-03-18 18:29:33] (1s) Starting to evaluate predicate m#Locations::Location::hasLocationInfo_dispred#bfffff/1@8f1ee6
+[2020-03-18 18:29:33] (1s)  >>> Wrote relation m#Locations::Location::hasLocationInfo_dispred#bfffff with 149815 rows and 1 columns.
+[2020-03-18 18:29:33] (1s) Starting to evaluate predicate Locations::Location::hasLocationInfo_dispred#bfffff/6@959dfa
+[2020-03-18 18:29:33] (1s)  >>> Wrote relation Locations::Location::hasLocationInfo_dispred#bfffff with 149815 rows and 6 columns.
+[2020-03-18 18:29:33] (1s) Starting to evaluate predicate #select#query#ffffffffffffff#shared#4/9@70cff2
+[2020-03-18 18:29:33] (1s)  >>> Wrote relation #select#query#ffffffffffffff#shared#4 with 0 rows and 9 columns.
+[2020-03-18 18:29:33] (1s) Inferred that non-rec relation #select#query#ffffffffffffff#shared#5/10 is empty
+[2020-03-18 18:29:33] (1s)  >>> Wrote relation #select#query#ffffffffffffff#shared#5 with 0 rows and 10 columns.
+[2020-03-18 18:29:33] (1s) Inferred that non-rec relation #select#query#ffffffffffffff#antijoin_rhs#1/9 is empty
+[2020-03-18 18:29:33] (1s)  >>> Wrote relation #select#query#ffffffffffffff#antijoin_rhs#1 with 0 rows and 9 columns.
+[2020-03-18 18:29:33] (1s) Starting to evaluate predicate #select#query#ffffffffffffff/14@7d114c
+[2020-03-18 18:29:33] (1s)  >>> Wrote relation #select#query#ffffffffffffff with 0 rows and 14 columns.
+[2020-03-18 18:29:33] (1s) Query done
+[2020-03-18 18:29:33] CSV_CACHE_DIFF: #select#query#ffffffffffffff (console_getStmtAndSets.ql),0.7,0.335,0.135,0.082,0.109,0.028,0,0,0,0,0,0,0
+[2020-03-18 18:29:33] (1s) Sequence stamp origin is -6748207289742674369
+[2020-03-18 18:29:33] (1s) Stopped the world to sync to disk at sequence stamp o+0
+[2020-03-18 18:29:33] (1s) Starting the world again
+[2020-03-18 18:29:33] CSV_IMB_QUERIES: Query,#select#query#ffffffffffffff,console_getStmtAndSets.ql,20,Success,0.7,0,1152
+[2020-03-18 18:29:33] Evaluation of /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql produced BQRS results
+[2020-03-18 18:29:33] [PROGRESS] execute queries> [1/1] Evaluation done (1.2s); writing results to /home/ellen/Documents/ASJProj/AsyncAnalysis/temp_swaps.bqrs.
+[2020-03-18 18:29:33] [PROGRESS] execute queries> Shutting down query evaluator.
+[2020-03-18 18:29:33] Stopped the world to close the cache at sequence stamp o+1
+[2020-03-18 18:29:33] The disk cache is freshly trimmed; leave it be.
+[2020-03-18 18:29:33] Starting the world again
+[2020-03-18 18:29:33] Terminating normally.

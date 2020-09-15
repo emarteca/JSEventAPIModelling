@@ -1,0 +1,12 @@
+[2020-06-24 22:45:16] This is codeql query run --database=../../../ASJProj/TESTING_reordering/QLDBs/fiddle/ --output=temp.bqrs --ram=25600 analyse.ql
+[2020-06-24 22:45:16] Log file was started late.
+[2020-06-24 22:45:16] Calling plumbing command: codeql resolve ram --ram=25600 --format=json
+[2020-06-24 22:45:16] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx12800M",
+                        "--off-heap-ram=12800"
+                      ]
+[2020-06-24 22:45:16] Spawning plumbing command: execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --ml-model-path= --native-library-path= --warnings=show --output=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/temp.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql
+[2020-06-24 22:45:30] [ERROR] Spawned process exited abnormally (code 1; tried to run: [/home/ellen/codeql_home/codeql/tools/linux64/java/bin/java, -Xmx12800M, -Djava.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib, -cp, /home/ellen/codeql_home/codeql/tools/codeql.jar, com.semmle.cli2.CodeQL, execute, queries, -J-Xmx12800M, --off-heap-ram=12800, --verbosity=progress, --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log, --ml-model-path=, --native-library-path=, --warnings=show, --output=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/temp.bqrs, --, /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript, /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql])
+[2020-06-24 22:45:30] Plumbing command codeql execute queries terminated with status 1.
+[2020-06-24 22:45:30] Exiting with code 1

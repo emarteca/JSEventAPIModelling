@@ -1,0 +1,291 @@
+[2020-06-24 23:40:35] This is codeql execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --ml-model-path= --native-library-path= --warnings=show --output=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/temp.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql
+[2020-06-24 23:40:35] Creating executor with 1 threads.
+[2020-06-24 23:40:35] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql --format=json
+[2020-06-24 23:40:35] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 23:40:36] [DETAILS] resolve library-path> Found enclosing pack 'api-modelling-analysis' at /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data.
+[2020-06-24 23:40:36] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/.cache.
+[2020-06-24 23:40:36] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/qlpack.yml.
+[2020-06-24 23:40:36] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-06-24 23:40:36] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-06-24 23:40:36] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-06-24 23:40:36] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data resolved OK.
+[2020-06-24 23:40:36] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-06-24 23:40:36] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/.cache"
+                        ],
+                        "relativeName" : "api-modelling-analysis/analyse.ql"
+                      }
+[2020-06-24 23:40:36] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 23:40:36] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 23:40:38] Resolved file set for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql hashes to 08597e5ffdd586cff8130170002295db566c38ef.
+[2020-06-24 23:40:38] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 23:40:39] ExternalModuleBindingPass ...
+[2020-06-24 23:40:45] ExternalModuleBindingPass time: 00:06.136
+[2020-06-24 23:40:45] QLPredicateSynthesiser ...
+[2020-06-24 23:40:45] QLPredicateSynthesiser time: 00:00.067
+[2020-06-24 23:40:45] DeclarationBindingPass ...
+[2020-06-24 23:40:45] DeclarationBindingPass time: 00:00.518
+[2020-06-24 23:40:45] Fixed point time ...
+[2020-06-24 23:40:46] Fixed point time time: 00:00.391
+[2020-06-24 23:40:46] ReferenceBindingPass ...
+[2020-06-24 23:40:46] ReferenceBindingPass time: 00:00.119
+[2020-06-24 23:40:46] EntityTypeUpdateBindingPass ...
+[2020-06-24 23:40:46] EntityTypeUpdateBindingPass time: 00:00.102
+[2020-06-24 23:40:46] ReferenceBindingCheck ...
+[2020-06-24 23:40:46] ReferenceBindingCheck time: 00:00.093
+[2020-06-24 23:40:46] PredicateBodyBindingPass ...
+[2020-06-24 23:40:47] PredicateBodyBindingPass time: 00:00.802
+[2020-06-24 23:40:47] LanguagePragmaPropagationPass ...
+[2020-06-24 23:40:47] LanguagePragmaPropagationPass time: 00:00.121
+[2020-06-24 23:40:47] Ambiguity checks ...
+[2020-06-24 23:40:47] Ambiguity checks time: 00:00.107
+[2020-06-24 23:40:47] Ql checks ...
+[2020-06-24 23:40:49] Ql checks time: 00:01.452
+[2020-06-24 23:40:51] Compilation pipeline
+[2020-06-24 23:40:52] Type Inference ...
+[2020-06-24 23:40:52] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2020-06-24 23:40:52] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-06-24 23:40:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:52] CSV_TYPE_HIERARCHY: 0,0,79,85
+[2020-06-24 23:40:52] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-06-24 23:40:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,749,3855
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,623,2259
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,7,7
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,26,26
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,17,19
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,7,10
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,12,15
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,10,13
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:53] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 23:40:55] Type Inference time: 00:03.328
+[2020-06-24 23:40:55] Binding Checks ...
+[2020-06-24 23:40:56] Binding Checks time: 00:00.555
+[2020-06-24 23:40:57] [WARN] execute queries> WARNING: Unused predicate incorrect (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:925,11-20)
+[2020-06-24 23:40:57] [WARN] execute queries> WARNING: Unused predicate knownUnknown (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:973,11-23)
+[2020-06-24 23:40:57] [DETAILS] execute queries> Optimizing /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 23:40:57] Processing compilation pipeline
+[2020-06-24 23:40:57] Started compiling a query
+[2020-06-24 23:40:57] Initialising compiler...
+[2020-06-24 23:40:57] 	 ... compiler initialised
+[2020-06-24 23:40:57] About to start query optimisation
+[2020-06-24 23:40:59] Compilation cache miss for 3b22f3c506b1e1b20636be57c520e067a4055a2b.
+[2020-06-24 23:41:10] Stored compiled program for 3b22f3c506b1e1b20636be57c520e067a4055a2b.
+[2020-06-24 23:41:11] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2020-06-24 23:41:11] CSV_COMPILATION: 2271,925,5805,3791
+[2020-06-24 23:41:11] [PROGRESS] execute queries> [1/1] Compiled /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql (35s).
+[2020-06-24 23:41:11] Of 70 predicates, 0 are used in more than one query.
+[2020-06-24 23:41:11] [PROGRESS] execute queries> Starting evaluation of api-modelling-analysis/analyse.ql.
+[2020-06-24 23:41:11] Starting evaluation of /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql
+[2020-06-24 23:41:11] (0s) Start query execution
+[2020-06-24 23:41:11] (0s) Prepared IMB program for execution: took 0ms
+[2020-06-24 23:41:11] (0s) Beginning execution of program...
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::typeOf#fb#join_rhs/1@a962b5
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::typeOf#fb#join_rhs with 37922 rows and 1 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#36/2@74a292
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#36 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#35/2@cf41c4
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#35 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#34/2@69161d
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#34 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#33/2@153ad4
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#33 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#32/2@b93e90
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#32 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#31/2@e66b80
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#31 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#30/2@8d69fa
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#30 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#29/2@bd2e7e
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#29 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#28/2@759c66
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#28 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#27/2@0faf87
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#27 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#26/2@bf1c13
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#26 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#25/2@be1033
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#25 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#24/2@9af2c8
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#24 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#23/2@bca424
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#23 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#22/2@17f945
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#22 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#21/2@169b8c
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#21 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#20/2@c535f0
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#20 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#19/2@3b8813
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#19 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#18/2@ba4619
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#18 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#17/2@cb0392
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#17 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#16/2@4da191
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#16 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#15/2@ca042d
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#15 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#14/2@51f63d
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#14 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#13/2@42258e
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#13 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#12/2@3e6778
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#12 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#11/2@9949e2
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#11 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#10/2@626ad0
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#10 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#9/2@504276
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#9 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#8/2@70a1a0
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#8 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#7/2@c3a5ab
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#7 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#6/2@dd199f
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#6 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#5/2@98b832
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#5 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#4/2@35c5f5
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#4 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#3/2@27fc57
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#3 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#2/2@0d0b14
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#2 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs#1/2@0e5372
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs#1 with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#join_rhs/2@7a4b39
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff#join_rhs with 1 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#cur_delta/2[1]@b0ebd5 (iteration 1)
+[2020-06-24 23:41:11] (0s) 			 - analyse::hasEvent#ff_delta has 184 rows (order for disjuncts: delta=<standard>).
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#cur_delta/2[2]@e0caff (iteration 2)
+[2020-06-24 23:41:11] (0s) 			 - analyse::hasEvent#ff_delta has 127 rows (order for disjuncts: delta=100).
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#cur_delta/2[3]@3e85b4 (iteration 3)
+[2020-06-24 23:41:11] (0s) 			 - analyse::hasEvent#ff_delta has 53 rows (order for disjuncts: delta=100).
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#cur_delta/2[4]@b1df56 (iteration 4)
+[2020-06-24 23:41:11] (0s) 			 - analyse::hasEvent#ff_delta has 21 rows (order for disjuncts: delta=100).
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#cur_delta/2[5]@9f613a (iteration 5)
+[2020-06-24 23:41:11] (0s) 			 - analyse::hasEvent#ff_delta has 4 rows (order for disjuncts: delta=100).
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::hasEvent#ff#cur_delta/2[6]@aeeae9 (iteration 6)
+[2020-06-24 23:41:11] (0s) Empty delta for analyse::hasEvent#ff_delta (order for disjuncts: delta=100).
+[2020-06-24 23:41:11] (0s) Accumulating deltas
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::hasEvent#ff with 389 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::method#ffb#join_rhs/1@c15b8b
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::method#ffb#join_rhs with 11 rows and 1 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate project#analyse::hasEvent#ff/1@0706a8
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation project#analyse::hasEvent#ff with 36 rows and 1 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::method#ffb/3@9f3228
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::method#ffb with 288 rows and 3 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate analyse::field#ffb/3@27d21c
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation analyse::field#ffb with 28 rows and 3 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate project#analyse::method#ffb/2@e689a9
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation project#analyse::method#ffb with 42 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate project#analyse::method#ffb_10#join_rhs/2@47c4c1
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation project#analyse::method#ffb_10#join_rhs with 42 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate project#analyse::field#ffb/2@eae672
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation project#analyse::field#ffb with 22 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate project#analyse::field#ffb_10#join_rhs/2@8eb892
+[2020-06-24 23:41:11] (0s)  >>> Wrote relation project#analyse::field#ffb_10#join_rhs with 22 rows and 2 columns.
+[2020-06-24 23:41:11] (0s) Starting to evaluate predicate m#analyse::typeOf#fb#cur_delta/1[1]@e45505 (iteration 1)
+[2020-06-24 23:41:12] (0s) 			 - m#analyse::typeOf#fb_delta has 36 rows (order for disjuncts: delta=<standard>).
+[2020-06-24 23:41:12] (0s) Starting to evaluate predicate m#analyse::typeOf#fb#cur_delta/1[2]@a33b89 (iteration 2)
+[2020-06-24 23:41:12] (0s) 			 - m#analyse::typeOf#fb_delta has 2 rows (order for disjuncts: delta=100).
+[2020-06-24 23:41:12] (0s) Starting to evaluate predicate m#analyse::typeOf#fb#cur_delta/1[3]@23de2a (iteration 3)
+[2020-06-24 23:41:12] (0s) Empty delta for m#analyse::typeOf#fb_delta (order for disjuncts: delta=100).
+[2020-06-24 23:41:12] (0s) Accumulating deltas
+[2020-06-24 23:41:12] (0s)  >>> Wrote relation m#analyse::typeOf#fb with 38 rows and 1 columns.
+[2020-06-24 23:41:12] (0s) Starting to evaluate predicate analyse::typeOf#fb#join_rhs#2/3@2b2099
+[2020-06-24 23:41:12] (0s)  >>> Wrote relation analyse::typeOf#fb#join_rhs#2 with 288 rows and 3 columns.
+[2020-06-24 23:41:12] (0s) Starting to evaluate predicate analyse::typeOf#fb#join_rhs#1/3@b8467e
+[2020-06-24 23:41:12] (0s)  >>> Wrote relation analyse::typeOf#fb#join_rhs#1 with 28 rows and 3 columns.
+[2020-06-24 23:41:12] (0s) Starting to evaluate predicate analyse::exportedClass#ff/2@3a0c2d
+[2020-06-24 23:41:12] (0s)  >>> Wrote relation analyse::exportedClass#ff with 12 rows and 2 columns.
+[2020-06-24 23:41:12] (0s) Starting to evaluate predicate analyse::exportedFn#fff/3@6bc098
+[2020-06-24 23:41:12] (0s)  >>> Wrote relation analyse::exportedFn#fff with 28 rows and 3 columns.
+[2020-06-24 23:41:12] (0s) Starting to evaluate predicate analyse::typeOf#fb#cur_delta/2[1]@ca54b8 (iteration 1)
+[2020-06-24 23:41:12] (0s) 			 - analyse::typeOf#fb_delta has 96 rows (order for disjuncts: delta=<standard>).
+[2020-06-24 23:41:12] (0s) Starting to evaluate predicate analyse::typeOf#fb#cur_delta/2[2]@4f61f3 (iteration 2)
+[2020-06-24 23:41:12] (0s) 			 - analyse::typeOf#fb_delta has 34 rows (order for disjuncts: delta=100).
+[2020-06-24 23:41:12] (0s) Starting to evaluate predicate analyse::typeOf#fb#cur_delta/2[3]@d79dc6 (iteration 3)
+[2020-06-24 23:41:12] (0s) 			 - analyse::typeOf#fb_delta has 3 rows (order for disjuncts: delta=100).
+[2020-06-24 23:41:12] (0s) Starting to evaluate predicate analyse::typeOf#fb#cur_delta/2[4]@4979e8 (iteration 4)
+[2020-06-24 23:41:12] (0s) Empty delta for analyse::typeOf#fb_delta (order for disjuncts: delta=100).
+[2020-06-24 23:41:12] (0s) Accumulating deltas
+[2020-06-24 23:41:12] (0s)  >>> Wrote relation analyse::typeOf#fb with 133 rows and 2 columns.
+[2020-06-24 23:41:12] (0s) Starting to evaluate predicate analyse::hasEvent#ff_10#join_rhs/2@c3d443
+[2020-06-24 23:41:12] (0s)  >>> Wrote relation analyse::hasEvent#ff_10#join_rhs with 389 rows and 2 columns.
+[2020-06-24 23:41:12] (0s) Starting to evaluate predicate #select#ff#join_rhs/1@d105f8
+[2020-06-24 23:41:12] (0s)  >>> Wrote relation #select#ff#join_rhs with 21249 rows and 1 columns.
+[2020-06-24 23:41:12] (0s) Starting to evaluate predicate #select#ff/2@02fb10
+[2020-06-24 23:41:13] (2s)  >>> Wrote relation #select#ff with 715 rows and 2 columns.
+[2020-06-24 23:41:13] (2s) Starting to evaluate predicate #select#ff_01_expr_#antijoin_rhs/3@f8ab9a
+[2020-06-24 23:41:13] (2s)  >>> Wrote relation #select#ff_01_expr_#antijoin_rhs with 715 rows and 3 columns.
+[2020-06-24 23:41:13] (2s) Starting to evaluate predicate #select#query#ffff/4@f05c08
+[2020-06-24 23:41:13] (2s)  >>> Wrote relation #select#query#ffff with 715 rows and 4 columns.
+[2020-06-24 23:41:13] (2s) Query done
+[2020-06-24 23:41:13] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2020-06-24 23:41:13] CSV_CACHE_DIFF: #select#query#ffff (analyse.ql),2.29,2.005,0,0.032,0.01,0.005,0,0,0,0,0,0,0
+[2020-06-24 23:41:13] (2s) Sequence stamp origin is -6711760701113961491
+[2020-06-24 23:41:13] (2s) Stopped the world to sync to disk at sequence stamp o+0
+[2020-06-24 23:41:13] (2s) Starting the world again
+[2020-06-24 23:41:13] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2020-06-24 23:41:13] CSV_IMB_QUERIES: Query,#select#query#ffff,analyse.ql,1,Success,2.29,715,2757
+[2020-06-24 23:41:13] Evaluation of /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql produced BQRS results
+[2020-06-24 23:41:13] [PROGRESS] execute queries> [1/1] Evaluation done (2.8s); writing results to /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/temp.bqrs.
+[2020-06-24 23:41:13] [PROGRESS] execute queries> Shutting down query evaluator.
+[2020-06-24 23:41:13] Stopped the world to close the cache at sequence stamp o+1
+[2020-06-24 23:41:13] The disk cache is freshly trimmed; leave it be.
+[2020-06-24 23:41:13] Starting the world again
+[2020-06-24 23:41:13] Terminating normally.

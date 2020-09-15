@@ -1,0 +1,122 @@
+[2020-03-18 16:54:46] This is codeql execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --warnings=show --output=/home/ellen/Documents/ASJProj/AsyncAnalysis/temp_swaps.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql
+[2020-03-18 16:54:46] Creating executor with 1 threads.
+[2020-03-18 16:54:47] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql --format=json
+[2020-03-18 16:54:47] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 16:54:47] [DETAILS] resolve library-path> Found enclosing pack 'await-reordering-analysis' at /home/ellen/Documents/ASJProj/AsyncAnalysis.
+[2020-03-18 16:54:47] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/ASJProj/AsyncAnalysis/.cache.
+[2020-03-18 16:54:47] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/ASJProj/AsyncAnalysis/qlpack.yml.
+[2020-03-18 16:54:47] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-03-18 16:54:47] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-03-18 16:54:47] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-03-18 16:54:47] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/ASJProj/AsyncAnalysis resolved OK.
+[2020-03-18 16:54:47] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-03-18 16:54:47] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis/.cache"
+                        ],
+                        "relativeName" : "await-reordering-analysis/console_getStmtAndSets.ql"
+                      }
+[2020-03-18 16:54:47] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 16:54:47] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 16:54:47] Resolved file set for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql hashes to abebdb84a6bc3212f2e01b85e149c8495bb27e86.
+[2020-03-18 16:54:47] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 16:54:47] ExternalModuleBindingPass ...
+[2020-03-18 16:54:48] ExternalModuleBindingPass time: 00:00.467
+[2020-03-18 16:54:48] QLPredicateSynthesiser ...
+[2020-03-18 16:54:48] QLPredicateSynthesiser time: 00:00.029
+[2020-03-18 16:54:48] DeclarationBindingPass ...
+[2020-03-18 16:54:48] DeclarationBindingPass time: 00:00.055
+[2020-03-18 16:54:49] ReferenceBindingCheck ...
+[2020-03-18 16:54:49] ReferenceBindingCheck time: 00:00.139
+[2020-03-18 16:54:49] PredicateBodyBindingPass ...
+[2020-03-18 16:54:50] PredicateBodyBindingPass time: 00:00.406
+[2020-03-18 16:54:50] LanguagePragmaPropagationPass ...
+[2020-03-18 16:54:50] LanguagePragmaPropagationPass time: 00:00.018
+[2020-03-18 16:54:50] Ambiguity checks ...
+[2020-03-18 16:54:50] Ambiguity checks time: 00:00.032
+[2020-03-18 16:54:50] Ql checks ...
+[2020-03-18 16:54:50] Ql checks time: 00:00.367
+[2020-03-18 16:54:51] Compilation pipeline
+[2020-03-18 16:54:51] Type Inference ...
+[2020-03-18 16:54:51] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2020-03-18 16:54:51] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-03-18 16:54:51] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:51] CSV_TYPE_HIERARCHY: 0,0,73,79
+[2020-03-18 16:54:51] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-03-18 16:54:51] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,750,3885
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,573,2043
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,26,26
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,5,5
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,17,19
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,11,15
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,12,15
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,7,10
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,10,13
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-03-18 16:54:53] Type Inference time: 00:02.032
+[2020-03-18 16:54:53] Binding Checks ...
+[2020-03-18 16:54:54] Binding Checks time: 00:00.760
+[2020-03-18 16:54:54] [ERROR] execute queries> ERROR: 'innerCaller' is not bound to a value. (/home/ellen/Documents/ASJProj/AsyncAnalysis/ReorderingUtils.qll:1046,65-83)
+[2020-03-18 16:54:54] [ERROR] execute queries> ERROR: 'innerCaller' is not bound to a value. (/home/ellen/Documents/ASJProj/AsyncAnalysis/ReorderingUtils.qll:1048,3-14)
+[2020-03-18 16:54:54] Sequence stamp origin is -6748231625899767372
+[2020-03-18 16:54:54] Stopped the world to close the cache at sequence stamp o+0
+[2020-03-18 16:54:54] The disk cache is freshly trimmed; leave it be.
+[2020-03-18 16:54:54] Starting the world again
+[2020-03-18 16:54:54] Exiting with code 1

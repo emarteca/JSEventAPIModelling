@@ -1,0 +1,50 @@
+[2020-03-18 17:43:08] This is codeql execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --warnings=show --output=/home/ellen/Documents/ASJProj/AsyncAnalysis/temp_swaps.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql
+[2020-03-18 17:43:08] Creating executor with 1 threads.
+[2020-03-18 17:43:08] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql --format=json
+[2020-03-18 17:43:08] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 17:43:09] [DETAILS] resolve library-path> Found enclosing pack 'await-reordering-analysis' at /home/ellen/Documents/ASJProj/AsyncAnalysis.
+[2020-03-18 17:43:09] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/ASJProj/AsyncAnalysis/.cache.
+[2020-03-18 17:43:09] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/ASJProj/AsyncAnalysis/qlpack.yml.
+[2020-03-18 17:43:09] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-03-18 17:43:09] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-03-18 17:43:09] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-03-18 17:43:09] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/ASJProj/AsyncAnalysis resolved OK.
+[2020-03-18 17:43:09] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-03-18 17:43:09] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/ASJProj/AsyncAnalysis/.cache"
+                        ],
+                        "relativeName" : "await-reordering-analysis/console_getStmtAndSets.ql"
+                      }
+[2020-03-18 17:43:09] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 17:43:09] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 17:43:09] Resolved file set for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql hashes to 3e9ea20b53906b01814ee0c01044240ca924b575.
+[2020-03-18 17:43:09] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql.
+[2020-03-18 17:43:09] ExternalModuleBindingPass ...
+[2020-03-18 17:43:10] ExternalModuleBindingPass time: 00:00.504
+[2020-03-18 17:43:10] QLPredicateSynthesiser ...
+[2020-03-18 17:43:10] QLPredicateSynthesiser time: 00:00.030
+[2020-03-18 17:43:10] DeclarationBindingPass ...
+[2020-03-18 17:43:10] DeclarationBindingPass time: 00:00.050
+[2020-03-18 17:43:11] ReferenceBindingCheck ...
+[2020-03-18 17:43:11] ReferenceBindingCheck time: 00:00.102
+[2020-03-18 17:43:11] PredicateBodyBindingPass ...
+[2020-03-18 17:43:12] PredicateBodyBindingPass time: 00:00.408
+[2020-03-18 17:43:12] LanguagePragmaPropagationPass ...
+[2020-03-18 17:43:12] LanguagePragmaPropagationPass time: 00:00.016
+[2020-03-18 17:43:12] Ambiguity checks ...
+[2020-03-18 17:43:12] Ambiguity checks time: 00:00.038
+[2020-03-18 17:43:12] Ql checks ...
+[2020-03-18 17:43:12] Ql checks time: 00:00.375
+[2020-03-18 17:43:12] [ERROR] execute queries> ERROR: getChildExpr() cannot be resolved for type Stmt (/home/ellen/Documents/ASJProj/AsyncAnalysis/console_getStmtAndSets.ql:25,30-42)
+[2020-03-18 17:43:13] Sequence stamp origin is -6748219162226771158
+[2020-03-18 17:43:13] Stopped the world to close the cache at sequence stamp o+0
+[2020-03-18 17:43:13] The disk cache is freshly trimmed; leave it be.
+[2020-03-18 17:43:13] Starting the world again
+[2020-03-18 17:43:13] Exiting with code 1

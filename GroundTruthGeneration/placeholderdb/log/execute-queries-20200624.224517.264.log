@@ -1,0 +1,165 @@
+[2020-06-24 22:45:17] This is codeql execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --ml-model-path= --native-library-path= --warnings=show --output=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/temp.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql
+[2020-06-24 22:45:17] Creating executor with 1 threads.
+[2020-06-24 22:45:17] Calling plumbing command: codeql resolve library-path --query=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql --format=json
+[2020-06-24 22:45:17] [DETAILS] resolve library-path> Resolving query at normalized path /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 22:45:17] [DETAILS] resolve library-path> Found enclosing pack 'api-modelling-analysis' at /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data.
+[2020-06-24 22:45:17] [DETAILS] resolve library-path> Adding compilation cache at /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/.cache.
+[2020-06-24 22:45:17] [DETAILS] resolve library-path> Resolving library dependencies from /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/qlpack.yml.
+[2020-06-24 22:45:17] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home.
+[2020-06-24 22:45:17] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql.
+[2020-06-24 22:45:17] [SPAMMIER] resolve library-path> Recursing into /home/ellen/codeql_home/ql/misc/legacy-support.
+[2020-06-24 22:45:17] [DETAILS] resolve library-path> QL pack dependencies for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data resolved OK.
+[2020-06-24 22:45:17] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme.
+[2020-06-24 22:45:17] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data",
+                          "/home/ellen/codeql_home/ql/javascript/ql/src"
+                        ],
+                        "dbscheme" : "/home/ellen/codeql_home/ql/javascript/ql/src/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/.cache"
+                        ],
+                        "relativeName" : "api-modelling-analysis/analyse.ql"
+                      }
+[2020-06-24 22:45:17] [PROGRESS] execute queries> Compiling query plan for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 22:45:17] [DETAILS] execute queries> Resolving imports for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 22:45:18] Resolved file set for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql hashes to dae441955a81f3e12fffae427c6af0afebda4c27.
+[2020-06-24 22:45:18] [DETAILS] execute queries> Checking QL for /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql.
+[2020-06-24 22:45:19] ExternalModuleBindingPass ...
+[2020-06-24 22:45:22] ExternalModuleBindingPass time: 00:02.747
+[2020-06-24 22:45:22] QLPredicateSynthesiser ...
+[2020-06-24 22:45:22] QLPredicateSynthesiser time: 00:00.046
+[2020-06-24 22:45:22] DeclarationBindingPass ...
+[2020-06-24 22:45:22] DeclarationBindingPass time: 00:00.277
+[2020-06-24 22:45:22] Fixed point time ...
+[2020-06-24 22:45:22] Fixed point time time: 00:00.287
+[2020-06-24 22:45:22] ReferenceBindingPass ...
+[2020-06-24 22:45:22] ReferenceBindingPass time: 00:00.080
+[2020-06-24 22:45:22] EntityTypeUpdateBindingPass ...
+[2020-06-24 22:45:22] EntityTypeUpdateBindingPass time: 00:00.078
+[2020-06-24 22:45:22] ReferenceBindingCheck ...
+[2020-06-24 22:45:22] ReferenceBindingCheck time: 00:00.056
+[2020-06-24 22:45:22] PredicateBodyBindingPass ...
+[2020-06-24 22:45:23] PredicateBodyBindingPass time: 00:00.509
+[2020-06-24 22:45:23] LanguagePragmaPropagationPass ...
+[2020-06-24 22:45:23] LanguagePragmaPropagationPass time: 00:00.046
+[2020-06-24 22:45:23] Ambiguity checks ...
+[2020-06-24 22:45:23] Ambiguity checks time: 00:00.104
+[2020-06-24 22:45:23] Ql checks ...
+[2020-06-24 22:45:24] Ql checks time: 00:00.722
+[2020-06-24 22:45:26] Compilation pipeline
+[2020-06-24 22:45:26] Type Inference ...
+[2020-06-24 22:45:26] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2020-06-24 22:45:26] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-06-24 22:45:26] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:26] CSV_TYPE_HIERARCHY: 0,0,77,83
+[2020-06-24 22:45:26] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-06-24 22:45:26] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,749,3855
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,623,2259
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,7,7
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,26,26
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,17,19
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,7,10
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,12,15
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,10,13
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:27] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2020-06-24 22:45:28] Type Inference time: 00:02.084
+[2020-06-24 22:45:28] Binding Checks ...
+[2020-06-24 22:45:29] Binding Checks time: 00:01.310
+[2020-06-24 22:45:30] [WARN] execute queries> WARNING: Unused predicate incorrect (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:921,11-20)
+[2020-06-24 22:45:30] [WARN] execute queries> WARNING: Unused predicate knownUnknown (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:965,11-23)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'accessPath' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:965,24-41)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'eventName' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:965,43-59)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: call argument is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:970,38-48)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'extAccessPath' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:265,12-32)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: call argument is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:265,55-68)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'extAccessPath' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:265,77-90)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: call argument is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:265,70-71)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'extAccessPath' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:273,12-32)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: call argument is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:273,55-68)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'extAccessPath' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:273,77-90)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: call argument is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:273,70-71)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'accessPath' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:954,19-36)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'd' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:959,15-23)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'd' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:959,71-72)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:959,39-72)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:959,39-72)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:959,39-79)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'd' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:961,15-23)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'd' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:961,71-72)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:961,39-72)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:961,39-72)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:961,39-79)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'accessPath' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:921,21-38)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'd' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:931,15-23)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'd' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:931,71-72)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:931,39-72)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:931,39-72)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:931,39-79)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'd' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:933,15-23)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'd' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:933,77-78)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:933,39-78)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:933,39-78)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:933,39-85)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'd' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:935,15-23)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'd' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:935,71-72)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:935,39-72)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:935,39-72)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:935,39-79)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'd' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:937,15-23)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: 'd' is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:937,78-79)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:937,39-79)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:937,39-79)
+[2020-06-24 22:45:30] [ERROR] execute queries> ERROR: expression is not bound to a value. (/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql:937,39-86)
+[2020-06-24 22:45:30] Sequence stamp origin is -6711774953925107708
+[2020-06-24 22:45:30] Stopped the world to close the cache at sequence stamp o+0
+[2020-06-24 22:45:30] The disk cache is freshly trimmed; leave it be.
+[2020-06-24 22:45:30] Starting the world again
+[2020-06-24 22:45:30] Exiting with code 1

@@ -1,0 +1,2 @@
+[2020-09-15 15:51:03] This is codeql execute queries -J-Xmx3968M --off-heap-ram=3968 --verbosity=progress --logdir=/home/ellen/Documents/APIModellingProj/Artifact/placeholderdb/log --ml-model-path= --native-library-path= --warnings=show --output=/home/ellen/Documents/APIModellingProj/Artifact/temp.bqrs -- /home/ellen/Documents/APIModellingProj/Artifact/placeholderdb/db-javascript /home/ellen/Documents/APIModellingProj/Artifact/correct_groundTruth.ql
+[2020-09-15 15:51:03] Creating executor with 1 threads.

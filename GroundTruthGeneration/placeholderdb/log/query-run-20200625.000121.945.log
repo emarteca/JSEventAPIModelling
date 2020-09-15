@@ -1,0 +1,11 @@
+[2020-06-25 00:01:21] This is codeql query run --database=../../../ASJProj/TESTING_reordering/QLDBs/fiddle/ --output=temp.bqrs --ram=25600 analyse.ql
+[2020-06-25 00:01:21] Log file was started late.
+[2020-06-25 00:01:21] Calling plumbing command: codeql resolve ram --ram=25600 --format=json
+[2020-06-25 00:01:21] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx12800M",
+                        "--off-heap-ram=12800"
+                      ]
+[2020-06-25 00:01:22] Spawning plumbing command: execute queries -J-Xmx12800M --off-heap-ram=12800 --verbosity=progress --logdir=/home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/log --ml-model-path= --native-library-path= --warnings=show --output=/home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/temp.bqrs -- /home/ellen/Documents/ASJProj/TESTING_reordering/QLDBs/fiddle/db-javascript /home/ellen/Documents/APIModellingProj/JSEventBasedAPILearning/data/analyse.ql
+[2020-06-25 00:01:52] Plumbing command codeql execute queries terminated with status 0.
+[2020-06-25 00:01:52] Exiting with code 0
