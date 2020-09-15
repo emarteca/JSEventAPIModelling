@@ -1,5 +1,8 @@
 #!/bin/bash
 
+unzip listeners-new.zip
+unzip listeners-old.zip
+
 readlink -f (ls listeners-new) > new_query_proj_list.out
 readlink -f (ls listeners-old) > old_query_proj_list.out
 
