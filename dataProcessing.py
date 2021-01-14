@@ -605,6 +605,7 @@ def kfoldCrossValidateAtThresh(thresh, known_correct, known_broken, known_knownU
 	correct_splits = splitDFIntoK( known_correct, k)
 	broken_splits = splitDFIntoK( known_broken, k)
 	ku_splits = splitDFIntoK( known_knownUnknown, k)
+	retVal = []
 	for fold in range(k):
 		print("On fold: " + str(fold) + "\n")
 		test_broken = broken_splits[fold]
