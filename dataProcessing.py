@@ -608,20 +608,20 @@ def kfoldCrossValidateAtThresh(thresh, known_correct, known_broken, known_knownU
 	retVal = []
 	for fold in range(k):
 		print("On fold: " + str(fold) + "\n")
-		test_broken = broken_splits[fold]
-		test_correct = correct_splits[fold]
-		test_ku = ku_splits[fold]
-		compl_broken = test_broken.merge(known_broken, indicator='match', how='right')[lambda x: x.match=='right_only'].drop('match',1)
-		compl_correct = test_correct.merge(known_correct, indicator='match', how='right')[lambda x: x.match=='right_only'].drop('match',1)
-		compl_ku = test_ku.merge(known_knownUnknown, indicator='match', how='right')[lambda x: x.match=='right_only'].drop('match',1)
+		validation_broken = broken_splits[fold]
+		validation_correct = correct_splits[fold]
+		validation_ku = ku_splits[fold]
+		train_broken = validation_broken.merge(known_broken, indicator='match', how='right')[lambda x: x.match=='right_only'].drop('match',1)
+		train_correct = validation_correct.merge(known_correct, indicator='match', how='right')[lambda x: x.match=='right_only'].drop('match',1)
+		train_ku = validation_ku.merge(known_knownUnknown, indicator='match', how='right')[lambda x: x.match=='right_only'].drop('match',1)
 		# run the experiment over the data we've picked
-		results = getExperimentStats( param_configs, test_correct, test_broken, test_ku, True, [], False, data_dir)
+		results = getExperimentStats( param_configs, train_correct, train_broken, train_ku, True, [], False, data_dir)
 		check = [(np.inf if np.isnan(k[0]) else k[0], k[1].overall_TP_count, k[2], k[1].overall_FP_count, k[1].overall_U_U_count) for k in results] # get a more readable list without the giant "diagnosed" frames
 		check = list(zip(check, list(range(len(check)))))
 		check.sort()
 		best_res = getOverallBestGTEThresh(check, thresh)
 		best_config = best_res[2][0][2]
-		compl_res = getExperimentStats( [best_config], compl_correct, compl_broken, compl_ku, True, [], False, data_dir)
+		compl_res = getExperimentStats( [best_config], validation_correct, validation_broken, validation_ku, True, [], False, data_dir)
 		# return: 
 		retVal += [(best_res, compl_res)]
 	return(retVal)		
