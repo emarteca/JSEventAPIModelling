@@ -3,8 +3,10 @@
 unzip listeners-new.zip
 unzip listeners-old.zip
 
-readlink -f (ls listeners-new) > new_query_proj_list.out
-readlink -f (ls listeners-old) > old_query_proj_list.out
+cd listeners-new
+readlink -f `ls *_*.json` > new_query_proj_list.out
+cd ../listeners-old
+readlink -f `ls *_*.json` > old_query_proj_list.out
 
 python parse_query_output_into_csv.py new_query_proj_list.out merged_data_withFile.out
 python parse_query_output_into_csv.py old_query_proj_list.out merged_data_withFile_noAliasRemoval.out

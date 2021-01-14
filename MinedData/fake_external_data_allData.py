@@ -24,6 +24,8 @@ if( len( sys.argv) != 3):
 else:
 	df = pd.read_csv( sys.argv[1], sep=",", header=None)
 	df.columns = ["proot", "portal", "eventname", "projcount", "path"]
+	df["whitespace_ename"] = df.apply(lambda row: str(row.eventname).isspace(), axis=1)
+	df = df[df.whitespace_ename == False] # forced boolean comp bc of pandas structure
 	df.drop(["proot", "projcount", "path"], inplace=True, axis=1)
 	df.drop_duplicates(inplace=True)
 	out_file = open( sys.argv[2], "w");

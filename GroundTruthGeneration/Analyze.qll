@@ -250,12 +250,12 @@ pragma[noinline]
 // bindingset[accessPath]
 string typeOf(ExtAPString accessPath) {
   exists(string pkg, string fn, string tp | exportedFn(pkg, fn, tp) |
-    accessPath = "(return (member " + fn + " (root https://www.npmjs.com/package/" + pkg + ")))" and
+    accessPath = "(return (member " + fn + " (member exports (module " + pkg + "))))" and
     result = pkg + "." + tp
   )
   or
   exists(string pkg, string cls | exportedClass(pkg, cls) |
-    accessPath = "(instance (member " + cls + " (root https://www.npmjs.com/package/" + pkg + ")))" and
+    accessPath = "(instance (member " + cls + " (member exports (module " + pkg + "))))" and
     result = pkg + "." + cls
   )
   or
@@ -275,36 +275,42 @@ string typeOf(ExtAPString accessPath) {
     // any(DataPoint dp).getAccessPath().matches("%" + accessPath + "%")
   )
   or
-  accessPath = "(parameter 0 (parameter 0 (member createServer (root https://www.npmjs.com/package/net))))" and
+  accessPath = "(parameter 0 (parameter 0 (member createServer (member exports (module net)))))" and
   result = "net.Socket"
   or
+  accessPath = "(parameter -1 (parameter 1 (member connect (member exports (module net)))))" and 
+  result = "net.Socket"
+  or 
   exists(string http | http = "http" or http = "https" |
-    accessPath = "(return (member get (root https://www.npmjs.com/package/" + http + ")))" and
+    accessPath = "(return (member get (member exports (module " + http + "))))" and
     result = "http.ClientRequest"
     or
-    accessPath = "(return (member request (root https://www.npmjs.com/package/" + http + ")))" and
+    accessPath = "(return (member request (member exports (module " + http + "))))" and
     result = "http.ClientRequest"
     or
-    accessPath = "(parameter 0 (parameter 0 (member createServer (root https://www.npmjs.com/package/"
-        + http + "))))" and
+    accessPath = "(parameter 0 (parameter 0 (member createServer (member exports (module "
+        + http + ")))))" and
     result = "http.IncomingMessage"
     or
-    accessPath = "(parameter 0 (parameter 1 (member request (root https://www.npmjs.com/package/" +
-        http + "))))" and
+    accessPath = "(parameter 0 (parameter 1 (member request (member exports (module " +
+        http + ")))))" and
     result = "http.IncomingMessage"
     or
-    accessPath = "(return (member createServer (root https://www.npmjs.com/package/" + http + ")))" and
+    accessPath = "(return (member createServer (member exports (module " + http + "))))" and
     result = "http.Server"
     or
-    accessPath = "(parameter 0 (parameter 1 (member get (root https://www.npmjs.com/package/" + http
-        + "))))" and
+    accessPath = "(parameter 0 (parameter 1 (member get (member exports (module " + http
+        + ")))))" and
     result = "http.IncomingMessage"
     or
-    accessPath = "(instance (member Agent (root https://www.npmjs.com/package/" + http + ")))" and
+    accessPath = "(instance (member Agent (member exports (module " + http + "))))" and
     result = "http.Agent"
     or
-    accessPath = "(return (member Agent (root https://www.npmjs.com/package/" + http + ")))" and
+    accessPath = "(return (member Agent (member exports (module " + http + "))))" and
     result = "http.Agent"
+    or 
+    accessPath = "(parameter -1 (member Server (member exports (module " + http + "))))" and 
+    result = "http.Server"
   )
   or
   exists(string m |
@@ -318,26 +324,29 @@ string typeOf(ExtAPString accessPath) {
     m = "createInflateRaw" or
     m = "createUnzip"
   |
-    accessPath = "(return (member " + m + " (root https://www.npmjs.com/package/zlib)))" and
+    accessPath = "(return (member " + m + " (member exports (module zlib))))" and
     result = "stream.Duplex"
   )
   or
-  accessPath = "(return (root https://www.npmjs.com/package/socket.io))" and
+  accessPath = "(return (member exports (module socket.io)))" and
   result = "socket.io.Server"
   or
-  accessPath = "(instance (root https://www.npmjs.com/package/socket.io))" and
+  accessPath = "(instance (member exports (module socket.io)))" and
   result = "socket.io.Server"
   or
-  accessPath = "(instance (member listen (root https://www.npmjs.com/package/socket.io)))" and
+  accessPath = "(instance (member listen (member exports (module socket.io))))" and
   result = "socket.io.Server"
   or
-  accessPath = "(return (root https://www.npmjs.com/package/socket.io-client))" and
+  accessPath = "(return (member exports (module socket.io-client)))" and
   result = "socket.io-client.Socket"
   or
-  accessPath = "(return (root https://www.npmjs.com/package/readable-stream))" and
+  accessPath = "(return (member exports (module readable-stream)))" and
   result = "stream.Readable"
   or
-  accessPath = "(instance (root https://www.npmjs.com/package/readable-stream))" and
+  accessPath = "(parameter -1 (member pipe (instance (member exports (module readable-stream)))))" and 
+  result = "stream.Readable"
+  or
+  accessPath = "(instance (member exports (module readable-stream)))" and
   result = "stream.Readable"
   or
   exists(string stream, string m, string c |
@@ -349,8 +358,8 @@ string typeOf(ExtAPString accessPath) {
     (stream = "stream" or stream = "readable-stream") and
     (c = "return" or c = "instance")
   |
-    accessPath = "(" + c + " (member " + m + " (root https://www.npmjs.com/package/" + stream +
-        ")))" and
+    accessPath = "(" + c + " (member " + m + " (member exports (module " + stream +
+        "))))" and
     result = "stream." + m
   )
   or
@@ -359,74 +368,89 @@ string typeOf(ExtAPString accessPath) {
     (c = "instance" or c = "return") and 
     (m = "Transform" or m = "PassThrough")
   |
-    accessPath = "(" + c + " (member " + m + " (root https://www.npmjs.com/package/" + stream +
-        ")))" and
+    accessPath = "(" + c + " (member " + m + " (member exports (module " + stream +
+        "))))" and
     result = "stream.Duplex"
   )
   or
-  accessPath = "(return (root https://www.npmjs.com/package/ws))" and 
+  accessPath = "(return (member exports (module ws)))" and 
   result = "ws.WebSocket"
   or
-  accessPath = "(instance (root https://www.npmjs.com/package/ws))" and
+  accessPath = "(instance (member exports (module ws)))" and
   result = "ws.WebSocket"
   or
   exists( string c, string m | 
   	(c = "return" or c = "instance") and 
  	 ( m = "handleUpgrade" or m = "shouldHandle")| 
-  	accessPath = "(parameter 0 (member " + m + " (" + c + " (member Server (root https://www.npmjs.com/package/ws)))))" and
+  	accessPath = "(parameter 0 (member " + m + " (" + c + " (member Server (member exports (module ws))))))" and
   	result = "http.IncomingMessage"
   )
   or
   exists( string c | 
   	c = "return" or c = "instance" | 
-  	accessPath = "(parameter 1 (member handleUpgrade (" + c + " (member Server (root https://www.npmjs.com/package/ws)))))" and
+  	accessPath = "(parameter 1 (member handleUpgrade (" + c + " (member Server (member exports (module ws))))))" and
   	result = "net.Socket"
   )
   or 
   exists( string c | 
   	c = "return" or c = "instance" | 
-  	accessPath = "(parameter 0 (parameter 3 (member handleUpgrade (" + c + " (member Server (root https://www.npmjs.com/package/ws))))))" and
+  	accessPath = "(parameter 0 (parameter 3 (member handleUpgrade (" + c + " (member Server (member exports (module ws)))))))" and
   	result = "ws.WebSocket"
   )
   or 
   exists( string c | 
   	c = "return" or c = "instance" | 
-  	accessPath = "(parameter 0 (member createWebSocketStream (" + c + " (root https://www.npmjs.com/package/ws))))" and
+  	accessPath = "(parameter 0 (member createWebSocketStream (" + c + " (member exports (module ws)))))" and
   	result = "ws.WebSocket"
   )
   or 
   exists( string c | 
   	c = "return" or c = "instance" |
-  	accessPath = "(" + c + " (root https://www.npmjs.com/package/process))" and
+  	accessPath = "(" + c + " (member exports (module process)))" and
   	result = "process.Process"
   )
   or 
-  accessPath = "(root https://www.npmjs.com/package/process)" and
+  exists( string c | 
+    c = "return" or c = "instance" |
+    accessPath = "(" + c + " (parameter -1 (member nextTick (member exports (module process)))))" and
+    result = "process.Process"
+  )
+  or 
+  accessPath = "(member exports (module process))" and
   result = "process.Process"
   or 
   exists( string m | 
   	m = "stdin" or m = "stderr" or m = "stdout" |
-  	accessPath = "(member " + m + " (root https://www.npmjs.com/package/process))" and
+  	accessPath = "(member " + m + " (member exports (module process)))" and
   	result = "net.Socket"
   )
   or
   exists( string c | 
     c = "return" or c = "instance" |
-    accessPath = "(" + c + " (root https://www.npmjs.com/package/events))" and
+    accessPath = "(" + c + " (member exports (module events)))" and
     result = "events.EventEmitter"
   )
   or
+  accessPath = "(parameter -1 (member EventEmitter (member exports (module events))))" and
+  result = "events.EventEmitter"
+  or
   exists( string c | 
     c = "return" or c = "instance" |
-    accessPath = "(" + c + " (root https://www.npmjs.com/package/cluster))" and
+    accessPath = "(" + c + " (member exports (module cluster)))" and
     result = "cluster.Cluster"
   )
   or
   exists( string c | 
     c = "return" or c = "instance" |
-    accessPath = "(" + c + " (member Socket (root https://www.npmjs.com/package/socket.io-client)))" and
+    accessPath = "(" + c + " (member Socket (member exports (module socket.io-client))))" and
     result = "net.Socket"
   )
+  or
+  exists( string c | 
+    c = "return" or c = "instance" |
+    accessPath = "(" + c + " (member Socket (parameter -1 (member isIP (return (member binding (member exports (module process))))))))" and
+    result = "net.Socket"
+  ) 
   or
   exists ( string m, string e | 
     (
@@ -436,18 +460,18 @@ string typeOf(ExtAPString accessPath) {
       m = "moveCursor"
     ) and
     (
-      e = " (root https://www.npmjs.com/package/readline)))" or
-      e = " (return (root https://www.npmjs.com/package/readline))))" or
-      e = " (instance (root https://www.npmjs.com/package/readline))))"
+      e = " (member exports (module readline))))" or
+      e = " (return (member exports (module readline)))))" or
+      e = " (instance (member exports (module readline)))))"
     ) |
     accessPath = "(parameter 0 (member " + m + e and 
     result = "stream.Writable"
   )
   or 
   exists ( string e | 
-    e = " (root https://www.npmjs.com/package/readline)))" or
-    e = " (return (root https://www.npmjs.com/package/readline))))" or
-    e = " (instance (root https://www.npmjs.com/package/readline))))"
+    e = " (member exports (module readline))))" or
+    e = " (return (member exports (module readline)))))" or
+    e = " (instance (member exports (module readline)))))"
     |
     (accessPath = "(parameter 0 (member emitKeypressEvents" + e and 
     result = "stream.Readable") or
@@ -456,44 +480,44 @@ string typeOf(ExtAPString accessPath) {
   )
   or
   exists ( string e | 
-    e = " (root https://www.npmjs.com/package/send)))" or
-    e = " (return (root https://www.npmjs.com/package/send))))" or
-    e = " (instance (root https://www.npmjs.com/package/send))))"
+    e = " (member exports (module send))))" or
+    e = " (return (member exports (module send)))))" or
+    e = " (instance (member exports (module send)))))"
     |
     accessPath = "(parameter 0 (member pipe" + e and 
     result = "http.ServerResponse"
   )
   or
   exists ( string e | 
-    e = " (root https://www.npmjs.com/package/send))" or
-    e = " (return (root https://www.npmjs.com/package/send)))" or
-    e = " (instance (root https://www.npmjs.com/package/send)))"
+    e = " (member exports (module send)))" or
+    e = " (return (member exports (module send))))" or
+    e = " (instance (member exports (module send))))"
     |
     accessPath = "(parameter 0" + e and 
     result = "http.ClientRequest" // this is the same as the first argument passed to http.createServer
   )
   or 
   (
-    accessPath = "(root https://www.npmjs.com/package/send)" or
-    accessPath = "(return (root https://www.npmjs.com/package/send))" or
-    accessPath = "(instance (root https://www.npmjs.com/package/send))"
+    accessPath = "(member exports (module send))" or
+    accessPath = "(return (member exports (module send)))" or
+    accessPath = "(instance (member exports (module send)))"
   ) and result = "send.SendStream"
   or
   exists( string m | 
     m = "createServer" or m = "createSecureServer" | 
-    accessPath = "(parameter 0 (parameter 0 (member " + m + " (root https://www.npmjs.com/package/http2))))" and
+    accessPath = "(parameter 0 (parameter 0 (member " + m + " (member exports (module http2)))))" and
     result = "http2.Http2ServerRequest"
   )
   or
   exists( string m | 
     m = "createServer" or m = "createSecureServer" | 
-    accessPath = "(parameter 1 (parameter 0 (member " + m + " (root https://www.npmjs.com/package/http2))))" and
+    accessPath = "(parameter 1 (parameter 0 (member " + m + " (member exports (module http2)))))" and
     result = "http2.Http2ServerResponse"
   )
   or
   exists( string m | 
     m = "createServer" or m = "createSecureServer" | 
-    accessPath = "(parameter 1 (member createPushResponse (parameter 1 (parameter 0 (member " + m + " (root https://www.npmjs.com/package/http2))))))" and
+    accessPath = "(parameter 1 (member createPushResponse (parameter 1 (parameter 0 (member " + m + " (member exports (module http2)))))))" and
     result = "http2.ServerHttp2Stream"
   )
 }
@@ -948,7 +972,7 @@ class AnalyzedExtAPString extends ExtAPString {
   AnalyzedPackageName root;
 
   AnalyzedExtAPString() {
-    this.matches("%(root https://www.npmjs.com/package/" + root + "%")
+    this.matches("%(member exports (module " + root + "%")
   }
 }
 
@@ -961,7 +985,7 @@ predicate incorrect(ExtAPString accessPath, ExtEventString eventName) {
     // should i add custom things here? the verdict is: yes
     // these are some paths which get found for http2 which don't match well to specific types in the framework, but are wrong
     or
-    ( accessPath = "(return (member request (root https://www.npmjs.com/package/http2)))" and (eventName = "push" or eventName = "response"))
+    ( accessPath = "(return (member request (member exports (module http2))))" and (eventName = "push" or eventName = "response"))
     or
     ( exists( string d | accessPath = "(instance (member Readable " + d + "))" and doesNotHaveEvent("stream.Readable", eventName)))
     or
@@ -971,18 +995,18 @@ predicate incorrect(ExtAPString accessPath, ExtEventString eventName) {
     or
     ( exists( string d | accessPath = "(return (member createWriteStream " + d + "))" and doesNotHaveEvent("stream.Writable", eventName)))
     or // the socket.io Server 
-    ( accessPath = "(return (root https://www.npmjs.com/package/socket.io))" and (hasEvent("socket.io.Socket", eventName) or hasEvent("socket.io.Namespace", eventName)))
+    ( accessPath = "(return (member exports (module socket.io)))" and (hasEvent("socket.io.Socket", eventName) or hasEvent("socket.io.Namespace", eventName)))
     or
-    ( accessPath = "(return (root https://www.npmjs.com/package/socket.io-client))" and eventName = "connect_failed") // typo probably, for reconnect_failed or connect_erro/timeout
+    ( accessPath = "(return (member exports (module socket.io-client)))" and eventName = "connect_failed") // typo probably, for reconnect_failed or connect_erro/timeout
     or
-    ( accessPath = "(return (member createGunzip (root https://www.npmjs.com/package/zlib)))" and eventName = "complete")
+    ( accessPath = "(return (member createGunzip (member exports (module zlib))))" and eventName = "complete")
     or
-    ( accessPath = "(return (member createGunzip (root https://www.npmjs.com/package/zlib)))" and eventName = "entry")
+    ( accessPath = "(return (member createGunzip (member exports (module zlib))))" and eventName = "entry")
     or 
     ( exists( string c | c = "instance" or c = "return" | 
-         accessPath = "(" + c + " (root https://www.npmjs.com/package/stream))" and (hasEvent("stream.Readable", eventName) or hasEvent("stream.Writable", eventName))
+         accessPath = "(" + c + " (member exports (module stream)))" and (hasEvent("stream.Readable", eventName) or hasEvent("stream.Writable", eventName))
                                                                           and not hasEvent("events.EventEmitter", eventName)))
-    or (accessPath = "(parameter 0 (parameter 0 (member createServer (root https://www.npmjs.com/package/net))))" and eventName = "connect"))
+    or (accessPath = "(parameter 0 (parameter 0 (member createServer (member exports (module net)))))" and eventName = "connect"))
 
     and not correct(accessPath, eventName) 
   // )

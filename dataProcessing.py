@@ -15,7 +15,7 @@ pd.options.mode.chained_assignment = None # remove chained assignment warnings (
 # ----------------------------------------------------------------------------------------------------------------------- processing functions
 # given the name of a portal, split the string up to find the name of the root
 def getPortalRoot( portal):
-	return portal[ portal.index('root') + len('root https://www.npmjs.com/package/') : portal.index(')')]
+	return portal[ portal.index('module ') + len('module ') : portal.index(')')]
 
 # get length of an access path (where just a root has length 1)
 # to do this just count the number of closing parens, since these only appear at the end of the portal
@@ -476,6 +476,7 @@ def getExperimentStats( param_configs, known_correct, known_broken, known_knownU
 		except pd.errors.EmptyDataError:
 			if debug_mode:
 				print(data_dir + "/correct_" + filename + " is empty, using empty dataframe\n")
+				continue
 			if not check_errors: # can't merge on empty dataframe, so we'll get no results anyway
 				continue
 		try:
@@ -483,6 +484,7 @@ def getExperimentStats( param_configs, known_correct, known_broken, known_knownU
 		except pd.errors.EmptyDataError:
 			if debug_mode:
 				print(data_dir + "/broken_" + filename + " is empty, using empty dataframe\n")
+				continue
 			if check_errors:
 				continue
 		ps_stats = computeStats( computed_broken, computed_correct, known_broken, known_correct, known_knownUnknown, check_errors, pkgs_to_ignore)
