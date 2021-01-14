@@ -11,6 +11,11 @@ import time
 
 pd.options.mode.chained_assignment = None # remove chained assignment warnings (they dont fit my use case)
 
+# suppress runtime warnings to avoid polluting the terminal
+# comment this out if debugging
+import warnings
+warnings.filterwarnings("ignore",category = RuntimeWarning)
+
 
 # ----------------------------------------------------------------------------------------------------------------------- processing functions
 # given the name of a portal, split the string up to find the name of the root
@@ -595,6 +600,42 @@ def crossValidateAtThresh(thresh, known_correct, known_broken, known_knownUnknow
 		# return: 
 		retVal += [(best_res, compl_res)]
 	return(retVal)
+
+def kfoldCrossValidateAtThresh(thresh, known_correct, known_broken, known_knownUnknown, param_configs, k, data_dir = "."):
+	correct_splits = splitDFIntoK( known_correct, k)
+	broken_splits = splitDFIntoK( known_broken, k)
+	ku_splits = splitDFIntoK( known_knownUnknown, k)
+	for fold in range(k):
+		print("On fold: " + str(fold) + "\n")
+		test_broken = broken_splits[fold]
+		test_correct = correct_splits[fold]
+		test_ku = ku_splits[fold]
+		compl_broken = test_broken.merge(known_broken, indicator='match', how='right')[lambda x: x.match=='right_only'].drop('match',1)
+		compl_correct = test_correct.merge(known_correct, indicator='match', how='right')[lambda x: x.match=='right_only'].drop('match',1)
+		compl_ku = test_ku.merge(known_knownUnknown, indicator='match', how='right')[lambda x: x.match=='right_only'].drop('match',1)
+		# run the experiment over the data we've picked
+		results = getExperimentStats( param_configs, test_correct, test_broken, test_ku, True, [], False, data_dir)
+		check = [(np.inf if np.isnan(k[0]) else k[0], k[1].overall_TP_count, k[2], k[1].overall_FP_count, k[1].overall_U_U_count) for k in results] # get a more readable list without the giant "diagnosed" frames
+		check = list(zip(check, list(range(len(check)))))
+		check.sort()
+		best_res = getOverallBestGTEThresh(check, thresh)
+		best_config = best_res[2][0][2]
+		compl_res = getExperimentStats( [best_config], compl_correct, compl_broken, compl_ku, True, [], False, data_dir)
+		# return: 
+		retVal += [(best_res, compl_res)]
+	return(retVal)		
+
+def splitDFIntoK( df, k):
+	indices = np.arange(len(df))
+	np.random.shuffle(indices)
+	inc = int(len(df)/k)
+	df_splits = []
+	for i in range(k - 1):
+		rel_indices = indices[ i*inc : (i+1)*inc]
+		df_splits += [ df.iloc[rel_indices]]
+	df_splits += [ df.iloc[ indices[ (k-1)*inc :]]]
+	return( df_splits)
+
 
 # take the output from cross validation and turn it into a nice table
 # the results we want: generated TP, generated num TP, config, compl TP, compl num TP
