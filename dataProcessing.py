@@ -659,7 +659,8 @@ def displayRecallForCrossValDF( cv_df, recall_denom):
 # number of occurrences of this pattern, and the number of projects it appears in
 def getOverallCountAndProjCount( row, results, df_with_path):
 	rel_df = results[row['index']][1].diagnosed
-	total_TP = (rel_df['True_positive']*rel_df['freq']).sum()
+	rel_df = rel_df[rel_df.True_positive == 1]
+	total_TP = rel_df['freq'].sum()
 	total_proj = len(pd.merge(rel_df[['portal', 'eventname']], df_with_path[['portal', 'eventname', 'path']], how='left', indicator='match')['path'].unique())
 	return((total_TP, total_proj))
 
@@ -752,6 +753,8 @@ def main():
 	dat = processFile('MinedData/merged_data.out')
 	dat_with_files = pd.read_csv('MinedData/merged_data_withFile.out', sep=',', header=None)
 	dat_with_files.columns = ['proot', 'portal', 'eventname', 'projcount', 'path']
+	dat_with_files.portal = dat_with_files.portal.apply(condensePortal) # if we're doing condensing
+	dat_with_files.drop_duplicates(inplace=True)
 
 	print("Done reading in the data\n\n")
 
@@ -772,12 +775,15 @@ def main():
 	# read in the set of labelled data
 	new_known_correct = pd.read_csv('GroundTruthGeneration/correct.csv', sep=',', header=None)
 	new_known_correct.columns = ['portal', 'eventname']
+	new_known_correct.portal = new_known_correct.portal.apply(condensePortal)
 	new_known_correct.drop_duplicates(inplace=True)
 	new_known_broken = pd.read_csv('GroundTruthGeneration/broken.csv', sep=',', header=None)
 	new_known_broken.columns = ['portal', 'eventname']
+	new_known_broken.portal = new_known_broken.portal.apply(condensePortal)
 	new_known_broken.drop_duplicates(inplace=True)
 	new_known_knownUnknown = pd.read_csv('GroundTruthGeneration/knownUnknown.csv', sep=',', header=None)
 	new_known_knownUnknown.columns = ['portal', 'eventname']
+	new_known_knownUnknown.portal = new_known_knownUnknown.portal.apply(condensePortal)
 	new_known_knownUnknown.drop_duplicates(inplace=True)
 
 	# do the same thing, but for the data without alias removal
