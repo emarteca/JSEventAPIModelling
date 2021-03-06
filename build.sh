@@ -10,7 +10,8 @@ mkdir -p /home/codeql_home
 mv /home/playground/codeql-linux64.zip /home/codeql_home/ 
 cd /home/codeql_home
 unzip codeql-linux64.zip 
-git clone https://github.com/github/codeql.git codeql-repo
+# clone stable version
+git clone https://github.com/github/codeql.git --branch v1.26.0 codeql-repo
 
 echo "export PATH=/home/codeql_home/codeql:$PATH" >> /root/.bashrc
 
