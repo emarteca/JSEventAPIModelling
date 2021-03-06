@@ -601,6 +601,7 @@ def crossValidateAtThresh(thresh, known_correct, known_broken, known_knownUnknow
 		retVal += [(best_res, compl_res)]
 	return(retVal)
 
+# classic k-fold cross validation
 def kfoldCrossValidateAtThresh(thresh, known_correct, known_broken, known_knownUnknown, param_configs, k, data_dir = "."):
 	correct_splits = splitDFIntoK( known_correct, k)
 	broken_splits = splitDFIntoK( known_broken, k)
@@ -754,8 +755,8 @@ def condensePortal( portal):
 # sample usecase 
 def main():
 	# first, read in the results of the data mining (note: this is for the version with alias removal)
-	dat = processFile('MinedData/merged_data.out')
-	dat_with_files = pd.read_csv('MinedData/merged_data_withFile.out', sep=',', header=None)
+	dat = processFile('MinedData/listen_merged_data.out')
+	dat_with_files = pd.read_csv('MinedData/listen_merged_data_withFile.out', sep=',', header=None)
 	dat_with_files.columns = ['proot', 'portal', 'eventname', 'projcount', 'path']
 	dat_with_files.portal = dat_with_files.portal.apply(condensePortal) # if we're doing condensing
 	dat_with_files.drop_duplicates(inplace=True)
@@ -790,30 +791,12 @@ def main():
 	new_known_knownUnknown.portal = new_known_knownUnknown.portal.apply(condensePortal)
 	new_known_knownUnknown.drop_duplicates(inplace=True)
 
-	# do the same thing, but for the data without alias removal
-	old_known_correct = pd.read_csv('GroundTruthGeneration/correct.csv', sep=',', header=None)
-	old_known_correct.columns = ['portal', 'eventname']
-	old_known_correct.drop_duplicates(inplace=True)
-	old_known_broken = pd.read_csv('GroundTruthGeneration/broken.csv', sep=',', header=None)
-	old_known_broken.columns = ['portal', 'eventname']
-	old_known_broken.drop_duplicates(inplace=True)
-	old_known_knownUnknown = pd.read_csv('GroundTruthGeneration/knownUnknown.csv', sep=',', header=None)
-	old_known_knownUnknown.columns = ['portal', 'eventname']
-	old_known_knownUnknown.drop_duplicates(inplace=True)
-
 	# run the experiments
-	new_results = getExperimentStats( param_configs_new, new_known_correct, new_known_broken, new_known_knownUnknown, True, [], True, "new_data_exps")
+	new_results = getExperimentStats( param_configs_new, new_known_correct, new_known_broken, new_known_knownUnknown, True, [], True, "list_results")
 	new_check = [(np.inf if np.isnan(k[0]) else k[0], k[1].overall_TP_count, k[2], k[1].overall_FP_count, k[1].overall_U_U_count) for k in new_results] # get a more readable list without the giant "diagnosed" frames
 	new_check = list(zip(new_check, list(range(len(new_check)))))
 	new_check.sort()
 	new_graphcheck = [c for c in new_check if (c[0][2].pconfe != 1 or c[0][2].pconfp != 1)] # optional: remove all the results with both threshs set to 1, since this makes no sense as results and skews the graph axis
-
-	# same thing, but with the data without alias removal
-	old_results = getExperimentStats( param_configs_new, old_known_correct, old_known_broken, old_known_knownUnknown, True, [], True, "old_data_exps")
-	old_check = [(np.inf if np.isnan(k[0]) else k[0], k[1].overall_TP_count, k[2], k[1].overall_FP_count, k[1].overall_U_U_count) for k in old_results] # get a more readable list without the giant "diagnosed" frames
-	old_check = list(zip(old_check, list(range(len(old_check)))))
-	old_check.sort()
-	old_graphcheck = [c for c in old_check if (c[0][2].pconfe != 1 or c[0][2].pconfp != 1)]
 
 	threshs = np.arange(1, 0.79, -0.01).tolist()
 	reltable = generateTableBestGTE(check, threshs, results, dat_with_files)

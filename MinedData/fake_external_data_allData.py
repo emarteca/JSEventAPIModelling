@@ -20,7 +20,7 @@ def get_event_class(df):
 	return( to_ret + " or\n".join(to_ret_df.to_list()) + "\n\t}\n}")
 
 if( len( sys.argv) != 3):
-	print("Usage: python fake_external_data_allData.py file_with_all_data output_filename")
+	print("Usage: python3 fake_external_data_allData.py file_with_all_data output_filename")
 else:
 	df = pd.read_csv( sys.argv[1], sep=",", header=None)
 	df.columns = ["proot", "portal", "eventname", "projcount", "path"]

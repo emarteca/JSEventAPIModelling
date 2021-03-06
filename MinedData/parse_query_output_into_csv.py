@@ -43,7 +43,7 @@ def merge_info_from_files( specfile, exclude_paths):
 # specify this file as a command line arg
 
 if( len( sys.argv) < 3):
-	print("Usage: python parse_query_output_into_csv.py file_spec_list_of_query_output_files output_filename [bool_exclude_paths]")
+	print("Usage: python3 parse_query_output_into_csv.py file_spec_list_of_query_output_files output_filename [bool_exclude_paths]")
 else:
 	exclude_paths = True if len(sys.argv) == 4 else (sys.argv[3] == "true")
 	df = merge_info_from_files( sys.argv[1], exclude_paths)
