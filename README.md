@@ -39,6 +39,7 @@ These files are all 2-column csvs, where the first column is the access path and
 #### Experimental data
 
 * `list_results`: The results of running the classification for each of the 4096 parameter configurations we tested with.
+
 This is a directory containing all the output files for each configuration.
 For each configuration, there is a generated "correct" file, with the list of labelled correct listener registrations, and a generated "broken" file, with the list of labelled incorrect listener registrations.
 For configuration `[pe, pa, pce, pca]` the files have the name: `broken_pe<pe value>_pp<pa value>_pce<pce value>_pcp<pca value>_.csv` (and similarly for "correct")
@@ -69,6 +70,7 @@ Simply run `./getMergedFiles.sh` from inside `MinedData` to regenerate these fil
 #### Data Processing
 
 * `dataProcessing.py`: Python script containing all our data processing code
+
 This code is fully commented. 
 There is a commented sample of functions to run in the main method.
 Note: it's not meant to just run the script directly. 
@@ -88,6 +90,7 @@ Note: running any of the analysis code without rerunning the experiments will us
 This code is in `GroundTruthGeneration` directory.
 
 * `getGroundTruth.sh`: Our ground truth generating script (runs the QL analysis for each of the correct, knownUnknown, and incorrect sets)
+
 This is the script which generates our ground truth models -- we've included the output files (`broken.csv`, `correct.csv`, and `knownUnknown.csv` as explained above).
 The code is basically a mapping of API types to their associated events (which we created by manually reading the API documentations), and mappings of these types to access path representations of objects with these types.
 Then the script generates the lists of access path, event name pairs which exist in the mined data and which correspond to correct and incorrect pairings of types and events.
@@ -96,6 +99,7 @@ Then the script generates the lists of access path, event name pairs which exist
 #### Static Analysis
 
 * `MinedData/findListenersAndEmitters.ql`: Our data mining script
+
 This is another QL script, which does the data mining for the list of all listener registrations in a project.
 
 A note on usage: this script can be test-run on a project (we would recommend trying the browser tool for QL, the query console on [LGTM.com](lgtm.com) with an open source JavaScript project of your choosing).

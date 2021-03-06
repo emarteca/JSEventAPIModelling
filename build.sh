@@ -12,7 +12,7 @@ cd /home/codeql_home
 unzip codeql-linux64.zip 
 git clone https://github.com/github/codeql.git codeql-repo
 
-export PATH=/home/codeql_home/codeql:$PATH
+echo "export PATH=/home/codeql_home/codeql:$PATH" >> /root/.bashrc
 
 cd /home/playground
 

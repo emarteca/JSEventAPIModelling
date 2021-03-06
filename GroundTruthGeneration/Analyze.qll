@@ -1,5 +1,5 @@
 import javascript
-import new_externalData
+import externalData
 
 
 /** Holds if `pkg` exports a function `fn` returning type `pkg.tp`. */

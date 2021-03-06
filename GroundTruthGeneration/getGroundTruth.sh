@@ -1,5 +1,7 @@
 #!/bin/bash
 
+codeql database upgrade placeholderdb
+
 codeql query run --database=placeholderdb --output=temp.bqrs knownUnknown_groundTruth.ql
 codeql bqrs decode --format=csv temp.bqrs | tail -n+2 > knownUnknown.csv
 rm temp.bqrs

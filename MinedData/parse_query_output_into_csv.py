@@ -6,7 +6,7 @@ import numpy as np
 # print dataframe df to file specified
 def printDFToFile( df, filename):
 	if not df.empty:
-		f = open(filename, 'w');
+		f = open(filename, 'w', encoding='utf-8');
 		f.write(df.to_csv(index = False, header=None))
 		f.close()
 
@@ -45,7 +45,7 @@ def merge_info_from_files( specfile, exclude_paths):
 if( len( sys.argv) < 3):
 	print("Usage: python3 parse_query_output_into_csv.py file_spec_list_of_query_output_files output_filename [bool_exclude_paths]")
 else:
-	exclude_paths = True if len(sys.argv) == 4 else (sys.argv[3] == "true")
+	exclude_paths = True if len(sys.argv) == 3 else (sys.argv[3] == "true")
 	df = merge_info_from_files( sys.argv[1], exclude_paths)
 	printDFToFile( df[df.type == "emit"].drop(["type"], axis=1), "emit_" + sys.argv[2])
 	printDFToFile( df[df.type == "listen"].drop(["type"], axis=1), "listen_" + sys.argv[2])

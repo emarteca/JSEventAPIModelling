@@ -28,7 +28,7 @@ else:
 	df = df[df.whitespace_ename == False] # forced boolean comp bc of pandas structure
 	df.drop(["proot", "projcount", "path"], inplace=True, axis=1)
 	df.drop_duplicates(inplace=True)
-	out_file = open( sys.argv[2], "w");
+	out_file = open( sys.argv[2], "w", encoding='utf-8');
 	out_file.write( get_preamble() + get_predicate_body(df) + get_AP_class(df) + get_event_class(df))
 	out_file.close()
 	print("Done processing")
