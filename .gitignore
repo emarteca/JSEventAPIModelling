@@ -1,4 +1,4 @@
-data_exps/
-data_exps_noAliasRemoval/
+list_results/
+GroundTruthGeneration/placeholderdb
 
 .cache/

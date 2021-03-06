@@ -640,11 +640,15 @@ def splitDFIntoK( df, k):
 
 # take the output from cross validation and turn it into a nice table
 # the results we want: generated TP, generated num TP, config, compl TP, compl num TP
-def getCrossValidationDF( cv_results):
+def getCrossValidationDF( cv_results, recall_denoms = (-1, -1)):
 	ret_frame = pd.DataFrame([c[0][0] for c in cv_results], columns=['Gen TP %'])
+	if recall_denoms[0] != -1:
+		ret_frame["Gen recall"] = [c[0][1]/recall_denoms[0] for c in cv_results]
 	ret_frame['Gen num TP'] = [c[0][1] for c in cv_results]
 	ret_frame['Configs'] = [c[0][2][0][2] for c in cv_results]
 	ret_frame['Compl TP %'] = [c[1][0][1].overall_TP_rate for c in cv_results]
+	if recall_denoms[1] != -1:
+		ret_frame["Compl recall"] = [c[1][0][1].overall_TP_count/recall_denoms[1] for c in cv_results]
 	ret_frame['Compl num TP'] = [c[1][0][1].overall_TP_count for c in cv_results]
 	return( ret_frame)
 
@@ -787,13 +791,13 @@ def main():
 	new_known_knownUnknown.drop_duplicates(inplace=True)
 
 	# do the same thing, but for the data without alias removal
-	old_known_correct = pd.read_csv('GroundTruthGeneration/correct_noAliasRemoval.csv', sep=',', header=None)
+	old_known_correct = pd.read_csv('GroundTruthGeneration/correct.csv', sep=',', header=None)
 	old_known_correct.columns = ['portal', 'eventname']
 	old_known_correct.drop_duplicates(inplace=True)
-	old_known_broken = pd.read_csv('GroundTruthGeneration/broken_noAliasRemoval.csv', sep=',', header=None)
+	old_known_broken = pd.read_csv('GroundTruthGeneration/broken.csv', sep=',', header=None)
 	old_known_broken.columns = ['portal', 'eventname']
 	old_known_broken.drop_duplicates(inplace=True)
-	old_known_knownUnknown = pd.read_csv('GroundTruthGeneration/knownUnknown_noAliasRemoval.csv', sep=',', header=None)
+	old_known_knownUnknown = pd.read_csv('GroundTruthGeneration/knownUnknown.csv', sep=',', header=None)
 	old_known_knownUnknown.columns = ['portal', 'eventname']
 	old_known_knownUnknown.drop_duplicates(inplace=True)
 
